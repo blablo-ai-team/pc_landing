@@ -1,0 +1,53 @@
+{
+  "common": {
+    "loading": "Đang tải...",
+    "error": "Đã có lỗi xảy ra",
+    "tryAgain": "Thử lại",
+    "learnMore": "Tìm hiểu thêm",
+    "getStarted": "Bắt đầu ngay",
+    "contactUs": "Liên hệ chúng tôi"
+  },
+  "navigation": {
+    "home": "Trang chủ",
+    "features": "Tính năng",
+    "about": "Giới thiệu",
+    "contact": "Liên hệ",
+    "pricing": "Bảng giá"
+  },
+  "hero": {
+    "title": "Chào mừng đến với Blablo",
+    "subtitle": "Nền tảng thế hệ mới cho doanh nghiệp hiện đại",
+    "description": "Chuyển đổi doanh nghiệp của bạn với các giải pháp đổi mới. Xây dựng để mở rộng, thiết kế để phát triển.",
+    "primaryCta": "Bắt đầu ngay",
+    "secondaryCta": "Xem Demo"
+  },
+  "features": {
+    "title": "Tính năng mạnh mẽ",
+    "subtitle": "Mọi thứ bạn cần để thành công",
+    "feature1": {
+      "title": "Tốc độ chớp nhoáng",
+      "description": "Hiệu suất được tối ưu hóa cho trải nghiệm người dùng tốt nhất"
+    },
+    "feature2": {
+      "title": "Bảo mật & Đáng tin cậy",
+      "description": "Bảo mật cấp doanh nghiệp với thời gian hoạt động 99.9%"
+    },
+    "feature3": {
+      "title": "Tích hợp dễ dàng",
+      "description": "API đơn giản và tài liệu toàn diện"
+    }
+  },
+  "testimonials": {
+    "title": "Khách hàng nói gì về chúng tôi",
+    "subtitle": "Được tin tưởng bởi hàng nghìn doanh nghiệp trên toàn thế giới"
+  },
+  "footer": {
+    "company": "Công ty",
+    "products": "Sản phẩm",
+    "resources": "Tài nguyên",
+    "legal": "Pháp lý",
+    "copyright": "© 2025 Blablo. Tất cả quyền được bảo lưu.",
+    "privacy": "Chính sách bảo mật",
+    "terms": "Điều khoản dịch vụ"
+  }
+}

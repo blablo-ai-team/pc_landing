@@ -1,0 +1,53 @@
+{
+  "common": {
+    "loading": "Loading...",
+    "error": "Something went wrong",
+    "tryAgain": "Try again",
+    "learnMore": "Learn more",
+    "getStarted": "Get started",
+    "contactUs": "Contact us"
+  },
+  "navigation": {
+    "home": "Home",
+    "features": "Features",
+    "about": "About",
+    "contact": "Contact",
+    "pricing": "Pricing"
+  },
+  "hero": {
+    "title": "Welcome to Blablo",
+    "subtitle": "The next generation platform for modern businesses",
+    "description": "Transform your business with our innovative solutions. Built for scale, designed for growth.",
+    "primaryCta": "Get Started Now",
+    "secondaryCta": "Watch Demo"
+  },
+  "features": {
+    "title": "Powerful Features",
+    "subtitle": "Everything you need to succeed",
+    "feature1": {
+      "title": "Lightning Fast",
+      "description": "Optimized performance for the best user experience"
+    },
+    "feature2": {
+      "title": "Secure & Reliable",
+      "description": "Enterprise-grade security with 99.9% uptime"
+    },
+    "feature3": {
+      "title": "Easy Integration",
+      "description": "Simple APIs and comprehensive documentation"
+    }
+  },
+  "testimonials": {
+    "title": "What Our Customers Say",
+    "subtitle": "Trusted by thousands of businesses worldwide"
+  },
+  "footer": {
+    "company": "Company",
+    "products": "Products",
+    "resources": "Resources",
+    "legal": "Legal",
+    "copyright": "© 2025 Blablo. All rights reserved.",
+    "privacy": "Privacy Policy",
+    "terms": "Terms of Service"
+  }
+}
