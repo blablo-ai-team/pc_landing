@@ -23,7 +23,7 @@ export const metadata: Metadata = {
   openGraph: {
     type: "website",
     locale: "en_US",
-    url: "https://blablo.com",
+    url: "https://www.blablo.co",
     title: "Blablo - Next Generation Platform",
     description: "Transform your business with our innovative solutions. Built for scale, designed for growth.",
     siteName: "Blablo",

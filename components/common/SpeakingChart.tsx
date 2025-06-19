@@ -21,40 +21,71 @@ const data = [
   { day: 'SUN', minutes: 108, color: '#EE33DF' },
 ];
 
-const CustomDot = (props: any) => {
+interface CustomDotProps {
+  cx?: number;
+  cy?: number;
+  index?: number;
+}
+
+const CustomDot = (props: CustomDotProps) => {
   const { cx, cy, index } = props;
   
-  if (index === data.length - 1) {
+  if (index === data.length - 1 && cx && cy) {
     return (
       <g>
         <circle cx={cx} cy={cy} r={6} fill="#6366f1" stroke="#ffffff" strokeWidth={2} />
-        <text 
-          x={cx + 15} 
-          y={cy - 15} 
-          fill="#6366f1" 
-          fontSize={12}
-          fontWeight="600"
-          textAnchor="start"
-        >
-          108 mins speaking!
-        </text>
       </g>
     );
   }
-  return <circle cx={cx} cy={cy} r={4} fill="#e879f9" />;
+  return cx && cy ? <circle cx={cx} cy={cy} r={4} fill="#e879f9" /> : null;
 };
+
+// Custom label component for the SUN bar
+interface CustomLabelProps {
+  x?: number;
+  y?: number;
+  width?: number;
+  index?: number;
+}
+
+const CustomLabel = (props: CustomLabelProps) => {
+  const { x, y, width, index } = props;
+  
+  if (index === data.length - 1 && x && y && width) { // Only for the last bar (SUN)
+    return (
+      <text 
+        x={x + 15 } 
+        y={y - 15} // Position below the bar
+        fill="#6366f1" 
+        fontSize={12}
+        fontWeight="600"
+        textAnchor="middle"
+      >
+        108 mins speaking!
+      </text>
+    );
+  }
+  return null;
+};
+
+
 
 export default function SpeakingChart() {
   return (
-    <div className="  h-96 p-2 bg-gradient-to-br rounded-2xl">
+    <div className=" h-96 p-2 bg-gradient-to-br rounded-2xl">
       <ResponsiveContainer width="100%" height="100%">
-        <ComposedChart data={data} margin={{ top: 40, right: 80, bottom: 40, left: 40 }}>
+        <ComposedChart data={data} margin={{ top: 40, right: 80, bottom: 60, left: 40 }}>
           <defs>
             <linearGradient id="lineGradient" x1="0" y1="0" x2="1" y2="0">
               <stop offset="0%" stopColor="#e879f9" />
               <stop offset="50%" stopColor="#a855f7" />
               <stop offset="100%" stopColor="#6366f1" />
             </linearGradient>
+            <marker id="arrowX" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto">
+              <polygon points="0,0 0,6 9,3" fill="#9ca3af" />
+              </marker>            <marker id="arrowY" markerWidth="10" markerHeight="10" refX="3" refY="6">
+              <polygon points="0,6 6,6 3,0" fill="#9ca3af" />
+            </marker>
           </defs>
           
           <CartesianGrid 
@@ -65,25 +96,28 @@ export default function SpeakingChart() {
           />
             <XAxis 
             dataKey="day" 
-            axisLine={{ stroke: '#e5e7eb', strokeWidth: 1 }}
+            axisLine={{ stroke: '#e5e7eb', strokeWidth: 1, markerEnd: 'url(#arrowX)' }}
             tickLine={false}
             tick={{ fontSize: 12, fill: '#9ca3af', fontWeight: '500' }}
             dy={10}
-          />
-            <YAxis 
+          />          <YAxis 
             domain={[0, 120]}
-            axisLine={{ stroke: '#e5e7eb', strokeWidth: 1 }}
+            axisLine={{ stroke: '#e5e7eb', strokeWidth: 1, markerStart: 'url(#arrowY)' }}
             tickLine={false}
             tick={{ fontSize: 12, fill: '#9ca3af', fontWeight: '500' }}
             ticks={[0, 120]}
-            tickFormatter={(value: number) => value === 0 ? '0 MIN' : value === 120 ? '120 MINS' : ''}
-            width={60}
+            tickFormatter={(value: number) => {
+              if (value === 0) return '0 MIN';
+              if (value === 120) return '120 MINS';
+              return '';
+            }}
+            width={100}
           />
-          
-          <Bar
+            <Bar
             dataKey="minutes" 
             radius={[6, 6, 0, 0]}
             barSize={24}
+            label={<CustomLabel />}
           >
             {data.map((entry, index) => (
               <Cell key={`cell-${index}`} fill={entry.color} />

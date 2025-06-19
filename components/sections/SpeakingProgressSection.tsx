@@ -23,8 +23,8 @@ export default function SpeakingProgressSection() {
             </h3>
             <p className="font-bricolage text-gray-700 mb-6 lg:mb-8 text-base lg:text-lg leading-relaxed">
               So we get you talking early, often, anywhere. Skip perfect accents, making your point is what matters!
-            </p>              
-             <div className="flex justify-center items-end flex-1 pb-4 lg:pb-0">
+            </p>               
+             <div className="flex justify-center items-end flex-1 lg:pb-0 -mb-6 lg:-mb-2 lg:-translate-y-1">
               <div className="relative">
                 <Image
                   src="/images/speaking/hiro_speaking.png"
@@ -40,12 +40,12 @@ export default function SpeakingProgressSection() {
           
           {/* Right Content - Chart */}
           <div className="bg-white rounded-3xl p-6 lg:p-8 shadow-lg h-auto lg:h-[551px] lg:w-[744px] flex flex-col lg:flex-shrink-0">
-            <div className="text-center mb-6 lg:mb-8">
-              <h3 className="font-bricolage text-xl lg:text-2xl font-bold text-gray-900 mb-2 leading-tight">
-                Our learners speak over{' '}
+            <div className="text-center mb-6 lg:mb-8 text-black">
+              <h3 className="font-inter text-xl lg:text-2xl  mb-2 leading-tight">
+               Our learners speak over{' '}
                 <span className="text-pink-500 font-bold">1 hour 48 minutes</span>
               </h3>
-              <p className="font-bricolage text-gray-700 text-base lg:text-lg">
+              <p className="font-inter  text-xl lg:text-2xl leading-tight">
                 just in the first week
               </p>
             </div>
