@@ -3,7 +3,7 @@
 import HeroSection from "@/components/sections/HeroSection";
 import FeaturesSection from "@/components/sections/FeaturesSection";
 import Card3DSection from "@/components/sections/Card3DSection";
-import SpeakingChart from "@/components/sections/SpeakingChart";
+import SpeakingProgressSection from "@/components/sections/SpeakingProgressSection";
 
 export default function Home() {
   const handleGetBlabloClick = () => {
@@ -22,7 +22,10 @@ export default function Home() {
        
        {/* Features Section */}
       <FeaturesSection />
-   <SpeakingChart />
+
+      {/* Speaking Progress Section */}
+      <SpeakingProgressSection />
+
       {/* Additional sections can be added here */}
       <div className="py-16 px-4 text-center bg-white">
         <h2 className="font-bricolage text-2xl font-bold text-gray-900 mb-4">
