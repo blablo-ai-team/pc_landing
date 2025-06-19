@@ -5,7 +5,10 @@
     "tryAgain": "Try again",
     "learnMore": "Learn more",
     "getStarted": "Get started",
-    "contactUs": "Contact us"
+    "contactUs": "Contact us",
+    "getBlablo": "Get BlaBlo",
+    "available": "Now available",
+    "launchingSoon": "Launching soon"
   },
   "navigation": {
     "home": "Home",
@@ -15,27 +18,43 @@
     "pricing": "Pricing"
   },
   "hero": {
-    "title": "Welcome to Blablo",
-    "subtitle": "The next generation platform for modern businesses",
-    "description": "Transform your business with our innovative solutions. Built for scale, designed for growth.",
-    "primaryCta": "Get Started Now",
-    "secondaryCta": "Watch Demo"
+    "title": "Turn Dead Time into Fluent English",
+    "subtitle": "Use your commute, dish-washing, or any spare minute to practice real speaking",
+    "description": "Built to fit your busy mornings and tired nights.",
+    "primaryCta": "Boost your speaking NOW",
+    "secondaryCta": "Get BlaBlo",
+    "tagline": "Meet BlaBlo, your on-the-go English buddy"
   },
   "features": {
-    "title": "Powerful Features",
-    "subtitle": "Everything you need to succeed",
-    "feature1": {
-      "title": "Lightning Fast",
-      "description": "Optimized performance for the best user experience"
+    "title": "BlaBlo is for Your busy life",
+    "subtitle": "Built to fit your busy mornings and tired nights.",
+    "sectionTitle": "Meet BlaBlo, your on-the-go English buddy",
+    "listenRepeat": {
+      "title": "Listen & Repeat",
+      "description": "Explore new vocab, train your mouth and brain on the go.",
+      "duration": "10 mins activity",
+      "timeTag": "Morning commute"
     },
-    "feature2": {
-      "title": "Secure & Reliable",
-      "description": "Enterprise-grade security with 99.9% uptime"
+    "flashCards": {
+      "title": "Flash Cards", 
+      "description": "Tap, swipe, and store new words fast.",
+      "duration": "3 mins",
+      "timeTag": "Mid-day break"
     },
-    "feature3": {
-      "title": "Easy Integration",
-      "description": "Simple APIs and comprehensive documentation"
-    }
+    "rolePlay": {
+      "title": "Joyful Role play",
+      "description": "Act out a scenario, sleep on it and wake up sounding natural.",
+      "duration": "8 mins",
+      "timeTag": "Before bedtime"
+    },
+    "speedChallenge": {
+      "title": "Speed Challenge",
+      "description": "Beat the timer, train instant recall and smoother speech.",
+      "duration": "5 mins",
+      "timeTag": "Later days"
+    },
+    "cta": "Ready to transform your dead time into fluent English?",
+    "ctaButton": "Get BlaBlo Now"
   },
   "testimonials": {
     "title": "What Our Customers Say",

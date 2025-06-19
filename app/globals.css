@@ -131,3 +131,35 @@ body {
 .animate-float {
   animation: float 6s ease-in-out infinite;
 }
+
+/* Tilt Card Effects */
+.perspective-1000 {
+  perspective: 1000px;
+}
+
+.preserve-3d {
+  transform-style: preserve-3d;
+}
+
+.tilt-card {
+  transform-style: preserve-3d;
+  transition: all 0.1s ease-out;
+}
+
+.tilt-card:hover {
+  transform: rotateX(var(--rotate-x, 0deg)) rotateY(var(--rotate-y, 0deg)) scale(1.02);
+}
+
+/* Enhanced shadows for 3D effect */
+.tilt-shadow {
+  box-shadow: 
+    0 4px 8px rgba(0, 0, 0, 0.1),
+    0 8px 32px rgba(0, 0, 0, 0.1);
+  transition: box-shadow 0.3s ease;
+}
+
+.tilt-shadow:hover {
+  box-shadow: 
+    0 8px 16px rgba(0, 0, 0, 0.15),
+    0 16px 64px rgba(0, 0, 0, 0.15);
+}

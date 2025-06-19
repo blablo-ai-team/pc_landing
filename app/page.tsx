@@ -1,6 +1,8 @@
 'use client'
 
 import HeroSection from "@/components/sections/HeroSection";
+import FeaturesSection from "@/components/sections/FeaturesSection";
+import Card3DSection from "@/components/sections/Card3DSection";
 
 export default function Home() {
   const handleGetBlabloClick = () => {
@@ -11,14 +13,14 @@ export default function Home() {
   return (
     <div className="min-h-screen">
       <HeroSection
-        logoSrc="/images/blablo-logo.svg"
-        logoAlt="BlaBló"
         onGetBlabloClick={handleGetBlabloClick}
-        googlePlayUrl="https://play.google.com/store/apps"
-        appStoreUrl="https://apps.apple.com"
-        googlePlayQrSrc="/images/qr-google-play.svg"
-        appStoreQrSrc="/images/qr-app-store.svg"
       />
+
+      {/* 3D Cards Section */}
+      <Card3DSection />
+       
+       {/* Features Section */}
+      <FeaturesSection />
 
       {/* Additional sections can be added here */}
       <div className="py-16 px-4 text-center bg-white">

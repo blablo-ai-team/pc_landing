@@ -5,7 +5,10 @@
     "tryAgain": "Thử lại",
     "learnMore": "Tìm hiểu thêm",
     "getStarted": "Bắt đầu ngay",
-    "contactUs": "Liên hệ chúng tôi"
+    "contactUs": "Liên hệ chúng tôi",
+    "getBlablo": "Tải BlaBlo",
+    "available": "Có sẵn ngay",
+    "launchingSoon": "Sớm ra mắt"
   },
   "navigation": {
     "home": "Trang chủ",
@@ -15,27 +18,43 @@
     "pricing": "Bảng giá"
   },
   "hero": {
-    "title": "Chào mừng đến với Blablo",
-    "subtitle": "Nền tảng thế hệ mới cho doanh nghiệp hiện đại",
-    "description": "Chuyển đổi doanh nghiệp của bạn với các giải pháp đổi mới. Xây dựng để mở rộng, thiết kế để phát triển.",
-    "primaryCta": "Bắt đầu ngay",
-    "secondaryCta": "Xem Demo"
+    "title": "Biến Thời Gian Chết thành Tiếng Anh Lưu Loát",
+    "subtitle": "Sử dụng thời gian đi làm, rửa bát, hoặc bất kỳ phút rảnh nào để luyện nói thực tế",
+    "description": "Được xây dựng để phù hợp với buổi sáng bận rộn và đêm mệt mỏi của bạn.",
+    "primaryCta": "Tăng cường khả năng nói NGAY BÂY GIỜ",
+    "secondaryCta": "Tải BlaBlo",
+    "tagline": "Gặp gỡ BlaBlo, người bạn tiếng Anh di động của bạn"
   },
   "features": {
-    "title": "Tính năng mạnh mẽ",
-    "subtitle": "Mọi thứ bạn cần để thành công",
-    "feature1": {
-      "title": "Tốc độ chớp nhoáng",
-      "description": "Hiệu suất được tối ưu hóa cho trải nghiệm người dùng tốt nhất"
+    "title": "BlaBlo dành cho Cuộc sống bận rộn của bạn",
+    "subtitle": "Được xây dựng để phù hợp với buổi sáng bận rộn và đêm mệt mỏi của bạn.",
+    "sectionTitle": "Gặp gỡ BlaBlo, người bạn tiếng Anh di động của bạn",
+    "listenRepeat": {
+      "title": "Nghe & Lặp lại",
+      "description": "Khám phá từ vựng mới, rèn luyện miệng và não bộ khi di chuyển.",
+      "duration": "Hoạt động 10 phút",
+      "timeTag": "Đi làm buổi sáng"
     },
-    "feature2": {
-      "title": "Bảo mật & Đáng tin cậy",
-      "description": "Bảo mật cấp doanh nghiệp với thời gian hoạt động 99.9%"
+    "flashCards": {
+      "title": "Thẻ Từ Vựng",
+      "description": "Chạm, vuốt và lưu trữ từ mới một cách nhanh chóng.",
+      "duration": "3 phút",
+      "timeTag": "Nghỉ giữa ngày"
     },
-    "feature3": {
-      "title": "Tích hợp dễ dàng",
-      "description": "API đơn giản và tài liệu toàn diện"
-    }
+    "rolePlay": {
+      "title": "Nhập vai Vui vẻ",
+      "description": "Thực hiện một kịch bản, ngủ một giấc và thức dậy với giọng nói tự nhiên.",
+      "duration": "8 phút",
+      "timeTag": "Trước khi đi ngủ"
+    },
+    "speedChallenge": {
+      "title": "Thử thách Tốc độ",
+      "description": "Đánh bại thời gian, rèn luyện khả năng nhớ nhanh và nói trôi chảy hơn.",
+      "duration": "5 phút",
+      "timeTag": "Những ngày sau"
+    },
+    "cta": "Sẵn sàng biến thời gian chết thành tiếng Anh lưu loát?",
+    "ctaButton": "Tải BlaBlo Ngay"
   },
   "testimonials": {
     "title": "Khách hàng nói gì về chúng tôi",
