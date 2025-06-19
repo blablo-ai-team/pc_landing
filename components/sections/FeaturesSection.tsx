@@ -189,27 +189,7 @@ const FeaturesSection: React.FC<FeaturesSectionProps> = ({
           ))}
         </div>
 
-        {/* Bottom CTA */}
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, delay: 0.5 }}
-          className="text-center mt-16"
-        >
-          <p className="font-bricolage text-lg text-gray-700 mb-6">
-            Ready to transform your dead time into fluent English?
-          </p>
-          <button className="inline-flex items-center justify-center gap-2 px-8 py-4 bg-gradient-to-r from-pink-500 to-purple-600 text-white font-bold rounded-full shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105">
-            <Image
-              src="/icons/app_shortcut.svg"
-              alt="Download"
-              width={20}
-              height={20}
-              className="w-5 h-5"
-            />
-            Get BlaBlo Now
-          </button>
-        </motion.div>
+     
       </div>
     </section>
   )
