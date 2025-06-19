@@ -4,6 +4,8 @@ import HeroSection from "@/components/sections/HeroSection";
 import FeaturesSection from "@/components/sections/FeaturesSection";
 import Card3DSection from "@/components/sections/Card3DSection";
 import SpeakingProgressSection from "@/components/sections/SpeakingProgressSection";
+import BlabloForYouSection from "@/components/sections/BlabloForYouSection";
+import KazienSection from "@/components/sections/KazienSection";
 
 export default function Home() {
   const handleGetBlabloClick = () => {
@@ -26,6 +28,11 @@ export default function Home() {
       {/* Speaking Progress Section */}
       <SpeakingProgressSection />
 
+      {/* BlaBló is for You Section */}
+      <BlabloForYouSection />
+
+      {/*KazienSection level  */}
+      <KazienSection/>
       {/* Additional sections can be added here */}
       <div className="py-16 px-4 text-center bg-white">
         <h2 className="font-bricolage text-2xl font-bold text-gray-900 mb-4">
