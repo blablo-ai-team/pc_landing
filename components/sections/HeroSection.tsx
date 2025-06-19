@@ -3,7 +3,7 @@
 import React from 'react'
 import Image from 'next/image'
 import { motion } from 'framer-motion'
-import { heroContent, heroAnimations } from '@/data/hero'
+import { heroContent } from '@/data/hero'
 
 interface HeroSectionProps {
   onGetBlabloClick?: () => void

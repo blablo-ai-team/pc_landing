@@ -22,14 +22,9 @@ const EnhancedTiltCard: React.FC<{
   const x = useSpring(0, { stiffness: 150, damping: 25 })
   const y = useSpring(0, { stiffness: 150, damping: 25 })
   const scaleSpring = useSpring(1, { stiffness: 200, damping: 20 })
-
   // Transform values cho tilt effect với góc nghiêng vừa phải
   const rotateX = useTransform(y, [-0.5, 0.5], [12, -12])
   const rotateY = useTransform(x, [-0.5, 0.5], [-12, 12])
-  
-  // Shadow effect dựa trên tilt
-  const shadowX = useTransform(x, [-0.5, 0.5], [-25, 25])
-  const shadowY = useTransform(y, [-0.5, 0.5], [-25, 25])
 
   const handleMouseMove = (event: React.MouseEvent<HTMLDivElement>) => {
     if (!ref.current) return
@@ -95,7 +90,6 @@ const EnhancedTiltCard: React.FC<{
 }
 
 const FeaturesSection: React.FC<FeaturesSectionProps> = ({
-  title = "BlaBlo is for Your busy life",
   subtitle = "Built to fit your busy mornings and tired nights."
 }) => {
   return (
