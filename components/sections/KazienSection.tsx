@@ -1,5 +1,6 @@
 'use client';
 
+import AppDownload from '@/components/common/AppDownload';
 import { motion } from 'framer-motion';
 import Image from 'next/image';
 import { LineChart, Line, XAxis, ReferenceDot, ResponsiveContainer } from 'recharts';
@@ -294,7 +295,7 @@ export default function KazienSection() {    return (
             >
               Pick your first scenario for free!
             </motion.p>
-
+            <AppDownload/>
 
           </div>
         </section>

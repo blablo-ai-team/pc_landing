@@ -6,7 +6,10 @@ import Card3DSection from "@/components/sections/Card3DSection";
 import SpeakingProgressSection from "@/components/sections/SpeakingProgressSection";
 import BlabloForYouSection from "@/components/sections/BlabloForYouSection";
 import KazienSection from "@/components/sections/KazienSection";
-import DownloadAppSection from "@/components/sections/DownloadAppSection";
+import TestimonialsSection from "@/components/sections/TestimonialsSection";
+import FreeAppSection from "@/components/sections/FreeAppSection";
+import GameModeCarousel from "@/components/sections/GameModeSection";
+import FooterSection from "@/components/sections/FooterSection";
 
 export default function Home() {
   const handleGetBlabloClick = () => {
@@ -35,8 +38,19 @@ export default function Home() {
       {/*KazienSection level  */}
       <KazienSection/>
       
+      {/* Testimonials Section */}
+      <TestimonialsSection />
+      
+      {/* Free App Section */}
+      <FreeAppSection />
+      
+      <GameModeCarousel/>
+      
+      {/* Footer Section */}
+      <FooterSection />
+      
       {/* Download App Section with our new component */}
-      <DownloadAppSection />
+      {/* <DownloadAppSection /> */}
       
       {/* Additional sections can be added here */}
       <div className="py-16 px-4 text-center bg-white">

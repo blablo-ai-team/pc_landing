@@ -15,7 +15,7 @@ export const RegionData: Region[] = [
     name: "Yuki",
     subname: "Finance Officer",
     image: {
-      src: "/images/category/🇯🇵.svg",
+      src: "/images/category/🇯🇵.png",
       alt: "description of image"
     },
     content: "Metro rides became speaking time; BlaBlo’s adaptive scenarios helped me master my quarterly budget talk in English. My boss (and even me) was really impressed!",
@@ -25,7 +25,7 @@ export const RegionData: Region[] = [
     name: "Ji-yeon",
     subname: "Customer Support Agent",
     image: {
-      src: "/images/category/🇰🇷.svg",
+      src: "/images/category/🇰🇷.png",
       alt: "description of image"
     },
     content: "I used to memorize scripts. BlaBlo taught me to think in English. In six weeks my call-resolution score topped the team!",
@@ -35,49 +35,49 @@ export const RegionData: Region[] = [
     name: "Naree K.",
     subname: "Finance Officer",
     image: {
-      src: "a",
+      src: "/images/category/🇹🇭.png",
       alt: "description of image"
     },
-    content: "Metro rides became speaking time; BlaBlo’s adaptive scenarios helped me master my quarterly budget talk in English. My boss (and even me) was really impressed!",
+    content: "I practiced BlaBlo’s 5-minute greeting drills during laundry duty—after two weeks guests noticed, tips went up.",
   },
   {
-    id:2,
-    name: "Yuki",
-    subname: "Finance Officer",
+    id:4,
+    name: "Arjun Rao",
+    subname: "Data Analyst",
     image: {
-      src: "a",
+      src: "/images/category/🇮🇩.png",
       alt: "description of image"
     },
-    content: "Metro rides became speaking time; BlaBlo’s adaptive scenarios helped me master my quarterly budget talk in English. My boss (and even me) was really impressed!",
+    content: "I wash dishes while my kids finish homework. 10 mins voice drills sound simple, but they pushed me from A2 to solid B1 in three months.",
   },
   {
-    id:2,
-    name: "Yuki",
-    subname: "Finance Officer",
+    id:5,
+    name: "Thảo",
+    subname: "Sales Engineer",
     image: {
-      src: "a",
+      src: "/images/category/🇻🇳.png",
       alt: "description of image"
     },
-    content: "Metro rides became speaking time; BlaBlo’s adaptive scenarios helped me master my quarterly budget talk in English. My boss (and even me) was really impressed!",
+    content: "My product demos are full of technical words, so I created some demo scenarios in BlaBlo and got a tailored lesson that drilled every tricky term.",
   },
   {
-    id:2,
-    name: "Yuki",
-    subname: "Finance Officer",
+    id:6,
+    name: "Faisal",
+    subname: "Sales Executive",
     image: {
-      src: "a",
+      src: "/images/category/🇸🇦.png",
       alt: "description of image"
     },
-    content: "Metro rides became speaking time; BlaBlo’s adaptive scenarios helped me master my quarterly budget talk in English. My boss (and even me) was really impressed!",
+    content: "I echoed BlaBlo scripts on my 40-minute Riyadh commute—last month I closed a deal fully in English.",
   },
   {
-    id:2,
-    name: "Yuki",
-    subname: "Finance Officer",
+    id:7,
+    name: "Intan Rahayu",
+    subname: "Startup Founder",
     image: {
-      src: "a",
+      src: "/images/category/🇮🇳.png",
       alt: "description of image"
     },
-    content: "Metro rides became speaking time; BlaBlo’s adaptive scenarios helped me master my quarterly budget talk in English. My boss (and even me) was really impressed!",
+    content: "I practise investor pitches while jogging. Investors in Singapore said my delivery felt ‘global’—BlaBlo gets credit for that.",
   },
 ];

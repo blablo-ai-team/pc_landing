@@ -28,7 +28,8 @@ export default function DownloadAppSection() {
           transition={{ duration: 0.5, delay: 0.3 }}
         >
           <p>Join thousands of learners already improving their English skills</p>
-        </motion.div>                 <AppDownload 
+        </motion.div>                
+         <AppDownload 
           className="mt-12"
           qrCodeSize={80}
           qrContainerWidth={200}
