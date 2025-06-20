@@ -4,41 +4,41 @@ import React from 'react';
 import Image from 'next/image';
 
 // Card data with proper icons and colors
-const cards = [
-  { 
-    width: 56,
-    height: 276,
-    // title: "Listen\nRepeat", 
-    color: "bg-green-500", 
-    // icon: "/images/features/listen-repeat.png"
-  },
-  { 
-    width: 146,
-    height: 320,
-    title: "Flash\ncards", 
-    color: "bg-orange-400", 
-    icon: "/images/features/flash-cards.png"
-  },
-  { 
-    width: 196,
-    height: 320,
-    title: "Role\nplay", 
-    color: "bg-pink-500", 
-    icon: "/images/features/role-play.png"
-  },
-  { 
-    width: 146,
-    height: 320,
-    title: "Speed\nSprint", 
-    color: "bg-blue-600", 
-    icon: "/images/features/speed-challenge.png"
-  },
-  {
-    width: 56,
-    height: 276,
-    color: "bg-red-500",
-  }
-];
+// const cards = [
+//   { 
+//     width: 56,
+//     height: 276,
+//     // title: "Listen\nRepeat", 
+//     color: "bg-green-500", 
+//     // icon: "/images/features/listen-repeat.png"
+//   },
+//   { 
+//     width: 146,
+//     height: 320,
+//     title: "Flash\ncards", 
+//     color: "bg-orange-400", 
+//     icon: "/images/features/flash-cards.png"
+//   },
+//   { 
+//     width: 196,
+//     height: 320,
+//     title: "Role\nplay", 
+//     color: "bg-pink-500", 
+//     icon: "/images/features/role-play.png"
+//   },
+//   { 
+//     width: 146,
+//     height: 320,
+//     title: "Speed\nSprint", 
+//     color: "bg-blue-600", 
+//     icon: "/images/features/speed-challenge.png"
+//   },
+//   {
+//     width: 56,
+//     height: 276,
+//     color: "bg-red-500",
+//   }
+// ];
 
 export default function GameModeSection() {
   return (
