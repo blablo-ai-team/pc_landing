@@ -53,16 +53,15 @@ export default function BlabloForYouSection() {
             <div className="flex flex-col space-y-5 pt-4">
               {/* AI Icon and First Message */}
               <div className="flex items-start space-x-4">                {/* Rainbow AI Icon */}
-                <div className="relative w-[40px] h-[40px]">
-                  <div className="absolute inset-0 rounded-full bg-gradient-to-br from-[#FF5757] via-[#8C52FF] to-[#00A3FF] opacity-70 blur-sm"></div>
-                  <div className="absolute inset-0 rounded-full bg-gradient-to-br from-[#FF5757] via-[#8C52FF] to-[#00A3FF]"></div>
-                  <div className="absolute inset-[3px] rounded-full flex items-center justify-center bg-white">
+                <div className="relative w-[40px]  ">
+               
+                  <div className="absolute inset-[3px]  rounded-full flex items-center justify-center bg-white">
                     <Image 
                       src="/icons/chat_ai.svg" 
                       alt="AI Assistant" 
-                      width={24} 
-                      height={24} 
-                      className="w-6 h-6"
+                      width={94} 
+                      height={94} 
+                      className="w-[94px]  scale-150"
                     />
                   </div>
                 </div>

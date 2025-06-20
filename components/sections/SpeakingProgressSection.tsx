@@ -21,9 +21,9 @@ export default function SpeakingProgressSection() {
             <h3 className="font-bricolage text-xl lg:text-2xl font-bold text-gray-900 mb-4 lg:mb-6 leading-tight">
               Our only goal: Help you <span className="text-pink-500 font-bold">say what you want</span>, in english.
             </h3>
-            <p className="font-bricolage text-gray-700 mb-6 lg:mb-8 text-base lg:text-lg leading-relaxed">
-              So we get you talking early, often, anywhere. Skip perfect accents, making your point is what matters!
-            </p>               
+            <p className="font-inter text-black font-bold mb-6 lg:mb-8 text-base lg:text-lg leading-relaxed">
+
+So we’ll get you talking early, often, anywhere. Skip perfect accents, making your point is what matters!            </p>               
              <div className="flex justify-center items-end flex-1 lg:pb-0 -mb-6 lg:-mb-2 lg:-translate-y-1">
               <div className="relative">
                 <Image
