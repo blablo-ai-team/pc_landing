@@ -42,17 +42,24 @@ const cards = [
 
 export default function GameModeSection() {
   return (
-    <section className="py-16 bg-black relative overflow-hidden">
-      <div className="max-w-7xl mx-auto px-4">
+    <section className="py-16 bg-white relative overflow-hidden">
+      <div className="max-w-7xl mx-auto px-4 flex justify-center items-center">
+         <Image
+                            src={"/images/flash_card.png"}
+                            alt={'Game mode'}
+                            width={500}
+                            height={500}
+                            className="object-contain "
+                          />
         {/* Section Header */}
-        <div className="text-center mb-12">
+        {/* <div className="text-center mb-12">
           <h2 className="text-4xl md:text-5xl font-bold text-white mb-4">
             Game Modes
           </h2>
           <p className="text-gray-400 text-lg max-w-2xl mx-auto">
             Choose your learning style with our interactive game modes
           </p>
-        </div>        {/* Fixed 3D Cards Layout */}
+        </div>       
         <div className="flex justify-center items-center gap-2 md:gap-4  py-12 perspective-1000">
           {cards.map((card, index) => {
             // Center card is index 2 (Role play - pink) for 5 cards
@@ -87,7 +94,6 @@ export default function GameModeSection() {
                     height: `${card.height}px`,
                   }}
                 >
-                  {/* Icon at top-left - only show if card has icon */}
                   {card.icon && (
                     <div className="absolute top-4 md:top-6 left-4 md:left-6">
                       <div className="w-10 md:w-12 h-10 md:h-12 bg-white rounded-full flex items-center justify-center shadow-lg">
@@ -106,7 +112,6 @@ export default function GameModeSection() {
                     </div>
                   )}
 
-                  {/* Title at bottom - only show if card has title */}
                   {card.title && (
                     <div className="absolute bottom-6 md:bottom-8 left-4 md:left-6 right-4 md:right-6">
                       <h3 className="text-white text-2xl md:text-4xl font-bold whitespace-pre-line leading-tight">
@@ -115,7 +120,6 @@ export default function GameModeSection() {
                     </div>
                   )}
 
-                  {/* Center card highlight */}
                   {isCenter && (
                     <div className="absolute inset-0 rounded-[2rem] ring-2 md:ring-4 ring-white/20"></div>
                   )}
@@ -123,7 +127,7 @@ export default function GameModeSection() {
               </div>
             );
           })}
-        </div>
+        </div> */}
       </div>
 
       <style jsx>{`

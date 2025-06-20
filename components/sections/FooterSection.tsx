@@ -17,7 +17,7 @@ const socialLinks = [
     url: 'https://tiktok.com/@blablo'
   },
   {
-    name: 'YouTube',
+    name: 'Threads',
     icon: '/icons/socal/Vector-1.svg',
     url: 'https://youtube.com/@blablo'
   },
@@ -27,7 +27,7 @@ const socialLinks = [
     url: 'https://instagram.com/blablo'
   },
   {
-    name: 'Threads',
+    name: 'YouTube',
     icon: '/icons/socal/Group.svg',
     url: 'https://threads.net/@blablo'
   },
@@ -39,42 +39,54 @@ const socialLinks = [
 ];
 
 export default function FooterSection() {
-  return (
-    <footer className="relative bg-gradient-to-br from-green-50 via-pink-50 to-blue-50 py-20 overflow-hidden">
-      {/* Background decoration */}
-      <div className="absolute inset-0 bg-gradient-to-br from-green-100/30 via-pink-100/40 to-blue-100/30"></div>
+  return (   
+     <footer className="relative bg-neutral-50 py-20 overflow-hidden">
+   
       
       <div className="relative max-w-4xl mx-auto px-4">
         {/* Follow us text */}
         <div className="text-center mb-6">
           <p className="text-gray-600 text-sm">
-            Follow us for new feature updates
+            <span className='text-black font-bold'>Follow us </span>for new feature updates
           </p>
         </div>
 
         {/* Social Media Icons */}
-        <div className="flex justify-center items-center gap-3 mb-16">
+        <div className="flex justify-center items-center gap-6 mb-16">
           {socialLinks.map((social, index) => (
             <a
               key={index}
               href={social.url}
               target="_blank"
               rel="noopener noreferrer"
-              className="w-14 h-14 bg-white rounded-2xl flex items-center justify-center shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105"
+              className="w-[168px] h-[100px] bg-[hsl(240,24%,96%)] rounded-xl flex items-center justify-center shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105"
               aria-label={social.name}
             >
               <Image
                 src={social.icon}
                 alt={social.name}
-                width={28}
-                height={28}
+                width={social.name == "YouTube" || social.name =="Facebook" ? 100 :30}
+                height={50}
                 className="object-contain"
               />
             </a>
           ))}
         </div>
 
-        {/* Blablo Logo */}
+      <div>
+
+      </div >
+
+      <div    
+        className='mt-30'
+        style={{
+          position:"relative",
+          backgroundImage: 'url(/images/footer-background.png)',
+          backgroundSize: 'cover',
+          backgroundPosition: 'center',
+          backgroundRepeat: 'no-repeat'
+        }}>
+  {/* Blablo Logo */}
         <div className="text-center mb-6">
           <Image
             src="/images/blablo-logo.svg"
@@ -88,14 +100,16 @@ export default function FooterSection() {
         {/* Tagline */}
         <div className="text-center mb-16">
           <p className="text-gray-700 text-lg font-medium max-w-lg mx-auto leading-relaxed">
-            Designed with ❤️ to feel as fast as love moments, by Kazié teamwork.
-          </p>
+Designed and built for busy learners, by busy learners.          </p>
+<p>© 2025 BlaBlo, Inc. All rights reserved</p>
         </div>
 
         {/* App Download Section */}
         <div className="max-w-lg mx-auto mb-12">
           <AppDownload />
         </div>
+      </div>
+      
       </div>
     </footer>
   );

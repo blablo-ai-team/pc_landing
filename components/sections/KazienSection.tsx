@@ -30,7 +30,7 @@ export default function KazienSection() {    return (
                 transition={{ duration: 0.6 }}
                 className="text-[#ABEEBC] font-bricolage font-normal text-4xl sm:text-5xl md:text-6xl lg:text-[98px] leading-[100%] text-center mb-10 md:mb-20 md:-translate-y-2"
             >
-              Grow the Kaizen way
+              <span className='text-white'>Grow</span> the <span className='text-white'>Kaizen</span> way
             </motion.h1>            
             
             {/* Main container with increased height to accommodate the large tree */} 
