@@ -8,9 +8,9 @@ const Card3DSection: React.FC = () => {
 
 
   return (
-    <section className="w-full h-[300px] pt-20 pb-16 ">
+    <section className="w-full h-[300px] pt-20 pb-16 bg-neutral-50 ">
       <div className="max-w-7xl ">
-        <div className="flex justify-center items-center w-full">
+        <div className="flex justify-center items-center w-full ">
             <Image
                     src={'/images/card3d.png'}
                   alt="car3d"
