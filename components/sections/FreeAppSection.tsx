@@ -18,7 +18,7 @@ export default function FreeAppSection() {
         >          <h2 className="text-2xl md:text-3xl text-black font-bold mb-4">
             And it&apos;s
           </h2>
-          <h1 className="text-6xl md:text-8xl font-bold text-black mb-6">
+          <h1 className="text-6xl sm:text-8xl md:text-9xl font-bold text-black mb-6">
             Free
           </h1>
           <p className="text-gray-600 max-w-lg  mx-auto text-2xl">

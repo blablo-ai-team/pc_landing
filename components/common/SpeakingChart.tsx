@@ -20,6 +20,7 @@ const data = [
   { day: 'SAT', minutes: 70, color: '#EE33DF' },
   { day: 'SUN', minutes: 108, color: '#EE33DF' },
 ];
+import { motion } from 'framer-motion';
 
 interface CustomDotProps {
   cx?: number;
@@ -72,7 +73,11 @@ const CustomLabel = (props: CustomLabelProps) => {
 
 export default function SpeakingChart() {
   return (
-    <div className=" h-96 p-2 bg-gradient-to-br rounded-2xl">
+    <motion.div
+       initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: 0.2 }}
+    className=" h-96 p-2 bg-gradient-to-br rounded-2xl">
       <ResponsiveContainer width="100%" height="100%">
         <ComposedChart data={data} margin={{ top: 40, right: 80, bottom: 60, left: 40 }}>
           <defs>
@@ -134,6 +139,6 @@ export default function SpeakingChart() {
           />
         </ComposedChart>
       </ResponsiveContainer>
-    </div>
+    </motion.div>
   );
 }

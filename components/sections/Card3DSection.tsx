@@ -1,89 +1,78 @@
 'use client'
 
-import React, { useRef, useEffect } from 'react'
 import Image from 'next/image'
-import { motion, useAnimation } from 'framer-motion'
-import { galleryCards } from '@/data/features'
+
 
 const Card3DSection: React.FC = () => {
 
-  const containerRef = useRef<HTMLDivElement>(null)
-  const controls = useAnimation()
 
-  useEffect(() => {
-    controls.start({ opacity: 1, y: 0 })
-  }, [controls])
 
   return (
-    <section className="w-full bg-white pt-2 pb-16 overflow-hidden">
-      <div className="max-w-7xl mx-auto px-4">
-        
+    <section className="w-full h-[300px] pt-20 pb-16 ">
+      <div className="max-w-7xl ">
+        <div className="flex justify-center items-center w-full">
+            <Image
+                    src={'/images/card3d.png'}
+                  alt="car3d"
+                    fill
+                   
+                    // priority={index === 0 || index === total - 1}
+                    className="object-contain mt-20 translate-y-[600px]"
+                  
+                  />
+        </div>
+    
         {/* Cards Container - Elliptical/Curved Layout */}
-        <motion.div
-          ref={containerRef}
-          initial={{ opacity: 0, y: 50 }}
-          animate={controls}
-          transition={{ duration: 0.8 }}
-          className="flex justify-center items-end gap-1 sm:gap-2 relative py-12"
-          style={{
-            transform: 'perspective(1000px)',
-          }}
-        >            {galleryCards.map((card, index) => {
-            const total = galleryCards.length
-            const middle = Math.floor(total / 2)
-            
-            // Calculate position in the arc
-            // Adjust scale for first and last cards to make them more prominent
-            let scale = 1.0
-            let zIndex = 10
-            let opacity = 1
-            let translateY = 0
-            
-            // First card and last card should be visible and prominent
-            if (index === 0 || index === total - 1) {
-              scale = 1.1  // Make first and last cards larger
-              zIndex = 20  // Ensure they appear above other cards
-              opacity = 1
-            } else if (index === 1 || index === total - 2) {
-              scale = 0.95
-              zIndex = 15
-            } else {
-              // Middle cards
-              scale = 0.9
-              zIndex = 10
-              // Cards closer to the center are higher up
-              const distanceFromMiddle = Math.abs(index - middle)
-              if (distanceFromMiddle < 2) {
-                translateY = -10
-              }
-            }
-            
-            // Calculate rotations for the curved effect
-            const rotationY = (index - middle) * 10 // Horizontal rotation
-            const rotationZ = (index - middle) * 2  // Slight Z rotation for more depth
+        {/* <div className="flex justify-center items-center w-full">
+          <motion.div
+            ref={containerRef}
+            initial={{ opacity: 0, y: 50 }}
+            animate={controls}
+            transition={{ duration: 0.8 }}
+            className="relative mx-auto"            style={{
+              width: '1200px',
+              height: '600px',
+              perspective: '2000px',
+              perspectiveOrigin: 'center center',
+            }}
+          >
+            {galleryCards.map((card, index) => {
+            const offset = index - center;
+        const rotate = offset * 6; // Góc nghiêng theo vị trí
+        const offsetY = Math.abs(offset) * 20; // Dịch xuống theo độ cong
+        const zIndex = 100 - Math.abs(offset); // Ưu tiên thẻ giữa
             
             return (
               <motion.div
                 key={card.id}
                 initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: opacity, y: 0 }}
+                animate={{ opacity: 1, y: 0 }}
                 transition={{ 
                   duration: 0.6, 
                   delay: index * 0.05,
                   type: "spring",
                   stiffness: 100
                 }}
-                className="flex-shrink-0 relative"
-                style={{
-                  transform: `perspective(1200px) rotateY(${rotationY}deg) rotateZ(${rotationZ}deg) scale(${scale}) translateY(${translateY}px)`,
-                  transformOrigin: 'center bottom',
-                  zIndex: zIndex
-                }}
-              >                <div
-                  className="relative overflow-hidden rounded-2xl shadow-lg"
+                // className="absolute group cursor-pointer"
                   style={{
-                    width: `${(card.width || 276) * 0.9}px`, // Slightly reduce base size for better spacing
-                    height: `${(card.height || 400) * 0.9}px`,
+        transform: `rotate(${rotate}deg) translateY(${offsetY}px)`,
+        zIndex: zIndex,
+      }}
+      whileHover={{ scale: 1.1 }}
+      className="rounded-2xl shadow-xl overflow-hidden w-[clamp(180px,18vw,240px)] transition-all duration-300"
+              >                <div
+                  className="relative overflow-hidden rounded-2xl shadow-2xl border border-white/20"
+                  style={{
+                    width: `276px`,
+                    height: `400px`,
+                    boxShadow: `
+                      0 ${15 + zIndex}px ${30 + zIndex}px rgba(0, 0, 0, 0.2),
+                      0 0 0 1px rgba(255, 255, 255, 0.1),
+                      inset 0 1px 0 rgba(255, 255, 255, 0.2)
+                    `,
+                    background: '#D1D1D6',
+                    backdropFilter: 'blur(8px)',
+                    borderRadius: '16px',
                   }}
                 >
                   <Image
@@ -91,17 +80,22 @@ const Card3DSection: React.FC = () => {
                     alt={card.imageAlt || card.title}
                     fill
                     sizes="(max-width: 768px) 80vw, 300px"
-                    priority={index === 0 || index === total - 1} // Prioritize loading of important cards
-                    className="object-cover"
+                    // priority={index === 0 || index === total - 1}
+                    className="object-cover transition-transform duration-500 hover:scale-105"
+                    style={{
+                      borderRadius: '16px',
+                      filter: 'brightness(1.05) contrast(1.1) saturate(1.1)',
+                    }}
                   />
                 </div>
               </motion.div>
             )
           })}
         </motion.div>
+      </div> */}
       </div>
     </section>
-  )
+)
 }
 
 export default Card3DSection

@@ -137,12 +137,11 @@ export default function BlabloForYouSection() {
             </h3>
           </div>
             {/* Alternate direction marquees - 4 rows */}
-          <div className="flex flex-col gap-6">
-            {/* Row 1 - Right to Left */}
+          <div className="flex flex-col gap-6">            {/* Row 1 - Right to Left */}
             <div className="marquee-container overflow-hidden">
               <div className="marquee-row marquee-row-rtl">
-                {/* Duplicate content for seamless loop */}
-                {[...Array(2)].map((_, dupIndex) => (
+                {/* Triple content for seamless infinite loop */}
+                {[...Array(3)].map((_, dupIndex) => (
                   <div key={`rtl-1-${dupIndex}`} className="flex whitespace-nowrap">
                     {blabloForYouData.arrayrandom.slice(0, 1).map((group, groupIndex) => (
                       <div key={`rtl-1-${dupIndex}-${groupIndex}`} className="flex items-center">
@@ -158,11 +157,10 @@ export default function BlabloForYouSection() {
                 ))}
               </div>
             </div>
-            
-            {/* Row 2 - Left to Right */}
+              {/* Row 2 - Left to Right */}
             <div className="marquee-container overflow-hidden">
               <div className="marquee-row marquee-row-ltr">
-                {[...Array(2)].map((_, dupIndex) => (
+                {[...Array(4)].map((_, dupIndex) => (
                   <div key={`ltr-2-${dupIndex}`} className="flex whitespace-nowrap">
                     {blabloForYouData.arrayrandom.slice(1, 2).map((group, groupIndex) => (
                       <div key={`ltr-2-${dupIndex}-${groupIndex}`} className="flex items-center">
@@ -178,11 +176,10 @@ export default function BlabloForYouSection() {
                 ))}
               </div>
             </div>
-            
-            {/* Row 3 - Right to Left */}
+              {/* Row 3 - Right to Left */}
             <div className="marquee-container overflow-hidden">
-              <div className="marquee-row marquee-row-rtl" style={{ animationDuration: "35s" }}>
-                {[...Array(2)].map((_, dupIndex) => (
+              <div className="marquee-row marquee-row-rtl" >
+                {[...Array(3)].map((_, dupIndex) => (
                   <div key={`rtl-3-${dupIndex}`} className="flex whitespace-nowrap">
                     {blabloForYouData.arrayrandom.slice(2, 3).map((group, groupIndex) => (
                       <div key={`rtl-3-${dupIndex}-${groupIndex}`} className="flex items-center">
@@ -198,11 +195,10 @@ export default function BlabloForYouSection() {
                 ))}
               </div>
             </div>
-            
-            {/* Row 4 - Left to Right */}
+              {/* Row 4 - Left to Right */}
             <div className="marquee-container overflow-hidden">
-              <div className="marquee-row marquee-row-ltr" style={{ animationDuration: "40s" }}>
-                {[...Array(2)].map((_, dupIndex) => (
+              <div className="marquee-row marquee-row-ltr" >
+                {[...Array(3)].map((_, dupIndex) => (
                   <div key={`ltr-4-${dupIndex}`} className="flex whitespace-nowrap">
                     {blabloForYouData.arrayrandom.slice(3, 4).map((group, groupIndex) => (
                       <div key={`ltr-4-${dupIndex}-${groupIndex}`} className="flex items-center">
@@ -223,28 +219,60 @@ export default function BlabloForYouSection() {
       </div>      <style jsx>{`
         .marquee-container {
           width: 100%;
-          position: relative;
           overflow: hidden;
+          white-space: nowrap;
+          mask-image: linear-gradient(
+            to right,
+            transparent 0%,
+            black 5%,
+            black 95%,
+            transparent 100%
+          );
+          -webkit-mask-image: linear-gradient(
+            to right,
+            transparent 0%,
+            black 5%,
+            black 95%,
+            transparent 100%
+          );
         }
+        
         .marquee-row {
           display: flex;
-          position: relative;
-          white-space: nowrap;
+          width: fit-content;
           will-change: transform;
         }
+          .marquee-row-ltr {
+          animation: scroll-left-to-right 100s linear infinite;
+        }
+        
         .marquee-row-rtl {
-          animation: scroll-rtl 30s linear infinite;
+          animation: scroll-right-to-left 100s linear infinite;
         }
-        .marquee-row-ltr {
-          animation: scroll-ltr 30s linear infinite;
+        
+        @keyframes scroll-left-to-right {
+          0% { transform: translateX(-66.666%); }
+          100% { transform: translateX(0%); }
         }
-        @keyframes scroll-rtl {
-          0% { transform: translateX(0); }
-          100% { transform: translateX(-50%); }
+        
+        @keyframes scroll-right-to-left {
+          0% { transform: translateX(0%); }
+          100% { transform: translateX(-66.666%); }
         }
-        @keyframes scroll-ltr {
-          0% { transform: translateX(-50%); }
-          100% { transform: translateX(0); }
+        
+        /* Pause animation on hover for better UX */
+        .marquee-container:hover .marquee-row {
+          animation-play-state: paused;
+        }
+        
+        /* Smooth transitions */
+        .marquee-row span {
+          transition: all 0.2s ease;
+        }
+        
+        /* Add subtle hover effect */
+        .marquee-container:hover span {
+          opacity: 0.7;
         }
       `}</style>
     </section>

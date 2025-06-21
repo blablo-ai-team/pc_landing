@@ -1,5 +1,6 @@
 'use client'
 
+import Header from "@/components/common/Header";
 import HeroSection from "@/components/sections/HeroSection";
 import FeaturesSection from "@/components/sections/FeaturesSection";
 import Card3DSection from "@/components/sections/Card3DSection";
@@ -19,9 +20,10 @@ export default function Home() {
 
   return (
     <div className="min-h-screen">
-      <HeroSection
-        onGetBlabloClick={handleGetBlabloClick}
-      />
+      {/* Sticky Header */}
+      <Header onGetBlabloClick={handleGetBlabloClick} />
+      
+      <HeroSection/>
 
       {/* 3D Cards Section */}
       <Card3DSection />

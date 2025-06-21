@@ -2,20 +2,29 @@
 
 import SpeakingChart from '../common/SpeakingChart';
 import Image from 'next/image';
+import { motion } from 'framer-motion';
 
 export default function SpeakingProgressSection() {
   return (
-    <section className="py-16 px-4  bg-gradient-to-br from-gray-50 to-purple-50">
-      <div className="mx-auto max-w-5xl">
-        <div className="text-center mb-12">
+    <section className="py-16 px-4  bg-gradient-to-br from-gray-50 to-purple-50  overflow-visible " style={{ overflow: 'visible' }}>
+      <div className="mx-auto max-w-5xl overflow-visible" style={{ overflow: 'visible' }}>
+        <motion.div 
+          initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6 }}
+        className="text-center mb-12">
           <h2 className="font-bricolage text-4xl font-light text-gray-900 mb-4">
             BlaBlo is for <span className="font-bold ">Speaking</span>
           </h2>
           <p className="font-bricolage text-lg text-black max-w-2xl mx-auto">
             Just “blablo” it!
           </p>
-        </div>      
-          <div className="flex flex-col lg:flex-row lg:gap-[26px] gap-6 lg:justify-start">
+        </motion.div>      
+          <motion.div 
+               initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.7 }}
+          className="flex flex-col lg:flex-row lg:gap-[26px] gap-6 lg:justify-start">
           {/* Left Content */}
           <div className="bg-white rounded-3xl p-6 lg:p-8 shadow-lg h-auto lg:h-[551px] lg:w-[358px] flex flex-col lg:flex-shrink-0">
             <h3 className="font-bricolage text-xl lg:text-2xl font-bold text-gray-900 mb-4 lg:mb-6 leading-tight">
@@ -56,7 +65,7 @@ So we’ll get you talking early, often, anywhere. Skip perfect accents, making 
               </div>
             </div>
           </div>
-        </div>
+        </motion.div>
       </div>
     </section>
   );

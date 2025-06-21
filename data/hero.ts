@@ -6,6 +6,7 @@ export interface HeroContent {
       text: string
       iconSrc: string
       iconAlt: string
+      iconSticky :string,
     }
   }
   headline: {
@@ -44,8 +45,9 @@ export const heroContent: HeroContent = {
     logoAlt: 'BlaBló',
     ctaButton: {
       text: 'Get BlaBlo',
-      iconSrc: '/icons/app_shortcut.svg',
-      iconAlt: 'App shortcut'
+      iconSrc: '/icons/arrow_forward.svg',
+      iconAlt: 'App shortcut',
+       iconSticky : '/icons/arrow_forward_pink.svg',
     }
   },
   headline: {

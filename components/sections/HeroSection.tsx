@@ -4,46 +4,14 @@ import React from 'react'
 import Image from 'next/image'
 import { motion } from 'framer-motion'
 import { heroContent } from '@/data/hero'
+import AppDownload from '@/components/common/AppDownload'
 
-interface HeroSectionProps {
-  onGetBlabloClick?: () => void
-}
 
-const HeroSection: React.FC<HeroSectionProps> = ({
-  onGetBlabloClick
-}) => {
-  return (    <section className="w-full bg-gray-50 py-20 2xl:py-32">
+export default  function HeroSection () {
+  return (
+    <section className="w-full bg-neutral-50 py-20 2xl:py-32">
       <div className="max-w-7xl 2xl:max-w-8xl mx-auto px-4 sm:px-6 lg:px-8 2xl:px-12">
         
-        {/* Top Navigation Bar */}
-        <div className="flex flex-col sm:flex-row justify-between items-center mb-16">          {/* Logo */}
-          <div className="mb-4 sm:mb-0">
-            <Image
-              src={heroContent.branding.logoSrc}
-              alt={heroContent.branding.logoAlt}
-              width={120}
-              height={40}
-              className="h-10 w-auto"
-              priority
-            />
-          </div>          {/* Get BlaBlo Button */}
-          <button
-            onClick={onGetBlabloClick}
-            className="inline-flex cursor-pointer items-center justify-center gap-1 px-8 py-3 bg-white border border-[#C7C7CC] rounded-3xl shadow-[0px_4px_0px_0px_#DFDFDF] transition-all duration-200 hover:translate-y-0.5 hover:shadow-[0px_2px_0px_0px_#DFDFDF] active:translate-y-1 active:shadow-none"
-          >
-            <Image
-              src={heroContent.branding.ctaButton.iconSrc}
-              alt={heroContent.branding.ctaButton.iconAlt}
-              width={20}
-              height={20}
-              className="w-5 h-5"
-            />
-            <span className="text-[#EE33DF] text-center font-bricolage text-base font-bold leading-[100%]">
-              {heroContent.branding.ctaButton.text}
-            </span>
-          </button>
-        </div>
-
         {/* Main Content */}
         <div className="text-center">
             {/* Main Headline */}
@@ -126,90 +94,7 @@ const HeroSection: React.FC<HeroSectionProps> = ({
               {heroContent.callToAction.boostText}
             </p>
           </motion.div>
-          {/* CTA Buttons with QR Codes */}
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.4 }}
-            className="flex flex-col sm:flex-row gap-8 justify-center items-center"
-          >
-              {/* Google Play */}
-            <div className="flex flex-col items-center">
-              <a
-                href={heroContent.appStores.googlePlay.url}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="transition-transform hover:scale-105 mb-4"
-              >
-                <Image
-                  src={heroContent.appStores.googlePlay.buttonImage}
-                  alt={heroContent.appStores.googlePlay.alt}
-                  width={200}
-                  height={60}
-                  className="h-auto w-[176px]"
-                />
-              </a>
-                {/* Google Play QR Code */}
-              <div 
-                className="bg-white border-gray-300 flex items-center justify-center p-4"
-                style={{
-                  width: '176px',
-                  height: '104px',
-                  flexShrink: 0,
-                  borderRadius: '8px',
-                  border: '1px solid #D1D1D6',
-                  background: '#FFF'
-                }}
-              >
-                <Image
-                  src={heroContent.appStores.googlePlay.qrCode}
-                  alt="Google Play QR Code"
-                  width={80}
-                  height={80}
-                  className="object-contain"
-                />
-              </div>
-            </div>
-
-            {/* App Store */}
-            <div className="flex flex-col items-center">
-                
-              <a
-                href={heroContent.appStores.appStore.url}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="transition-transform hover:scale-105 mb-4"
-              >
-                <Image
-                  src={heroContent.appStores.appStore.buttonImage}
-                  alt={heroContent.appStores.appStore.alt}
-                  width={200}
-                  height={60}
-                  className="h-auto w-[176px]"
-                />
-              </a>
-              
-              {/* App Store QR Code */}
-              <div className="bg-white border-gray-300 flex items-center justify-center p-4"
-                style={{
-                  width: '176px',
-                  height: '104px',
-                  flexShrink: 0,
-                  borderRadius: '8px',
-                  border: '1px solid #D1D1D6',
-                  background: '#FFF'
-                }}>
-                <Image
-                  src={heroContent.appStores.appStore.qrCode}
-                  alt="App Store QR Code"
-                  width={64}
-                  height={64}
-                  className="w-full h-full object-contain"
-                />
-              </div>
-            </div>
-          </motion.div>
-
+          <AppDownload/>
        
         </div>
       </div>
@@ -217,4 +102,3 @@ const HeroSection: React.FC<HeroSectionProps> = ({
   )
 }
 
-export default HeroSection
