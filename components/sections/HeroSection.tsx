@@ -22,7 +22,7 @@ export default  function HeroSection () {
             className="mb-8"
           >            
           <h1 className="font-bricolage text-4xl sm:text-5xl lg:text-6xl 2xl:text-7xl font-bold leading-tight">
-              <div className="text-gray-900  mb-2 2xl:mb-4 text-[80px]">
+              <div className="text-gray-900  mb-2 2xl:mb-4  text-[36px] sm:text-[80px]">
                 {heroContent.headline.mainText}
               </div>             
                <div className="relative inline-block">              

@@ -42,12 +42,15 @@ import Image from 'next/image';
 
 export default function GameModeSection() {
   return (
-    <section className="py-16 bg-white relative overflow-hidden">
-      <div className="max-w-7xl mx-auto px-4 flex justify-center items-center">
+    <section className="py-[120px] lg:py-[160px]  section-bg relative overflow-hidden">
+      <div className="max-w-7xl mx-auto px-4 flex flex-col justify-center items-center">
+        <p
+        className='w-[380px] lg:w-[635px] mb-12 text-center font-inter text-[18px] lg:text-[24px]  px-[20px] lg:px-0 font-medium leading-[150%] text-[#8E8E93] lg:text-[color:var(--Grays-Gray-2,#AEAEB2)]'
+        >Role play, Flashcards, Speedchallenge & more fun features roll out shortly. <br className='sm:hidden '></br>  <br className='sm:hidden '></br>Join early and grow with us!</p>
          <Image
-                            src={"/images/flash_card.png"}
+                            src={"/images/flash_card_1.png"}
                             alt={'Game mode'}
-                            width={500}
+                            width={800}
                             height={500}
                             className="object-contain "
                           />

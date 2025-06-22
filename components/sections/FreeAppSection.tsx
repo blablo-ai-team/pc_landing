@@ -6,26 +6,26 @@ import AppDownload from '@/components/common/AppDownload';
 
 export default function FreeAppSection() {
   return (
-    <section className="py-16 md:py-24 bg-[#FFF]">
-      <div className="max-w-4xl mx-auto px-4 text-center">
+    <section className="py-16 md:py-24 section-bg">
+      <div className="max-w-4xl mx-auto px-4 text-center ">
         {/* Header */}
         <motion.div 
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
           viewport={{ once: true }}
-          className="mb-12"
-        >          <h2 className="text-2xl md:text-3xl text-black font-bold mb-4">
+          className=" "
+        >          <h2 className="text-2xl leading-none  md:text-3xl text-black font-bold ">
             And it&apos;s
           </h2>
-          <h1 className="text-6xl sm:text-8xl md:text-9xl font-bold text-black mb-6">
+          <h1 className="text-[148px] leading-none sm:text-[150] md:text-[158px] font-bold text-black ">
             Free
           </h1>
-          <p className="text-gray-600 max-w-lg  mx-auto text-2xl">
+          <p className="text-gray-600  max-w-lg  mx-auto text-2xl">
             Boost your speaking for free.
-            <br />
+            <br className='hidden sm:block'/>
             Enjoy free daily scenarios to level up your
-            <br />
+            <br className='hidden sm:block'/>
             confident. No credit card required.
           </p>
         </motion.div>
@@ -39,7 +39,7 @@ export default function FreeAppSection() {
           className="flex justify-center"
         >
            <AppDownload 
-                   className="mt-12"
+                   className="mt-10"
                    qrCodeSize={80}
                    qrContainerWidth={200}
                    qrContainerHeight={177}

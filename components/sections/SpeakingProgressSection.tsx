@@ -6,7 +6,7 @@ import { motion } from 'framer-motion';
 
 export default function SpeakingProgressSection() {
   return (
-    <section className="py-16 px-4  bg-gradient-to-br from-gray-50 to-purple-50  overflow-visible " style={{ overflow: 'visible' }}>
+    <section className="py-16 px-4 section-bg overflow-visible " style={{ overflow: 'visible' }}>
       <div className="mx-auto max-w-5xl overflow-visible" style={{ overflow: 'visible' }}>
         <motion.div 
           initial={{ opacity: 0, y: 20 }}

@@ -21,7 +21,7 @@ export default function AppDownload({
 
 }: AppDownloadProps) {  return (
     <div className={`w-full ${className}`}>
-      <div className="flex justify-center gap-6">
+      <div className="flex flex-col md:flex-row justify-center gap-6">
         {/* Google Play Store */}
         <div className="flex flex-col items-center">
           <Image
@@ -32,13 +32,13 @@ export default function AppDownload({
             priority
             className="translate-y-[54px]"
           />
-          <div className="w-[170px] h-[177px] bg-[#FFF] flex items-center justify-center  rounded-[8px] shadow-lg border">
+          <div className="w-[170px] h-[177px] hidden md:flex  bg-[#FFF]  items-center justify-center  rounded-[8px] shadow-lg border">
             <Image
               src="/images/qr-google-play.svg"
               alt="QR code to download Google Play app"
               width={80}
               height={80}
-              className="translate-y-[24px]"
+              className="translate-y-[24px] "
             />
           </div>
         </div>
@@ -53,7 +53,7 @@ export default function AppDownload({
             priority
             className="translate-y-[54px]"
           />
-          <div className="w-[170px] h-[177px] bg-[#FFF] flex items-center justify-center  rounded-[8px] shadow-lg border">
+          <div className="w-[170px] h-[177px] bg-[#FFF] hidden md:flex items-center justify-center  rounded-[8px] shadow-lg border">
             <Image
               src="/images/qr-app-store.svg"
               alt="QR code to download App Store app"

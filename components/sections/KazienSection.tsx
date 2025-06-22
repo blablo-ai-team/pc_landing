@@ -28,9 +28,9 @@ export default function KazienSection() {    return (
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6 }}
-                className="text-[#ABEEBC] font-bricolage font-normal text-4xl sm:text-5xl md:text-6xl lg:text-[98px] leading-[100%] text-center mb-10 md:mb-20 md:-translate-y-2"
+                className="text-[#ABEEBC] font-bricolage font-normal text-4xl sm:text-5xl md:text-6xl lg:text-[98px] leading-[100%] text-left sm:text-center mb-10 md:mb-20 md:-translate-y-2"
             >
-              <span className='text-white'>Grow</span> the <span className='text-white'>Kaizen</span> way
+              <span className='text-white '>Grow</span><br className='block sm:hidden'></br> the <span className='text-white'>Kaizen</span> way
             </motion.h1>            
             
             {/* Main container with increased height to accommodate the large tree */} 
@@ -38,19 +38,22 @@ export default function KazienSection() {    return (
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: 0.2 }}
-                className="w-full max-w-5xl mx-auto bg-white rounded-3xl shadow-xl p-6 md:p-10 lg:p-12 relative mb-[80px]"
+                className="w-full  sm:relative max-w-5xl h-[890px] sm:h-[400px] mx-auto bg-white rounded-3xl shadow-xl p-6 md:p-10 lg:p-12  mb-[80px]"
                 style={{
                     borderRadius: "32px",
-                    height: "468px", // Matching the Figma design height
+                  
                     overflow: "visible", 
                     position: "relative",
                     zIndex: 1
                 }}
             >            
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-8 lg:gap-12 h-full relative overflow-visible">
+              <div className="   sm:grid md:grid-cols-2 gap-8 lg:gap-12 -h-full relative overflow-visible">
                 {/* Left side - Kaizen steps */}
-                <div className="h-full relative z-10">
-                  <h2 className="font-bricolage text-[14px] md:text-[16px] text-black mb-2 pb-2">
+                <div className="  h-full relative z-10">
+                  <h2 
+                className="font-inter font-semibold text-[22px] leading-[140%] self-stretch
+               md:w-[390px] md:font-normal md:text-[16px] md:leading-[150%] 
+               text-black mb-2 pb-2">
                     Our approach is inspired by Kaizen – a Japanese philosophy of steady, small steps that lead to big success.
                   </h2>
                     <div className="space-y-6 relative">                    
@@ -94,9 +97,11 @@ export default function KazienSection() {    return (
                       </div>
                     </div>
                   </div>
-                </div>                  {/* Right side - Tree Growth Visualization */}                <div className="relative w-full h-full overflow-visible flex items-end" style={{ zIndex: 20 }}>
+                </div>             
+                     {/* Right side - Tree Growth Visualization */}               
+                 <div className=" sm:relative w-full h-full overflow-visible " style={{ zIndex: 20 }}>
                   {/* Timeline with trees */}
-                  <div className="absolute bottom-0 left-0 right-0 h-[180px] overflow-visible">                    {/* Large tree overlay - Positioned absolutely to avoid clipping with exact 470x470 size */}
+                  <div className=" absolute -bottom-[500px]  sm:-bottom-25  left-0 right-0 h-[180px] overflow-visible">                    {/* Large tree overlay - Positioned absolutely to avoid clipping with exact 470x470 size */}
                     <div 
                       className="absolute right-[-200px] bottom-[-390px] z-50"
                       style={{
@@ -134,6 +139,7 @@ export default function KazienSection() {    return (
                       >
                         {/* Baseline with arrow */}
                         <Line
+                          className=' hidden sm:block'
                           type="linear"
                           dataKey="y"
                           stroke="#D1D5DB"
@@ -143,6 +149,7 @@ export default function KazienSection() {    return (
                         
                         {/* X-Axis with labels */}
                         <XAxis 
+                         className='hidden sm:block'
                           dataKey="x" 
                           axisLine={false}
                           tickLine={false}
@@ -254,10 +261,13 @@ export default function KazienSection() {    return (
                         />
                         
                         {/* Dot at start of timeline */}
-                        <ReferenceDot x={0} y={0} r={3} fill="#D1D5DB" stroke="none" />
+                        <ReferenceDot
+                           className=' hidden sm:block'
+                        x={0} y={0} r={3} fill="#D1D5DB" stroke="none" />
                         
                         {/* Arrow at end of timeline */}
                         <ReferenceDot
+                           className=' hidden sm:block'
                           x={100}
                           y={0}
                           r={0}

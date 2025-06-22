@@ -6,7 +6,7 @@ import { motion } from 'framer-motion';
 
 export default function BlabloForYouSection() {
   return (
-    <section className="py-20 px-4 bg-white">
+    <section className="py-20 px-4 section-bg">
       <div className="max-w-7xl mx-auto">
         {/* Section Header */}
         <div className="text-center mb-16">
@@ -147,7 +147,7 @@ export default function BlabloForYouSection() {
                       <div key={`rtl-1-${dupIndex}-${groupIndex}`} className="flex items-center">
                         {group.msg.map((job, index) => (
                           <span key={`rtl-1-${dupIndex}-${groupIndex}-${index}`} className="flex items-center">
-                            <span className="text-blue-600 font-medium text-2xl md:text-4xl whitespace-nowrap">{job}</span>
+                            <span className="text-[#2249D1] font-medium text-2xl md:text-4xl whitespace-nowrap">{job}</span>
                             <span className="mx-3 text-gray-300 text-2xl md:text-4xl">•</span>
                           </span>
                         ))}
@@ -166,7 +166,7 @@ export default function BlabloForYouSection() {
                       <div key={`ltr-2-${dupIndex}-${groupIndex}`} className="flex items-center">
                         {group.msg.map((job, index) => (
                           <span key={`ltr-2-${dupIndex}-${groupIndex}-${index}`} className="flex items-center">
-                            <span className="text-blue-600 font-medium text-2xl md:text-4xl whitespace-nowrap">{job}</span>
+                            <span className="text-[#2249D1] font-medium text-2xl md:text-4xl whitespace-nowrap">{job}</span>
                             <span className="mx-3 text-gray-300 text-2xl md:text-4xl">•</span>
                           </span>
                         ))}
@@ -185,7 +185,7 @@ export default function BlabloForYouSection() {
                       <div key={`rtl-3-${dupIndex}-${groupIndex}`} className="flex items-center">
                         {group.msg.map((job, index) => (
                           <span key={`rtl-3-${dupIndex}-${groupIndex}-${index}`} className="flex items-center">
-                            <span className="text-blue-600 font-medium text-2xl md:text-4xl whitespace-nowrap">{job}</span>
+                            <span className="text-[#2249D1] font-medium text-2xl md:text-4xl whitespace-nowrap">{job}</span>
                             <span className="mx-3 text-gray-300 text-2xl md:text-4xl">•</span>
                           </span>
                         ))}
@@ -204,7 +204,7 @@ export default function BlabloForYouSection() {
                       <div key={`ltr-4-${dupIndex}-${groupIndex}`} className="flex items-center">
                         {group.msg.map((job, index) => (
                           <span key={`ltr-4-${dupIndex}-${groupIndex}-${index}`} className="flex items-center">
-                            <span className="text-blue-600 font-medium text-2xl md:text-4xl whitespace-nowrap">{job}</span>
+                            <span className="text-[#2249D1] font-medium text-2xl md:text-4xl whitespace-nowrap">{job}</span>
                             <span className="mx-3 text-gray-300 text-2xl md:text-4xl">•</span>
                           </span>
                         ))}

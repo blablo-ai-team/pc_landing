@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Priority Test - Section Background</title>
+    <style>
+        /* Test 1: CSS Variables */
+        :root {
+            --section-bg: #00FF00; /* mobile: xanh lá */
+        }
+        
+        @media (min-width: 768px) {
+            :root {
+                --section-bg: #FF0000; /* pc: đỏ */
+            }
+        }
+        
+        /* Test 2: Section BG utility - method 1 */
+        .section-bg {
+            background-color: var(--section-bg);
+        }
+        
+        /* Test 3: Section BG utility - method 2 with !important */
+        .section-bg-important {
+            background-color: var(--section-bg) !important;
+        }
+        
+        /* Test 4: Direct CSS without variables */
+        .section-direct {
+            background-color: #00FF00; /* mobile: xanh lá */
+        }
+        
+        @media (min-width: 768px) {
+            .section-direct {
+                background-color: #FF0000; /* pc: đỏ */
+            }
+        }
+        
+        /* Test 5: Tailwind-like utility with !important */
+        .section-direct-important {
+            background-color: #00FF00 !important;
+        }
+        
+        @media (min-width: 768px) {
+            .section-direct-important {
+                background-color: #FF0000 !important;
+            }
+        }
+        
+        /* Common styles for visual testing */
+        .test-section {
+            padding: 20px;
+            margin: 10px 0;
+            border: 2px solid #333;
+            color: white;
+            font-weight: bold;
+            text-align: center;
+            min-height: 80px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        /* Override test */
+        .with-override {
+            background-color: blue !important;
+        }
+    </style>
+</head>
+<body>
+    <h1>CSS Priority Test - Section Background</h1>
+    <p><strong>Kiểm tra:</strong> Mobile = Xanh lá (#00FF00), Desktop ≥768px = Đỏ (#FF0000)</p>
+    
+    <div class="test-section section-bg">
+        Test 1: .section-bg (CSS Variables)
+    </div>
+    
+    <div class="test-section section-bg-important">
+        Test 2: .section-bg-important (CSS Variables + !important)
+    </div>
+    
+    <div class="test-section section-direct">
+        Test 3: .section-direct (Direct CSS, no variables)
+    </div>
+    
+    <div class="test-section section-direct-important">
+        Test 4: .section-direct-important (Direct CSS + !important)
+    </div>
+    
+    <div class="test-section section-bg with-override">
+        Test 5: .section-bg với override (blue !important)
+    </div>
+    
+    <div class="test-section" style="background-color: purple;">
+        Test 6: Inline style (purple)
+    </div>
+    
+    <script>
+        // Debug script để kiểm tra CSS variables
+        function checkCSSVariables() {
+            const root = document.documentElement;
+            const sectionBgValue = getComputedStyle(root).getPropertyValue('--section-bg').trim();
+            
+            console.log('Current --section-bg value:', sectionBgValue);
+            console.log('Screen width:', window.innerWidth);
+            console.log('Is desktop (≥768px):', window.innerWidth >= 768);
+            
+            // Hiển thị trên trang
+            const debugInfo = document.getElementById('debug-info') || document.createElement('div');
+            debugInfo.id = 'debug-info';
+            debugInfo.style.cssText = 'position: fixed; top: 10px; right: 10px; background: black; color: white; padding: 10px; font-family: monospace; z-index: 9999;';
+            debugInfo.innerHTML = `
+                --section-bg: ${sectionBgValue}<br>
+                Screen: ${window.innerWidth}px<br>
+                Desktop: ${window.innerWidth >= 768 ? 'Yes' : 'No'}
+            `;
+            document.body.appendChild(debugInfo);
+        }
+        
+        // Chạy debug khi load và resize
+        window.addEventListener('load', checkCSSVariables);
+        window.addEventListener('resize', checkCSSVariables);
+    </script>
+</body>
+</html>

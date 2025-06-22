@@ -1,5 +1,6 @@
 'use client'
 
+import { useState } from 'react';
 import Header from "@/components/common/Header";
 import HeroSection from "@/components/sections/HeroSection";
 import FeaturesSection from "@/components/sections/FeaturesSection";
@@ -11,50 +12,63 @@ import TestimonialsSection from "@/components/sections/TestimonialsSection";
 import FreeAppSection from "@/components/sections/FreeAppSection";
 import GameModeCarousel from "@/components/sections/GameModeSection";
 import FooterSection from "@/components/sections/FooterSection";
+import AppDownloadModal from "@/components/common/AppDownloadModal";
 
 export default function Home() {
+  const [isModalOpen, setIsModalOpen] = useState(false);
+
   const handleGetBlabloClick = () => {
     console.log("Get BlaBló clicked!");
-    // Add your logic here (e.g., navigation, tracking, etc.)
+    setIsModalOpen(true);
+  };
+
+  const handleCloseModal = () => {
+    setIsModalOpen(false);
   };
 
   return (
-    <div className="min-h-screen">
+    <>
       {/* Sticky Header */}
       <Header onGetBlabloClick={handleGetBlabloClick} />
-      
-      <HeroSection/>
+      <main className="min-h-screen ">
 
-      {/* 3D Cards Section */}
-      <Card3DSection />
-       
-       {/* Features Section */}
-      <FeaturesSection />
 
-      {/* Speaking Progress Section */}
-      <SpeakingProgressSection />
+        <HeroSection />
 
-      {/* BlaBló is for You Section */}
-      <BlabloForYouSection />
+        {/* 3D Cards Section */}
+        <Card3DSection />
 
-      {/*KazienSection level  */}
-      <KazienSection/>
-      
-      {/* Testimonials Section */}
-      <TestimonialsSection />
-      
-      {/* Free App Section */}
-      <FreeAppSection />
-      
-      <GameModeCarousel/>
-      
-      {/* Footer Section */}
-      <FooterSection />
-      
-      {/* Download App Section with our new component */}
-      {/* <DownloadAppSection /> */}
-      
-  
-    </div>
+        {/* Features Section */}
+        <FeaturesSection />
+
+        {/* Speaking Progress Section */}
+        <SpeakingProgressSection />
+
+        {/* BlaBló is for You Section */}
+        <BlabloForYouSection />
+
+        {/*KazienSection level  */}
+        <KazienSection />
+
+        {/* Testimonials Section */}
+        <TestimonialsSection />
+
+        {/* Free App Section */}
+        <FreeAppSection />
+
+        <GameModeCarousel />
+        {/* < TestSection/> */}
+        {/* Footer Section */}
+        <FooterSection />
+
+        {/* Download App Section with our new component */}
+        {/* <DownloadAppSection /> */}
+
+      </main>
+
+      {/* App Download Modal */}
+      <AppDownloadModal isOpen={isModalOpen} onClose={handleCloseModal} />
+    </>
+
   );
 }

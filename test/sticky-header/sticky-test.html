@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sticky Header Test - Debug</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+        }
+
+        /* Test 1: Basic sticky */
+        .header-basic {
+            position: sticky;
+            top: 0;
+            background: linear-gradient(135deg, #ff6b6b, #4ecdc4);
+            color: white;
+            padding: 1rem;
+            z-index: 100;
+            text-align: center;
+            font-weight: bold;
+        }
+
+        /* Test 2: Advanced sticky with backdrop */
+        .header-advanced {
+            position: sticky;
+            top: 0;
+            background: rgba(255, 255, 255, 0.9);
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+            border-bottom: 1px solid #ddd;
+            padding: 1rem;
+            z-index: 200;
+            transition: all 0.3s ease;
+        }
+
+        /* Test 3: Fixed positioning fallback */
+        .header-fixed {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            background: rgba(0, 0, 0, 0.8);
+            color: white;
+            padding: 1rem;
+            z-index: 300;
+            text-align: center;
+        }
+
+        /* Content sections */
+        .section {
+            height: 100vh;
+            padding: 2rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 2rem;
+            font-weight: bold;
+        }
+
+        .section:nth-child(odd) {
+            background: #f0f0f0;
+        }
+
+        .section:nth-child(even) {
+            background: #e0e0e0;
+        }
+
+        /* Debug info */
+        .debug-info {
+            position: fixed;
+            top: 10px;
+            right: 10px;
+            background: black;
+            color: white;
+            padding: 10px;
+            font-family: monospace;
+            font-size: 12px;
+            z-index: 9999;
+            border-radius: 5px;
+        }
+
+        /* Button styles */
+        .test-button {
+            background: #007bff;
+            color: white;
+            border: none;
+            padding: 0.5rem 1rem;
+            margin: 0.25rem;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .test-button:hover {
+            background: #0056b3;
+        }
+
+        .test-button.active {
+            background: #28a745;
+        }
+
+        /* iOS Safari specific fixes */
+        @supports (-webkit-touch-callout: none) {
+            .header-ios-fix {
+                position: -webkit-sticky;
+                position: sticky;
+                top: 0;
+                background: rgba(255, 255, 255, 0.95);
+                border-bottom: 1px solid #ddd;
+                padding: 1rem;
+                z-index: 400;
+                will-change: transform;
+                transform: translateZ(0);
+            }
+        }
+
+        /* Container that might interfere */
+        .problematic-container {
+            min-height: 100vh;
+            overflow: hidden;
+            position: relative;
+        }
+
+        .good-container {
+            position: relative;
+        }
+    </style>
+</head>
+<body>
+    <div class="debug-info" id="debug-info">
+        <div id="scroll-info">Scroll: 0px</div>
+        <div id="browser-info">Browser: Detecting...</div>
+        <div id="support-info">Sticky Support: Checking...</div>
+    </div>
+
+    <h1 style="text-align: center; padding: 2rem; background: #333; color: white;">
+        Sticky Header Debug Tests
+    </h1>
+
+    <div style="text-align: center; padding: 1rem; background: #f8f9fa;">
+        <button class="test-button" onclick="testBasicSticky()">Test 1: Basic Sticky</button>
+        <button class="test-button" onclick="testAdvancedSticky()">Test 2: Advanced Sticky</button>
+        <button class="test-button" onclick="testFixedFallback()">Test 3: Fixed Fallback</button>
+        <button class="test-button" onclick="testIOSFix()">Test 4: iOS Fix</button>
+        <button class="test-button" onclick="testProblematicContainer()">Test 5: Problematic Container</button>
+        <button class="test-button" onclick="resetTest()">Reset</button>
+    </div>
+
+    <!-- Test headers (initially hidden) -->
+    <header class="header-basic" id="header-basic" style="display: none;">
+        Test 1: Basic Sticky Header - Should stick to top when scrolling
+    </header>
+
+    <header class="header-advanced" id="header-advanced" style="display: none;">
+        <div style="display: flex; justify-content: space-between; align-items: center;">
+            <div>Test 2: Advanced Sticky with Backdrop</div>
+            <div style="font-size: 0.8em;">Scroll position: <span id="scroll-position">0</span>px</div>
+        </div>
+    </header>
+
+    <header class="header-fixed" id="header-fixed" style="display: none;">
+        Test 3: Fixed Positioning (Fallback) - Always at top
+    </header>
+
+    <header class="header-ios-fix" id="header-ios-fix" style="display: none;">
+        Test 4: iOS Safari Fix - Sticky with hardware acceleration
+    </header>
+
+    <!-- Content sections -->
+    <div id="content-container" class="good-container">
+        <section class="section" style="background: #ff9999;">
+            Section 1 - Scroll down to test sticky behavior
+        </section>
+        <section class="section" style="background: #99ff99;">
+            Section 2 - Header should be sticky at the top
+        </section>
+        <section class="section" style="background: #9999ff;">
+            Section 3 - Keep scrolling to test
+        </section>
+        <section class="section" style="background: #ffff99;">
+            Section 4 - Sticky header working?
+        </section>
+        <section class="section" style="background: #ff99ff;">
+            Section 5 - Final test section
+        </section>
+    </div>
+
+    <script>
+        let currentTest = null;
+        let debugInterval;
+
+        // Debug information
+        function updateDebugInfo() {
+            const scrollY = window.scrollY;
+            const userAgent = navigator.userAgent;
+            const isIOS = /iPad|iPhone|iPod/.test(userAgent);
+            const isSafari = /Safari/.test(userAgent) && !/Chrome/.test(userAgent);
+            const supportsSticky = CSS.supports('position', 'sticky') || CSS.supports('position', '-webkit-sticky');
+
+            document.getElementById('scroll-info').textContent = `Scroll: ${scrollY.toFixed(0)}px`;
+            document.getElementById('browser-info').textContent = `Browser: ${isIOS ? 'iOS' : isSafari ? 'Safari' : 'Other'}`;
+            document.getElementById('support-info').textContent = `Sticky Support: ${supportsSticky ? 'Yes' : 'No'}`;
+
+            // Update scroll position in advanced test
+            const scrollPos = document.getElementById('scroll-position');
+            if (scrollPos) {
+                scrollPos.textContent = scrollY.toFixed(0);
+            }
+        }
+
+        function hideAllHeaders() {
+            document.querySelectorAll('header[id^="header-"]').forEach(header => {
+                header.style.display = 'none';
+            });
+        }
+
+        function clearActiveButtons() {
+            document.querySelectorAll('.test-button').forEach(btn => {
+                btn.classList.remove('active');
+            });
+        }
+
+        function testBasicSticky() {
+            resetTest();
+            hideAllHeaders();
+            clearActiveButtons();
+            event.target.classList.add('active');
+            
+            document.getElementById('header-basic').style.display = 'block';
+            currentTest = 'basic';
+            console.log('Testing basic sticky positioning');
+        }
+
+        function testAdvancedSticky() {
+            resetTest();
+            hideAllHeaders();
+            clearActiveButtons();
+            event.target.classList.add('active');
+            
+            document.getElementById('header-advanced').style.display = 'block';
+            currentTest = 'advanced';
+            console.log('Testing advanced sticky with backdrop filter');
+        }
+
+        function testFixedFallback() {
+            resetTest();
+            hideAllHeaders();
+            clearActiveButtons();
+            event.target.classList.add('active');
+            
+            document.getElementById('header-fixed').style.display = 'block';
+            currentTest = 'fixed';
+            console.log('Testing fixed positioning fallback');
+        }
+
+        function testIOSFix() {
+            resetTest();
+            hideAllHeaders();
+            clearActiveButtons();
+            event.target.classList.add('active');
+            
+            document.getElementById('header-ios-fix').style.display = 'block';
+            currentTest = 'ios-fix';
+            console.log('Testing iOS Safari sticky fix');
+        }
+
+        function testProblematicContainer() {
+            resetTest();
+            hideAllHeaders();
+            clearActiveButtons();
+            event.target.classList.add('active');
+            
+            // Change container to problematic version
+            const container = document.getElementById('content-container');
+            container.className = 'problematic-container';
+            
+            document.getElementById('header-advanced').style.display = 'block';
+            currentTest = 'problematic';
+            console.log('Testing with problematic container (min-height: 100vh, overflow: hidden)');
+        }
+
+        function resetTest() {
+            hideAllHeaders();
+            clearActiveButtons();
+            
+            // Reset container
+            const container = document.getElementById('content-container');
+            container.className = 'good-container';
+            
+            currentTest = null;
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+
+        // Initialize debug updates
+        function startDebug() {
+            updateDebugInfo();
+            debugInterval = setInterval(updateDebugInfo, 100);
+        }
+
+        function stopDebug() {
+            if (debugInterval) {
+                clearInterval(debugInterval);
+            }
+        }
+
+        // Event listeners
+        window.addEventListener('scroll', updateDebugInfo, { passive: true });
+        window.addEventListener('load', startDebug);
+        window.addEventListener('beforeunload', stopDebug);
+
+        // Test which header positioning works
+        window.addEventListener('load', () => {
+            console.log('=== Sticky Header Debug Test ===');
+            console.log('User Agent:', navigator.userAgent);
+            console.log('Supports position:sticky:', CSS.supports('position', 'sticky'));
+            console.log('Supports position:-webkit-sticky:', CSS.supports('position', '-webkit-sticky'));
+            console.log('Screen size:', window.innerWidth + 'x' + window.innerHeight);
+            console.log('Instructions: Use buttons above to test different sticky implementations');
+        });
+    </script>
+</body>
+</html>
