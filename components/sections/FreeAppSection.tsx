@@ -6,7 +6,7 @@ import AppDownload from '@/components/common/AppDownload';
 
 export default function FreeAppSection() {
   return (
-    <section className="py-16 md:py-24 section-bg">
+    <section className="py-16 md:py-16 section-bg">
       <div className="max-w-4xl mx-auto px-4 text-center ">
         {/* Header */}
         <motion.div 

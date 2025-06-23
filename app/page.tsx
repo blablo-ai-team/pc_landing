@@ -4,7 +4,6 @@ import { useState } from 'react';
 import Header from "@/components/common/Header";
 import HeroSection from "@/components/sections/HeroSection";
 import FeaturesSection from "@/components/sections/FeaturesSection";
-import Card3DSection from "@/components/sections/Card3DSection";
 import SpeakingProgressSection from "@/components/sections/SpeakingProgressSection";
 import BlabloForYouSection from "@/components/sections/BlabloForYouSection";
 import KazienSection from "@/components/sections/KazienSection";
