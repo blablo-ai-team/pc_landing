@@ -59,7 +59,7 @@ export const heroContent: HeroContent = {
       blueStarRight: '/icons/Soft_star_blue.svg'
     }
   },
-  subtext: 'Use your commute, dish-washing, or any spare minute to practice real speaking',
+  subtext: 'Use your commute, dish-washing, or any spare time to practice speaking.',
   callToAction: {
     boostText: 'Boost your speaking NOW',
     downloadText: 'Download the app:'

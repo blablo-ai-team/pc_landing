@@ -33,10 +33,10 @@ export default function Home() {
       <main className="min-h-screen ">
 
 
-        <HeroSection />
+        <HeroSection  />
 
         {/* 3D Cards Section */}
-        <Card3DSection />
+        {/* <Card3DSection /> */}
 
         {/* Features Section */}
         <FeaturesSection />

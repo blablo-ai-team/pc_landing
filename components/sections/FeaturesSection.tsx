@@ -22,6 +22,7 @@ const EnhancedTiltCard: React.FC<{
   const x = useSpring(0, { stiffness: 150, damping: 25 })
   const y = useSpring(0, { stiffness: 150, damping: 25 })
   const scaleSpring = useSpring(1, { stiffness: 200, damping: 20 })
+  
   // Transform values cho tilt effect với góc nghiêng vừa phải
   const rotateX = useTransform(y, [-0.5, 0.5], [12, -12])
   const rotateY = useTransform(x, [-0.5, 0.5], [-12, 12])
@@ -76,12 +77,13 @@ const EnhancedTiltCard: React.FC<{
       onMouseEnter={handleMouseEnter}
       onMouseLeave={handleMouseLeave}
       className={`cursor-pointer will-change-transform ${className}`}
-    >      <motion.div 
+    >      
+      <motion.div 
         style={{ 
           transform: 'translateZ(60px)',
           transformStyle: 'preserve-3d',
         }} 
-        className="relative bg-white rounded-3xl shadow-lg overflow-hidden backdrop-blur-sm h-[526px]"
+        className="relative bg-white rounded-3xl shadow-lg overflow-hidden backdrop-blur-sm h-[426px]"
       >
         {children}
       </motion.div>
@@ -93,7 +95,7 @@ const FeaturesSection: React.FC<FeaturesSectionProps> = ({
   subtitle = "Built to fit your busy mornings and tired nights."
 }) => {
   return (
-    <section className="w-full section-bg py-16 lg:py-24">
+    <section className="w-full section-bg py-16 lg:py-[120px]">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
         {/* Section Header */}
@@ -103,87 +105,91 @@ const FeaturesSection: React.FC<FeaturesSectionProps> = ({
           transition={{ duration: 0.6 }}
           className="text-center mb-16"
         >
-          <p className="text-gray-600 text-sm font-medium mb-2 tracking-wide uppercase">
-            Meet BlaBlo, your on-the-go English buddy
-          </p>          <h2 className="font-bricolage text-4xl lg:text-5xl text-black mb-4">
+          <p className="text-[#8E8E93] text-[12px] font-normal leading-normal mb-4">
+            Meet BlaBlo, your on-the-go English buddy          
+          </p> 
+          <h2 className="font-bricolage text-[30px] lg:text-[35px] text-black mb-5">
             <span className="font-light">BlaBlo is for </span>
             <span className="font-bold">Your busy life</span>
           </h2>
-          <p className="font-bricolage text-xl text-black max-w-2xl mx-auto">
+          <p className="font-bricolage text-[12px] text-black max-w-xl mx-auto">
             {subtitle}
           </p>
         </motion.div>     
-           {/* Features Grid */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 lg:gap-6 max-w-6xl mx-auto" style={{ perspective: '1200px' }}>
-          {featureCards.map((card, index) => (
-            <div key={card.id} className="w-full">
-              <EnhancedTiltCard index={index}>           
-                   
-                     <div className="w-full h-[526px] rounded-3xl px-[16px] py-[24px] flex flex-col">
-                  {/* Time Tag */}
-                  <div className="mb-6">
-                    <div className={`inline-flex items-center px-4 py-2 rounded-full text-sm font-semibold ${timeTagColors[card.timeTagColor]}`}>
-                      {card.timeTag}
+
+        {/* Features Grid - Responsive container */}
+        <div className='bg-[#F2F2F7] mx-4 sm:mx-8 md:mx-16 lg:mx-[250px] py-4 rounded-3xl'> 
+          <div 
+            className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-2 lg:gap-4 max-w-6xl mx-auto px-2" 
+            style={{ perspective: '1200px' }}
+          >
+            {featureCards.map((card, index) => (
+              <div key={card.id} className="w-full">
+                <EnhancedTiltCard index={index}>           
+                  <div className="w-full h-[426px]  rounded-3xl px-4 py-6 flex flex-col">
+                    {/* Time Tag */}
+                    <div className="mb-6">
+                      <div className={`inline-flex items-center px-4 py-2 rounded-full text-[12px] font-semibold ${timeTagColors[card.timeTagColor]}`}>
+                        {card.timeTag}
+                      </div>
+                    </div>
+
+                    {/* Feature Icon/Image - Centered and responsive */}
+                    <div className="flex justify-center items-center mb-8 flex-1">
+                      <div className="relative w-16 h-16 sm:w-20 sm:h-20  lg:w-30 lg:h-30">
+                        {card.imageSrc ? (
+                          <Image
+                            src={card.imageSrc}
+                            alt={card.imageAlt || card.title}
+                            fill
+                            className="object-contain"
+                            // sizes="(max-width: 640px) 64px, (max-width: 1024px) 80px, 96px"
+                          />
+                        ) : (
+                          <Image
+                            src={card.icon}
+                            alt={card.iconAlt}
+                            fill
+                            className="object-contain"
+                            // sizes="(max-width: 640px) 64px, (max-width: 1024px) 80px, 96px"
+                          />
+                        )}
+                      </div>
+                    </div>
+
+                    {/* Bottom Content - Auto-positioned at bottom */}
+                    <div className="text-black">
+                      {/* Title */}
+                      <div className="mb-4">
+                        <h3 className="font-bricolage text-[28px] font-light leading-tight">
+                          {card.title}
+                        </h3>
+                        <h4 className="font-bricolage text-[28px] font-light leading-tight">
+                          {card.subtitle}
+                        </h4>
+                      </div>
+
+                      {/* Duration and Status */}
+                      <div className="flex items-center mb-4 text-sm gap-1">
+                        <span className="font-medium text-black">
+                          {card.duration}
+                        </span>
+                        <span className={`font-medium ${statusStyles[card.status]}`}>
+                          • {card.status === 'available' ? 'Now available' : 'Launching soon'}
+                        </span>
+                      </div>
+
+                      {/* Description */}
+                      <p className="font-bricolage text-sm leading-relaxed text-[#797979]">
+                        {card.description}
+                      </p>
                     </div>
                   </div>
-
-                  {/* Feature Icon/Image - Larger for 526px height */}
-                  <div className="flex justify-center mb-8 flex-grow">
-                    <div className="relative w-24 h-24 lg:w-48 lg:h-48">
-                      {card.imageSrc ? (
-                        <Image
-                          src={card.imageSrc}
-                          alt={card.imageAlt || card.title}
-                          fill
-                          className="object-contain"
-                          sizes="(max-width: 768px) 192px, 224px"
-                        />
-                      ) : (
-                        <Image
-                          src={card.icon}
-                          alt={card.iconAlt}
-                          fill
-                          className="object-contain"
-                          sizes="(max-width: 768px) 192px, 224px"
-                        />
-                      )}
-                    </div>
-                  </div>
-
-                  {/* Bottom Content */}
-                  <div className="mt-auto text-[48px] font-light text-black leading-tight -translate-y-4">
-                    {/* Title */}
-                    <div className="mb-4">
-                      <h3 className="font-bricolage  ">
-                        {card.title}
-                      </h3>
-                      <h4 className="font-bricolage">
-                        {card.subtitle}
-                      </h4>
-                    </div>
-
-                    {/* Duration and Status */}
-                    <div className="flex items-center mb-4 text-sm gap-1">
-                      <span className="font-medium text-black">
-                        {card.duration}
-                      </span>
-                      <span className={`font-medium ${statusStyles[card.status]}`}>
-                        • {card.status === 'available' ? 'Now available' : 'Launching soon'}
-                      </span>
-                    </div>
-
-                    {/* Description */}
-                    <p className="font-bricolage text-sm leading-relaxed ">
-                      {card.description}
-                    </p>
-                  </div>
-                </div>
-              </EnhancedTiltCard>
-            </div>
-          ))}
+                </EnhancedTiltCard>
+              </div>
+            ))}
+          </div>
         </div>
-
-     
       </div>
     </section>
   )

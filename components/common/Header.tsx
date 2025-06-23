@@ -44,7 +44,7 @@ const Header: React.FC<HeaderProps> = ({ onGetBlabloClick }) => {
       {isSticky && <div style={{ height: '88px' }} />}
       
       <header
-        className={`w-full border-b border-[#C7C7CC] transition-all duration-300 ${
+        className={`w-full px-[250px]  transition-all duration-300 ${
           isSticky ? 'fixed top-0 left-0 right-0' : 'relative'
         }`}
         style={{
@@ -54,7 +54,7 @@ const Header: React.FC<HeaderProps> = ({ onGetBlabloClick }) => {
           zIndex: isSticky ? 999 : 1,
         }}
       >
-      <div className="max-w-7xl 2xl:max-w-8xl mx-auto px-4 sm:px-6 lg:px-8 2xl:px-12 py-4">
+      <div className="max-w-5xl 2xl:max-w-8xl mx-auto px-4 sm:px-6 lg:px-8 2xl:px-12 py-4">
         <div className="flex justify-between items-center">
           {/* Logo */}
           <button 
@@ -66,8 +66,8 @@ const Header: React.FC<HeaderProps> = ({ onGetBlabloClick }) => {
               src={heroContent.branding.logoSrc}
               alt={heroContent.branding.logoAlt}
               width={120}
-              height={40}
-              className="h-10 w-[100px]  sm:w-auto"
+              height={39}
+              className="  sm:w-auto h-[29px]"
               priority
             />
           </button>

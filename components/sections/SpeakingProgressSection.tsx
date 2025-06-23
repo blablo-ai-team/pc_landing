@@ -7,7 +7,7 @@ import { motion } from 'framer-motion';
 export default function SpeakingProgressSection() {
   return (
     <section className="py-16 px-4 section-bg overflow-visible " style={{ overflow: 'visible' }}>
-      <div className="mx-auto max-w-5xl overflow-visible" style={{ overflow: 'visible' }}>
+      <div className=" overflow-visible" style={{ overflow: 'visible' }}>
         <motion.div 
           initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
@@ -19,8 +19,11 @@ export default function SpeakingProgressSection() {
           <p className="font-bricolage text-lg text-black max-w-2xl mx-auto">
             Just “blablo” it!
           </p>
-        </motion.div>      
-          <motion.div 
+        </motion.div>   
+
+        {/* Chart content  */}
+        <div className='bg-[#F2F2F7] mx-[250px] p-4 rounded-3xl'>
+              <motion.div 
                initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.7 }}
@@ -48,7 +51,7 @@ So we’ll get you talking early, often, anywhere. Skip perfect accents, making 
           </div>
           
           {/* Right Content - Chart */}
-          <div className="bg-white rounded-3xl p-6 lg:p-8 shadow-lg h-auto lg:h-[551px] lg:w-[744px] flex flex-col lg:flex-shrink-0">
+          <div className="bg-white rounded-3xl p-6 lg:p-8 shadow-lg   lg:w-full ">
             <div className="text-center mb-6 lg:mb-8 text-black">
               <h3 className="font-inter text-xl lg:text-2xl  mb-2 leading-tight">
                Our learners speak over{' '}
@@ -66,6 +69,8 @@ So we’ll get you talking early, often, anywhere. Skip perfect accents, making 
             </div>
           </div>
         </motion.div>
+          </div>   
+      
       </div>
     </section>
   );

@@ -79,7 +79,7 @@ export default function SpeakingChart() {
                 transition={{ duration: 0.6, delay: 0.2 }}
     className=" h-96 p-2 bg-gradient-to-br rounded-2xl">
       <ResponsiveContainer width="100%" height="100%">
-        <ComposedChart data={data} margin={{ top: 40, right: 80, bottom: 60, left: 40 }}>
+        <ComposedChart data={data} margin={{ top: 20, right: 80, bottom: 0, left: -30 }}>
           <defs>
             <linearGradient id="lineGradient" x1="0" y1="0" x2="1" y2="0">
               <stop offset="0%" stopColor="#e879f9" />
