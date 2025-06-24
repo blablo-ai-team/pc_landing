@@ -61,8 +61,7 @@ const CustomLabel = (props: CustomLabelProps) => {
         fontSize={12}
         fontWeight="600"
         textAnchor="middle"
-      >
-        108 mins speaking!
+      >108 mins speaking!
       </text>
     );
   }

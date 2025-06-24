@@ -9,7 +9,7 @@ import AppDownload from '@/components/common/AppDownload'
 
 export default  function HeroSection () {
   return (   
-     <section className="w-full leading-none block  -z-20 mb-[250px] pt-4 2xl:pt-[60px]">
+     <section className="w-full leading-none block   mb-[210px] pt-4  2xl:pt-[60px]">
       {/* <div className="max-w-6xl bg-amber-700 2xl:max-w-8xl mx-auto px-4 sm:px-12 lg:px-8 2xl:px-12"> */}
         <div className="max-w-6xl  2xl:max-w-8xl "> 
         {/* Main Content */}

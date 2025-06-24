@@ -42,7 +42,7 @@ import Image from 'next/image';
 
 export default function GameModeSection() {
   return (
-    <section className="py-[120px] lg:py-[100px]  section-bg relative overflow-hidden">
+    <section className="py-[120px] lg:py-[100px]   section-bg relative overflow-hidden">
       <div className="max-w-7xl mx-auto px-4 flex flex-col justify-center items-center">
         <p
         className='w-[380px] lg:w-[635px] mb-12 text-center font-inter text-[18px] lg:text-[24px]  px-[20px] lg:px-0 font-medium leading-[150%] text-[#8E8E93] lg:text-[color:var(--Grays-Gray-2,#AEAEB2)]'

@@ -1,0 +1,166 @@
+# Page snapshot
+
+```yaml
+- banner:
+  - button "Back to top":
+    - img "BlaBló"
+  - button "Get BlaBlo App shortcut":
+    - text: Get BlaBlo
+    - img "App shortcut"
+- main:
+  - heading "Turn Dead Time into Fluent English" [level=1]
+  - paragraph: Use your commute, dish-washing, or any spare minute to practice real speaking
+  - paragraph: Boost your speaking NOW
+  - img "Get it on Google Play"
+  - img "Download on the App Store"
+  - img "car3d"
+  - paragraph: Meet BlaBlo, your on-the-go English buddy
+  - heading "BlaBlo is for Your busy life" [level=2]
+  - paragraph: Built to fit your busy mornings and tired nights.
+  - text: Morning commute
+  - img "Listen and repeat feature illustration"
+  - heading "Listen" [level=3]
+  - heading "& Repeat" [level=4]
+  - text: 10 mins activity • Now available
+  - paragraph: Explore new vocab, train your mouth and brain on the go.
+  - text: Mid-day break
+  - img "Flash cards feature illustration"
+  - heading "Flash" [level=3]
+  - heading "Cards" [level=4]
+  - text: 3 mins • Launching soon
+  - paragraph: Tap, swipe, and store new words fast.
+  - text: Before bedtime
+  - img "Joyful role play feature illustration"
+  - heading "Joyful" [level=3]
+  - heading "Role play" [level=4]
+  - text: 8 mins • Launching soon
+  - paragraph: Act out a scenario, sleep on it and wake up sounding natural.
+  - text: Later days
+  - img "Speed challenge feature illustration"
+  - heading "Speed" [level=3]
+  - heading "Challenge" [level=4]
+  - text: 5 mins • Launching soon
+  - paragraph: Beat the timer, train instant recall and smoother speech.
+  - heading "BlaBlo is for Speaking" [level=2]
+  - paragraph: Just “blablo” it!
+  - 'heading "Our only goal: Help you say what you want, in english." [level=3]'
+  - paragraph: So we’ll get you talking early, often, anywhere. Skip perfect accents, making your point is what matters!
+  - img "Hiro - Smart learning companion with headphones"
+  - heading "Our learners speak over 1 hour 48 minutes" [level=3]
+  - paragraph: just in the first week
+  - img: WED SUN 0 MIN 120 MINS
+  - heading "BlaBlo is for You" [level=2]
+  - paragraph: Master what you want with AI-powered Learning path, designed just for you!
+  - img "Hiro character"
+  - paragraph: I’m a Hotel receptionist
+  - paragraph: My English is okay... I can handle simple topics
+  - paragraph: I want smoother guest chats!
+  - img "AI Assistant"
+  - paragraph: Hi Hiro! By the end of this week, you'll handle guest complaints smoothly
+  - paragraph: "First quest: 'Apologising Professionally'"
+  - paragraph: Let's begin!
+  - img "App screenshot - Learning Quest"
+  - img "App screenshot - Learning Activity"
+  - heading "Whatever your job, BlaBlo has you covered." [level=3]
+  - text: Receptionist • Fashion designer • Accountant • Administrator • Receptionist • Fashion designer • Accountant • Administrator • Receptionist • Fashion designer • Accountant • Administrator • Data Analyst • Software Developer • UI/UX Designer • Data Analyst • Software Developer • UI/UX Designer • Data Analyst • Software Developer • UI/UX Designer • Data Analyst • Software Developer • UI/UX Designer • Travel Consultant • Retail Store Owner • Sales Executive • Travel Consultant • Retail Store Owner • Sales Executive • Travel Consultant • Retail Store Owner • Sales Executive • HR Coordinator • IT Helpdesk • Digital Marketer • Social Media Manager • HR Coordinator • IT Helpdesk • Digital Marketer • Social Media Manager • HR Coordinator • IT Helpdesk • Digital Marketer • Social Media Manager •
+  - heading "Grow the Kaizen way" [level=1]
+  - heading "Our approach is inspired by Kaizen – a Japanese philosophy of steady, small steps that lead to big success." [level=2]
+  - paragraph: "Pick a real scenario : Ordering coffee, presenting a project, whatever you want!"
+  - paragraph: Get bite-size lessons built just for it, and master the scenario in a week
+  - paragraph: Add a new scenario every week. Soon you can talk about anything you care about with ease!
+  - img "Large growth tree"
+  - img:
+    - img "Seedling"
+    - img "Small tree"
+    - img "Medium tree"
+  - paragraph: Pick your first scenario for free!
+  - img "Get it on Google Play"
+  - img "Download on the App Store"
+  - paragraph: BlaBlo knew exactly why I'm learning! Every lesson tailored made just for me.
+  - img "Keiko"
+  - paragraph: Keiko - Customer Support Lead
+  - article:
+    - img "Yuki profile"
+    - heading "Yuki" [level=3]
+    - paragraph: Finance Officer
+    - blockquote:
+      - paragraph: Metro rides became speaking time; BlaBlo’s adaptive scenarios helped me master my quarterly budget talk in English. My boss (and even me) was really impressed!
+  - article:
+    - img "Ji-yeon profile"
+    - heading "Ji-yeon" [level=3]
+    - paragraph: Customer Support Agent
+    - blockquote:
+      - paragraph: I used to memorize scripts. BlaBlo taught me to think in English. In six weeks my call-resolution score topped the team!
+  - article:
+    - img "Naree K. profile"
+    - heading "Naree K." [level=3]
+    - paragraph: Finance Officer
+    - blockquote:
+      - paragraph: I practiced BlaBlo’s 5-minute greeting drills during laundry duty—after two weeks guests noticed, tips went up.
+  - article:
+    - img "Arjun Rao profile"
+    - heading "Arjun Rao" [level=3]
+    - paragraph: Data Analyst
+    - blockquote:
+      - paragraph: I wash dishes while my kids finish homework. 10 mins voice drills sound simple, but they pushed me from A2 to solid B1 in three months.
+  - article:
+    - img "Thảo profile"
+    - heading "Thảo" [level=3]
+    - paragraph: Sales Engineer
+    - blockquote:
+      - paragraph: My product demos are full of technical words, so I created some demo scenarios in BlaBlo and got a tailored lesson that drilled every tricky term.
+  - article:
+    - img "Faisal profile"
+    - heading "Faisal" [level=3]
+    - paragraph: Sales Executive
+    - blockquote:
+      - paragraph: I echoed BlaBlo scripts on my 40-minute Riyadh commute—last month I closed a deal fully in English.
+  - article:
+    - img "Intan Rahayu profile"
+    - heading "Intan Rahayu" [level=3]
+    - paragraph: Startup Founder
+    - blockquote:
+      - paragraph: I practise investor pitches while jogging. Investors in Singapore said my delivery felt ‘global’—BlaBlo gets credit for that.
+  - button "Go to testimonial 1"
+  - button "Go to testimonial 2"
+  - button "Go to testimonial 3"
+  - button "Go to testimonial 4"
+  - button "Go to testimonial 5"
+  - button "Go to testimonial 6"
+  - button "Go to testimonial 7"
+  - heading "And it's" [level=2]
+  - heading "Free" [level=1]
+  - paragraph: Boost your speaking for free.Enjoy free daily scenarios to level up yourconfident. No credit card required.
+  - img "Get it on Google Play"
+  - img "Download on the App Store"
+  - paragraph: Role play, Flashcards, Speedchallenge & more fun features roll out shortly. Join early and grow with us!
+  - img "Game mode"
+  - paragraph: Follow us for new feature updates
+  - link "Follow us on X (Twitter)":
+    - /url: https://twitter.com/blablo
+    - img "X (Twitter) icon"
+  - link "Follow us on TikTok":
+    - /url: https://tiktok.com/@blablo
+    - img "TikTok icon"
+  - link "Follow us on Threads":
+    - /url: https://youtube.com/@blablo
+    - img "Threads icon"
+  - link "Follow us on Instagram":
+    - /url: https://instagram.com/blablo
+    - img "Instagram icon"
+  - link "Follow us on YouTube":
+    - /url: https://threads.net/@blablo
+    - img "YouTube icon"
+  - link "Follow us on Facebook":
+    - /url: https://facebook.com/blablo
+    - img "Facebook icon"
+  - img "banner"
+  - img "Blablo Logo"
+  - paragraph: Designed and built for busy learners, by busy learners.
+  - paragraph: © 2025 BlaBlo, Inc. All rights reserved
+  - img "Get it on Google Play"
+  - img "Download on the App Store"
+- alert
+- button "Open Next.js Dev Tools":
+  - img
+```

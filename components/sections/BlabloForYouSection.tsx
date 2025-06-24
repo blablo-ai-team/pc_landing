@@ -13,13 +13,13 @@ export default function BlabloForYouSection() {
           <h2 className="font-bricolage text-4xl md:text-5xl font-bold text-gray-900 mb-6">
             {blabloForYouData.title}
           </h2>
-          <p className="font-bricolage text-xl text-gray-600 max-w-4xl mx-auto leading-relaxed">
+          <p className="font-bricolage text-[16px] max-w-[419px] text-gray-600  mx-auto leading-relaxed">
             {blabloForYouData.subtitle}
           </p>
         </div>
         {/* Main Content Grid */}
-        <div className='bg-[#F2F2F7] mx-[250px] p-4 rounded-3xl flex flex-col '>
-          <div className="grid lg:grid-cols-2 gap-4  items-center">
+        <div className='bg-[#F2F2F7] max-w-[1176px] max-h-[1091px] mx-auto py-6 px-6 rounded-3xl flex flex-col '>
+          <div className="grid lg:grid-cols-2 gap-2  items-center">
             {/* Left Side - Hiro Chat Conversation */}
             <div className="relative min-h-[551px] w-full max-w-[552px]  rounded-[32px] bg-[#FEFAF4] shadow-lg overflow-hidden">
               {/* Character Image */}

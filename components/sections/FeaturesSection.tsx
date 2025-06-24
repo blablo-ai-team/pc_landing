@@ -3,7 +3,7 @@
 import React, { useRef } from 'react'
 import Image from 'next/image'
 import { motion, useSpring, useTransform } from 'framer-motion'
-import { featureCards, timeTagColors, statusStyles } from '@/data/features'
+import { featureCards, timeTagColors } from '@/data/features'
 
 interface FeaturesSectionProps {
   title?: string
@@ -83,7 +83,7 @@ const EnhancedTiltCard: React.FC<{
           transform: 'translateZ(60px)',
           transformStyle: 'preserve-3d',
         }} 
-        className="relative bg-white rounded-3xl shadow-lg overflow-hidden backdrop-blur-sm h-[426px]"
+        className="relative bg-white  h-[426px] rounded-3xl shadow-lg overflow-hidden backdrop-blur-sm "
       >
         {children}
       </motion.div>
@@ -118,15 +118,15 @@ const FeaturesSection: React.FC<FeaturesSectionProps> = ({
         </motion.div>     
 
         {/* Features Grid - Responsive container */}
-        <div className='bg-[#F2F2F7] mx-4 sm:mx-8 md:mx-16 lg:mx-[250px] py-4 rounded-3xl'> 
+        <div className='bg-[#F2F2F7] max-w-[1176px]  mx-auto py-4 sm:px-8 md:px-4 rounded-3xl'> 
           <div 
-            className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-2 lg:gap-4 max-w-6xl mx-auto px-2" 
+            className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-2 lg:gap-4 " 
             style={{ perspective: '1200px' }}
           >
             {featureCards.map((card, index) => (
               <div key={card.id} className="w-full">
                 <EnhancedTiltCard index={index}>           
-                  <div className="w-full h-[426px]  rounded-3xl px-4 py-6 flex flex-col">
+                  <div className="w-full  rounded-3xl px-4 py-6 flex flex-col items-stretch" >
                     {/* Time Tag */}
                     <div className="mb-6">
                       <div className={`inline-flex items-center px-4 py-2 rounded-full text-[12px] font-semibold ${timeTagColors[card.timeTagColor]}`}>
@@ -136,13 +136,13 @@ const FeaturesSection: React.FC<FeaturesSectionProps> = ({
 
                     {/* Feature Icon/Image - Centered and responsive */}
                     <div className="flex justify-center items-center mb-8 flex-1">
-                      <div className="relative w-16 h-16 sm:w-20 sm:h-20  lg:w-30 lg:h-30">
+                      <div className="relative w-16 h-16 sm:w-20 sm:h-20  lg:w-40 lg:h-40">
                         {card.imageSrc ? (
                           <Image
                             src={card.imageSrc}
                             alt={card.imageAlt || card.title}
                             fill
-                            className="object-contain"
+                            className="object-cover"
                             // sizes="(max-width: 640px) 64px, (max-width: 1024px) 80px, 96px"
                           />
                         ) : (
@@ -158,10 +158,10 @@ const FeaturesSection: React.FC<FeaturesSectionProps> = ({
                     </div>
 
                     {/* Bottom Content - Auto-positioned at bottom */}
-                    <div className="text-black">
+                    <div className="text-black flex flex-col justify-center">
                       {/* Title */}
                       <div className="mb-4">
-                        <h3 className="font-bricolage text-[28px] font-light leading-tight">
+                        <h3 className="font-bricolage text-[29px] font-light leading-tight">
                           {card.title}
                         </h3>
                         <h4 className="font-bricolage text-[28px] font-light leading-tight">
@@ -170,17 +170,17 @@ const FeaturesSection: React.FC<FeaturesSectionProps> = ({
                       </div>
 
                       {/* Duration and Status */}
-                      <div className="flex items-center mb-4 text-sm gap-1">
+                      <div className="flex items-center mb-4 text-[10px] gap-[2px] font-light leading-none">
                         <span className="font-medium text-black">
                           {card.duration}
                         </span>
-                        <span className={`font-medium ${statusStyles[card.status]}`}>
+                        <span className={`font-medium `}>
                           • {card.status === 'available' ? 'Now available' : 'Launching soon'}
                         </span>
                       </div>
 
                       {/* Description */}
-                      <p className="font-bricolage text-sm leading-relaxed text-[#797979]">
+                      <p className="font-bricolage text-sm leading-relaxed text-[#797979] text-[12px]">
                         {card.description}
                       </p>
                     </div>

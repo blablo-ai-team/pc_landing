@@ -212,17 +212,18 @@ useEffect(() => {
         </div>
 
  {/* Destops Touch Carousel */}
-      <div className="max-w-[1660px] hidden md:block mx-auto px-4 md:px-6">       
+      <div className="max-w-[1660px] max-h-[406px] hidden md:block mx-auto px-4 md:px-6">       
          {/* First row - exactly 4 cards */}
         <div className="mb-6">
-          <div className="flex justify-center gap-6">
+          <div className="flex justify-center gap-6 max-w-[1512px] max-h-[236px] ">
             {RegionData.slice(0, 4).map((testimonial, index) => (
               <motion.div 
                 key={testimonial.id.toString()}
                 initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5, delay: 0.1 * index }}
-                viewport={{ once: true }}                className="bg-white rounded-2xl p-4 md:p-6 shadow-md hover:shadow-lg transition-shadow w-[360px] h-[236px] flex flex-col"
+                viewport={{ once: true }}             
+                   className="bg-white border-[1px] border-[#C7C7CC] rounded-2xl max-w-[360px] max-h-[236px] p-4 md:p-6 shadow-md hover:shadow-lg transition-shadow w-[360px] h-[236px] flex flex-col"
               >
                 <div className="flex items-center mb-5">
                   <div className="h-10 w-10 rounded-none overflow-hidden mr-3 flex-shrink-0">
@@ -251,7 +252,9 @@ useEffect(() => {
                 initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5, delay: 0.1 * index + 0.2 }}
-                viewport={{ once: true }}                className="bg-white rounded-2xl p-4 md:p-6 shadow-md hover:shadow-lg transition-shadow w-[360px] h-[236px] flex flex-col"
+                viewport={{ once: true }}             
+                
+                className="bg-white rounded-2xl border-[1px] border-[#C7C7CC] p-4 md:p-6 shadow-md hover:shadow-lg transition-shadow w-[360px] h-[236px] flex flex-col"
               >                <div className="flex items-center mb-5">
                   <div className="h-10 w-10 rounded-none overflow-hidden mr-3 flex-shrink-0">
                     <Image 
