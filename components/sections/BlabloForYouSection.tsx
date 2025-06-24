@@ -10,11 +10,12 @@ export default function BlabloForYouSection() {
       <div className="max-w-7xl mx-auto">
         {/* Section Header */}
         <div className="text-center mb-16">
+          <p className='text-[16px] max-w-[419px] mx-auto text-[#8E8E93] mb-[20px]'>Meet BlaBlo, your on-the-go English buddy</p>
           <h2 className="font-bricolage text-4xl md:text-5xl  text-gray-900 mb-6">
             {blabloForYouData.title}<span className='font-bold'>You</span>
           </h2>
-          <p className="font-bricolage text-[16px] max-w-[419px] text-gray-600  mx-auto leading-relaxed">
-            {blabloForYouData.subtitle}
+          <p className="font-bricolage text-[16px] max-w-[419px] text-[#000]  mx-auto leading-relaxed">
+            {blabloForYouData.subtitle} <br /><span className='font-bold '>designed just for you.</span>
           </p>
         </div>
         {/* Main Content Grid */}

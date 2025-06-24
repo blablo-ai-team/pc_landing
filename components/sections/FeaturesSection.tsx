@@ -83,7 +83,7 @@ const EnhancedTiltCard: React.FC<{
           transform: 'translateZ(60px)',
           transformStyle: 'preserve-3d',
         }} 
-        className="relative bg-white  h-[426px] rounded-3xl shadow-lg overflow-hidden backdrop-blur-sm "
+        className="relative bg-white  max-h-[526px] rounded-3xl shadow-lg overflow-hidden backdrop-blur-sm "
       >
         {children}
       </motion.div>
@@ -118,7 +118,7 @@ const FeaturesSection: React.FC<FeaturesSectionProps> = ({
         </motion.div>     
 
         {/* Features Grid - Responsive container */}
-        <div className='bg-[#F2F2F7] max-w-[1176px]  mx-auto py-4 sm:px-8 md:px-4 rounded-3xl'> 
+        <div className='bg-[#F2F2F7]  max-w-[1176px] max-h-[717px]  mx-auto py-4 sm:px-8 md:px-4 rounded-3xl'> 
           <div 
             className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-2 lg:gap-4 " 
             style={{ perspective: '1200px' }}
@@ -160,11 +160,11 @@ const FeaturesSection: React.FC<FeaturesSectionProps> = ({
                     {/* Bottom Content - Auto-positioned at bottom */}
                     <div className="text-black flex flex-col justify-center">
                       {/* Title */}
-                      <div className="mb-4">
-                        <h3 className="font-bricolage text-[29px] font-light leading-tight">
+                      <div className="mb-4  min-h-[96px] ">
+                        <h3 className="font-bricolage  text-[48px] font-light leading-tight">
                           {card.title}
                         </h3>
-                        <h4 className="font-bricolage text-[28px] font-light leading-tight">
+                        <h4 className="font-bricolage text-[48px] font-light leading-tight">
                           {card.subtitle}
                         </h4>
                       </div>
@@ -180,7 +180,7 @@ const FeaturesSection: React.FC<FeaturesSectionProps> = ({
                       </div>
 
                       {/* Description */}
-                      <p className="font-bricolage text-sm leading-relaxed text-[#797979] text-[12px]">
+                      <p className="font-bricolage text-sm leading-relaxed text-[#797979] ">
                         {card.description}
                       </p>
                     </div>
@@ -188,6 +188,16 @@ const FeaturesSection: React.FC<FeaturesSectionProps> = ({
                 </EnhancedTiltCard>
               </div>
             ))}
+          </div>
+          <div className=' mt-[80px] flex gap-4 '>
+            <Image
+            src={"/images/features/cambi.png"}
+            alt='hello'
+            width={168}
+            height={35}
+            className='object-contain'
+            />
+            <p className='max-w-[648px] font-inter text-[14px] font-normal text-[#8E8E93] '>Research from the University of Cambridge shows that cycling quickly through three micro-steps Learn, Practice, Apply locks a new language skill faster and with less stress than long classes. BlaBlo builds that same loop into your day.</p>
           </div>
         </div>
       </div>

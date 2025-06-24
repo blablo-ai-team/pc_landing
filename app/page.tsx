@@ -37,14 +37,18 @@ export default function Home() {
         {/* 3D Cards Section */}
         {/* <Card3DSection /> */}
 
+        {/* BlaBló is for You Section */}
+        <BlabloForYouSection />
+
+
+   {/* Speaking Progress Section */}
+        <SpeakingProgressSection />
+        
         {/* Features Section */}
         <FeaturesSection />
 
-        {/* Speaking Progress Section */}
-        <SpeakingProgressSection />
+     
 
-        {/* BlaBló is for You Section */}
-        <BlabloForYouSection />
 
         {/*KazienSection level  */}
         <KazienSection />
