@@ -10,8 +10,8 @@ export default function BlabloForYouSection() {
       <div className="max-w-7xl mx-auto">
         {/* Section Header */}
         <div className="text-center mb-16">
-          <h2 className="font-bricolage text-4xl md:text-5xl font-bold text-gray-900 mb-6">
-            {blabloForYouData.title}
+          <h2 className="font-bricolage text-4xl md:text-5xl  text-gray-900 mb-6">
+            {blabloForYouData.title}<span className='font-bold'>You</span>
           </h2>
           <p className="font-bricolage text-[16px] max-w-[419px] text-gray-600  mx-auto leading-relaxed">
             {blabloForYouData.subtitle}
@@ -29,7 +29,7 @@ export default function BlabloForYouSection() {
                   alt="Hiro character"
                   width={512}
                   height={512}
-                  className="w-auto h-[512px] object-cover"
+                  className="w-auto h-[512px] "
                   priority
                 />
               </div>
@@ -51,11 +51,12 @@ export default function BlabloForYouSection() {
               </div>
             </div>
             {/* Right Side - AI Chat and Phone Screenshots */}
-            <div className="relative min-h-[551px] w-full max-w-[552px] rounded-[32px] bg-white p-6 shadow-lg overflow-hidden">
+            <div className="relative min-h-[551px] w-full max-w-[552px] rounded-[32px] bg-white px-6 pt-6 shadow-lg overflow-hidden">
               {/* AI Icon and Response Bubbles */}
               <div className="flex flex-col space-y-5 pt-4">
                 {/* AI Icon and First Message */}
-                <div className="flex items-start space-x-4">                {/* Rainbow AI Icon */}
+                <div className="flex items-start space-x-4">              
+                    {/* Rainbow AI Icon */}
                   <div className="relative w-[40px]  ">
 
                     <div className="absolute inset-[3px]  rounded-full flex items-center justify-center bg-white">
@@ -108,26 +109,26 @@ export default function BlabloForYouSection() {
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ delay: 1.2 }}
                 viewport={{ once: true }}
-                className="flex justify-center space-x-6 mt-10"
+                className="flex justify-center space-x-6 "
               >              {/* First Phone */}
-                <div className="relative w-[210px] h-[220px] object-cover shadow-xl">
+                <div className=" max-w-[170px] translate-y-10 object-cover shadow-xl">
                   <Image
                     src="/images/learning/phone1.png"
                     alt="App screenshot - Learning Quest"
                     width={210}
                     height={220}
-                    className="inset-0  w-full h-full "
+                    className="inset-0  w-full h-full  "
                   />
                 </div>
 
                 {/* Second Phone */}
-                <div className="relative w-[210px] h-[220px] object-cover">
+                <div className=" max-w-[170px] translate-y-10 object-cover">
                   <Image
                     src="/images/learning/phone2.png"
                     alt="App screenshot - Learning Activity"
                   width={210}
                     height={220}
-                    className="absolute inset-0 w-full h-full"
+                    className=" inset-0 w-full h-full"
                   />
                 </div>
               </motion.div>

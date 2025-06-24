@@ -26,8 +26,8 @@ export interface BlabloForYouData {
   }[];
 }
 export const blabloForYouData: BlabloForYouData = {
-  title: "BlaBlo is for You",
-  subtitle: "Master what you want with AI-powered Learning path, designed just for you!",
+  title: "BlaBlo is for ",
+  subtitle: "Master what you want with an AI-powered learning path, designed just for you!",
   hiromsg: [
     { msg: "I’m a Hotel receptionist" },
     { msg: "My English is okay... I can handle simple topics" },
