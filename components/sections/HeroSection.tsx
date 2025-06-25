@@ -9,11 +9,11 @@ import AppDownload from '@/components/common/AppDownload'
 
 export default  function HeroSection () {
   return (   
-     <section className="w-full leading-none block   mb-[210px] pt-4  2xl:pt-[60px]">
+     <section className="w-full leading-none block    pt-4  2xl:pt-[60px]">
       {/* <div className="max-w-6xl bg-amber-700 2xl:max-w-8xl mx-auto px-4 sm:px-12 lg:px-8 2xl:px-12"> */}
         <div className="max-w-6xl  2xl:max-w-8xl "> 
         {/* Main Content */}
-        <div className="text-center pt-16 ">
+        <div className="text-center  ">
             {/* Main Headline */}
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -108,17 +108,21 @@ export default  function HeroSection () {
             
           </motion.div>
 
-            <AppDownload className=' -translate-y-[54px]  '/>
-        <Image
-                           src={'/images/card3d.png'}
-                         alt="car3d"
-                           fill
-                          
-                           // priority={index === 0 || index === total - 1}
-                           className="object-contain mt-96   -z-10"
-                          priority={true}
-                         />
+               <div className="relative z-20 mb-8">
+            <AppDownload />
+          </div>
+     
         </div>
+      </div>
+          <div className="relative z-10 lg-top-20 -top-10">
+        <Image
+          src="/images/card3d.png"
+          alt="3D card preview"
+          width={1986}
+          height={510}
+          className="w-full h-auto max-h-[551px] -translate-y-20"
+          priority={true}
+        />
       </div>
     </section>
   )

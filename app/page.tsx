@@ -29,7 +29,7 @@ export default function Home() {
     <>
       {/* Sticky Header */}
       <Header onGetBlabloClick={handleGetBlabloClick} />
-      <main className="min-h-screen ">
+      <main className=" ">
 
 
         <HeroSection  />
