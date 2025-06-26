@@ -44,6 +44,7 @@ const Header: React.FC<HeaderProps> = ({ onGetBlabloClick }) => {
       {isSticky && <div style={{ height: '88px' }} />}
       
       <header
+   
         className={`w-full px-[250px]  transition-all duration-300 ${
           isSticky ? 'fixed top-0 left-0 right-0' : 'relative'
         }`}
@@ -65,9 +66,9 @@ const Header: React.FC<HeaderProps> = ({ onGetBlabloClick }) => {
             <Image
               src={heroContent.branding.logoSrc}
               alt={heroContent.branding.logoAlt}
-              width={120}
-              height={39}
-              className="  sm:w-auto h-[29px]"
+              width={149}
+              height={49}
+              className=" "
               priority
             />
           </button>

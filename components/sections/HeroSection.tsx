@@ -9,7 +9,7 @@ import AppDownload from '@/components/common/AppDownload'
 
 export default  function HeroSection () {
   return (   
-     <section className="w-full leading-none block    pt-4  2xl:pt-[60px]">
+     <section className="w-full leading-none block  pt-[160px]">
       {/* <div className="max-w-6xl bg-amber-700 2xl:max-w-8xl mx-auto px-4 sm:px-12 lg:px-8 2xl:px-12"> */}
         <div className="max-w-6xl  2xl:max-w-8xl "> 
         {/* Main Content */}
@@ -22,7 +22,7 @@ export default  function HeroSection () {
             className=" px-4 sm:px-6 md:px-8 lg:px-12 xl:px-[330px] 2xl:px-20"
           >            
             <h1 className="font-bricolage  ">
-              <div className="text-gray-900    mb-2 2xl:mb-3 text-[36px] sm:text-[48px] md:text-[64px] lg:text-[72px] xl:text-[60px] 2xl:text-[70px] font-medium p-0">
+              <div className="text-gray-900 max-w-[1024px] max-h-[86px] text-nowrap mx-auto    mb-2 2xl:mb-3 text-[36px] sm:text-[48px] md:text-[64px] lg:text-[72px] xl:text-[70px]  2xl:text-[70px] font-medium p-0">
                 {heroContent.headline.mainText}
               </div>
                <div className="relative inline-block mb-[46px]">              
@@ -58,7 +58,7 @@ export default  function HeroSection () {
                     @[600px]:left-28 @[600px]:w-7 @[600px]:h-7"
                 />
                   {/* Main text with gradient */}
-                <span className="text-[36px] sm:text-[48px] md:text-[64px] lg:text-[59px] xl:text-[60px] 2xl:text-[86px] font-medium" style={{
+                <span className="text-[36px] sm:text-[48px] md:text-[64px] lg:text-[59px] xl:text-[86px] 2xl:text-[86px] font-medium" style={{
                   background: 'linear-gradient(90deg, #FF4BA0 0%, #CE6CFF 45%, #3260FF 100%)',
                   WebkitBackgroundClip: 'text',
                   WebkitTextFillColor: 'transparent',
