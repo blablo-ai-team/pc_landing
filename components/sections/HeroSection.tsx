@@ -115,7 +115,7 @@ export default  function HeroSection () {
      
         </div>
       </div>
-          <div className="relative z-10  -top-10 lg:-top-16 xl:-top-10 ">
+          <div className="relative z-10   lg:-top-20 xl:-top-10 ">
         <Image
           src="/images/card3d.png"
           alt="3D card preview"

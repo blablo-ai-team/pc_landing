@@ -36,7 +36,7 @@ export default function AppDownload({
             />
           </div>
 
-          <div className="max-w-[164px]  max-h-[185px] h-full hidden mx-2 md:flex  bg-[#FFF]  items-center justify-center  rounded-b-[8px]  border">
+          <div className="max-w-[164px]  max-h-[185px] h-full hidden mx-2 md:flex  bg-[#FFF]  items-center justify-center  rounded-b-[8px] ">
             <Image
               src="/images/qr-google-play.svg"
               alt="QR code to download Google Play app"
@@ -58,7 +58,7 @@ export default function AppDownload({
             />
           </div>
 
-          <div className="max-w-[164px]  max-h-[185px] h-full hidden mx-2 md:flex  bg-[#FFF]  items-center justify-center  rounded-b-[8px]  border">
+          <div className="max-w-[164px]  max-h-[185px] h-full hidden mx-2 md:flex  bg-[#FFF]  items-center justify-center  rounded-b-[8px]  ">
             <Image
               src="/images/qr-app-store.svg"
               alt="QR code to download Google Play app"
