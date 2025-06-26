@@ -38,33 +38,24 @@ export default function FooterSection() {
   borderRadius='16px'
 />
        </div>
-         <div className='block sm:hidden'>
- <SocalButton 
-   customWidth={100}
- customHeight={71}  
-  iconSize="lg"
-  variant="large"
-  className="mb-12"
-  borderRadius='8px'
-/>
-       </div>
+    
   
 
-        <div className='relative w-full h-[700px]   mx-auto rounded-4xl'>
+        <div className='relative h-[700px] max-w-[1128px]   mx-auto rounded-4xl'>
           <Image
             src="/images/test_banner.png"
             alt={'banner'}
             fill
-
-            className="object-cover rounded-4xl z-10 hidden md:block "
+        
+            className="object-cover rounded-4xl z-10  max-w-[1128px]  "
           />          
-                  <Image
+                  {/* <Image
             src="/images/footer-background-1.png"
             alt={'banner'}
             fill
 
             className="object-cover rounded-4xl z-10 block md:hidden "
-          />       
+          />        */}
           {/* <div className="absolute inset-0 bg-black/20 rounded-4xl z-10"></div> */}
           
           <div className="relative z-20 text-center mb-6 mt-20 pt-[100px]">
@@ -82,7 +73,7 @@ export default function FooterSection() {
             <p className="text-black text-lg font-medium max-w-lg mx-auto leading-relaxed drop-shadow-lg">
               Designed and built for busy learners, by busy learners.
             </p>
-            <p className="text-gray-500 mt-2">© 2025 BlaBlo, Inc. All rights reserved</p>
+            <p className="text-gray-500 mt-2 mb-16">© 2025 BlaBlo, Inc. All rights reserved</p>
           </div>
 
           {/* App Download Section */}

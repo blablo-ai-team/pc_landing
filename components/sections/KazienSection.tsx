@@ -58,12 +58,12 @@ export default function KazienSection() {    return (
                   </h2>
                     <div className="space-y-6 relative">                    
                     {/* Vertical line connecting dots - gradient background */}
-                    <div className="absolute left-[9px] top-[24px] w-[2px] h-[calc(100%-48px)] bg-gradient-to-b from-[rgba(170,235,186,1)] via-[rgba(72,195,103,1)] to-[rgba(17,165,54,1)]"></div>
+                    <div className="absolute left-[9px] top-[20px] w-[1px] h-[calc(100%-48px)] bg-gradient-to-b from-[rgba(170,235,186,1)] via-[rgba(72,195,103,1)] to-[rgba(17,165,54,1)]"></div>
                     
                     {/* Step 1 */}
                     <div className="flex gap-4">
                       <div className="relative">
-                        <div className="h-5 w-5 rounded-full bg-[#34C759] flex-shrink-0 z-10 relative"></div>
+                        <div className="h-5 w-5 rounded-full bg-[#AAEBBA] flex-shrink-0 z-10 relative"></div>
                       </div>
                       <div>
                         <p className="text-black font-medium">
@@ -75,7 +75,7 @@ export default function KazienSection() {    return (
                     {/* Step 2 */}
                     <div className="flex gap-4">
                       <div className="relative">
-                        <div className="h-5 w-5 rounded-full bg-[#34C759] flex-shrink-0 z-10 relative"></div>
+                        <div className="h-5 w-5 rounded-full bg-[#48C367] flex-shrink-0 z-10 relative"></div>
                       </div>
                       <div>
                         <p className="text-black font-medium">
@@ -88,7 +88,7 @@ export default function KazienSection() {    return (
                     {/* Step 3 */}
                     <div className="flex gap-4">
                       <div className="relative">
-                        <div className="h-5 w-5 rounded-full bg-[#34C759] flex-shrink-0 z-10 relative"></div>
+                        <div className="h-5 w-5 rounded-full bg-[#11A536] flex-shrink-0 z-10 relative"></div>
                       </div>
                       <div>
                         <p className="text-black font-medium">
@@ -127,7 +127,7 @@ export default function KazienSection() {    return (
                       />
                     </div>
                     
-                    <ResponsiveContainer width="100%" height="100%" style={{ overflow: 'visible' }}>
+                    <ResponsiveContainer width="100%" height="102%" style={{ overflow: 'visible' }}>
                       <LineChart
                         data={[
                           { x: 0, y: 0 },
@@ -240,9 +240,9 @@ export default function KazienSection() {    return (
                             return (
                               <foreignObject
                                 x={viewBox.x - 70}
-                                y={viewBox.y - 100}
+                                y={viewBox.y - 159}
                                 width={100}
-                                height={150}
+                                height={200}
                                 style={{ zIndex: 40  }}
                               >
                                 <div className="w-full h-full relative">
@@ -250,8 +250,8 @@ export default function KazienSection() {    return (
                                     src="/images/kaizen/tree2.png"
                                     alt="Medium tree"
                                     width={100}
-                                    height={150}
-                                    className="object-contain absolute bottom-[50px]"
+                                    height={180}
+                                    className="object-contain absolute bottom-[40px]  "
                                     style={{ objectPosition: 'bottom center' }}
                                   />
                                 </div>

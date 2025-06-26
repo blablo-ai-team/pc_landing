@@ -6,7 +6,7 @@ import AppDownload from '@/components/common/AppDownload';
 
 export default function FreeAppSection() {
   return (
-    <section className="py-16 md:py-16 section-bg">
+    <section className="pt-[160px] pb-[100px] section-bg">
       <div className="max-w-4xl mx-auto px-4 text-center ">
         {/* Header */}
         <motion.div 
@@ -21,7 +21,7 @@ export default function FreeAppSection() {
           <h1 className="text-[148px] leading-none sm:text-[150] md:text-[158px] font-bold text-black ">
             Free
           </h1>
-          <p className="text-gray-600  max-w-lg  mx-auto text-2xl">
+          <p className="text-gray-600 font-inter  max-w-lg  mx-auto text-2xl">
             Boost your speaking for free.
             <br className='hidden sm:block'/>
             Enjoy free daily scenarios to level up your
@@ -44,6 +44,7 @@ export default function FreeAppSection() {
                    qrContainerWidth={200}
                    qrContainerHeight={177}
                    variant="light" 
+
                  />
         </motion.div>
       </div>

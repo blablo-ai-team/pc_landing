@@ -19,51 +19,52 @@ interface AppDownloadProps {
 export default function AppDownload({
   className = '',
 
-}: AppDownloadProps) {  return (
+}: AppDownloadProps) {
+  return (
     <div className={`w-full ${className} `}>
       <div className="flex flex-col md:flex-row justify-center gap-2 z-50">
         {/* Google Play Store */}
-        <div className="h-[185px] max-w-[164px] flex flex-col ">
+        <div className="h-[185px] max-w-[175.5px] flex flex-col ">
           <div className=''>
-     <Image
-            src="/images/app_button_google.png"
-            alt="Get it on Google Play"
-            width={175}
-            height={52}
-            priority
-            className=" "
-          />
+            <Image
+              src="/images/app_button_google.png"
+              alt="Get it on Google Play"
+              width={175.5}
+              height={52}
+              priority
+              className=" "
+            />
           </div>
-     
+
           <div className="max-w-[164px]  max-h-[185px] h-full hidden mx-2 md:flex  bg-[#FFF]  items-center justify-center  rounded-b-[8px]  border">
             <Image
               src="/images/qr-google-play.svg"
               alt="QR code to download Google Play app"
               width={65}
               height={65}
-           className=""
+              className=""
             />
           </div>
         </div>
-             <div className="h-[185px] max-w-[164px] flex flex-col ">
+        <div className="h-[185px] max-w-[175.5px] flex flex-col ">
           <div className=''>
-     <Image
-            src="/images/app_button_apple.png"
-            alt="Get it on Google Play"
-            width={175}
-            height={52}
-            priority
-            className=" "
-          />
+            <Image
+              src="/images/app_button_apple.png"
+              alt="Get it on Google Play"
+              width={175}
+              height={52}
+              priority
+              className=" "
+            />
           </div>
-     
-          <div className="max-w-[164px]  max-h-[185px] h-full hidden mx-2 md:flex  bg-[#FFF]  items-center justify-center  rounded-b-[8px] shadow-lg border">
+
+          <div className="max-w-[164px]  max-h-[185px] h-full hidden mx-2 md:flex  bg-[#FFF]  items-center justify-center  rounded-b-[8px]  border">
             <Image
               src="/images/qr-app-store.svg"
               alt="QR code to download Google Play app"
               width={65}
               height={65}
-           className=""
+              className=""
             />
           </div>
         </div>

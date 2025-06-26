@@ -48,11 +48,14 @@ export default function GameModeSection() {
         className='w-[380px] lg:w-[635px] mb-12 text-center font-inter text-[18px] lg:text-[24px]  px-[20px] lg:px-0 font-medium leading-[150%] text-[#8E8E93] lg:text-[color:var(--Grays-Gray-2,#AEAEB2)]'
         >Role play, Flashcards, Speedchallenge & more fun features roll out shortly. <br className='sm:hidden '></br>  <br className='sm:hidden '></br>Join early and grow with us!</p>
          <Image
-                            src={"/images/flash_card_1.png"}
-                            alt={'Game mode'}
-                            width={800}
-                            height={500}
-                            className="object-contain "
+                            src={"/images/1.png"}
+                 alt="Game mode"
+  width={747}
+  height={320} // hoặc dùng height phù hợp với tỉ lệ thật
+  quality={100}
+  priority
+  unoptimized={true}
+                            className=" "
                           />
         {/* Section Header */}
         {/* <div className="text-center mb-12">

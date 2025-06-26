@@ -9,12 +9,12 @@ export default function BlabloForYouSection() {
     <section className="py-20 px-4 section-bg">
       <div className="max-w-7xl mx-auto">
         {/* Section Header */}
-        <div className="text-center mb-16">
+        <div className="text-center mb-12">
           <p className='text-[16px] max-w-[419px] mx-auto text-[#8E8E93] mb-[20px]'>Meet BlaBlo, your on-the-go English buddy</p>
           <h2 className="font-bricolage text-4xl md:text-5xl  text-gray-900 mb-6">
             {blabloForYouData.title}<span className='font-bold'>You</span>
           </h2>
-          <p className="font-bricolage text-[16px] max-w-[419px] text-[#000]  mx-auto leading-relaxed">
+          <p className="font-inter text-[16px] max-w-[419px] text-[#000]  mx-auto leading-relaxed">
             {blabloForYouData.subtitle} <br /><span className='font-bold '>designed just for you.</span>
           </p>
         </div>
@@ -36,7 +36,7 @@ export default function BlabloForYouSection() {
               </div>
 
               {/* Chat Bubbles Container */}
-              <div className="absolute top-8 right-6 flex flex-col space-y-4 max-w-[359px]">
+              <div className="absolute top-8 right-6 flex flex-col space-y-2 max-w-[359px]">
                 {blabloForYouData.hiromsg.map((message, index) => (
                   <motion.div
                     key={index}
@@ -54,7 +54,7 @@ export default function BlabloForYouSection() {
             {/* Right Side - AI Chat and Phone Screenshots */}
             <div className="relative min-h-[551px] w-full max-w-[552px] rounded-[32px] bg-white px-6 pt-6 shadow-lg overflow-hidden">
               {/* AI Icon and Response Bubbles */}
-              <div className="flex flex-col space-y-5 pt-4">
+              <div className="flex flex-col space-y-2 pt-4">
                 {/* AI Icon and First Message */}
                 <div className="flex items-start space-x-4">              
                     {/* Rainbow AI Icon */}
@@ -66,7 +66,7 @@ export default function BlabloForYouSection() {
                         alt="AI Assistant"
                         width={94}
                         height={94}
-                        className="w-[94px]  scale-150"
+                        className="max-h-[94px]  scale-200"
                       />
                     </div>
                   </div>
@@ -76,12 +76,13 @@ export default function BlabloForYouSection() {
                     whileInView={{ opacity: 1, y: 0 }}
                     transition={{ delay: 0.3 }}
                     viewport={{ once: true }}
-                    className="inline-flex max-w-[378px] px-6 py-4 justify-center items-center gap-1 rounded-[100px] bg-[#F2F2F7] "
+                    className="inline-flex max-w-[378px] px-6 py-4 justify-center items-center rounded-[100px] bg-[#F2F2F7] "
                   >                  <p className="font-inter text-black text-[14px]  leading-[150%]">
-                      Hi Hiro! By the end of this week, you&apos;ll <span className="font-bold">handle guest complaints smoothly</span>
+                      Hi Hiro! By the end of this week, you&apos;ll <span className="font-bold text-[#2249D1]">handle guest complaints smoothly</span>
                     </p>
                   </motion.div>
-                </div>              {/* Second Message */}
+                </div>            
+                  {/* Second Message */}
                 <motion.div
                   initial={{ opacity: 0, y: 10 }}
                   whileInView={{ opacity: 1, y: 0 }}

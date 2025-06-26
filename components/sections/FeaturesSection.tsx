@@ -161,10 +161,10 @@ const FeaturesSection: React.FC<FeaturesSectionProps> = ({
                     <div className="text-black flex flex-col justify-center">
                       {/* Title */}
                       <div className="mb-4  min-h-[96px] ">
-                        <h3 className="font-bricolage  text-[48px] font-light leading-tight">
+                        <h3 className="font-bricolage  text-[48px] font-light leading-none ">
                           {card.title}
                         </h3>
-                        <h4 className="font-bricolage text-[48px] font-light leading-tight">
+                        <h4 className="font-bricolage text-[48px] font-light leading-none ">
                           {card.subtitle}
                         </h4>
                       </div>
@@ -174,7 +174,7 @@ const FeaturesSection: React.FC<FeaturesSectionProps> = ({
                         <span className="font-medium text-black">
                           {card.duration}
                         </span>
-                        <span className={`font-medium `}>
+                        <span className={`font-medium ${card.status === 'available' ? 'text-black': 'text-[#8E8E93]'}  `}>
                           • {card.status === 'available' ? 'Now available' : 'Launching soon'}
                         </span>
                       </div>
@@ -189,7 +189,7 @@ const FeaturesSection: React.FC<FeaturesSectionProps> = ({
               </div>
             ))}
           </div>
-          <div className=' mt-[80px] flex gap-4 '>
+          <div className=' mt-[60px] flex gap-x-[24px] border-t-[1px] pt-[20px] border-[#E5E5EA] '>
             <Image
             src={"/images/features/cambi.png"}
             alt='hello'
@@ -197,7 +197,7 @@ const FeaturesSection: React.FC<FeaturesSectionProps> = ({
             height={35}
             className='object-contain'
             />
-            <p className='max-w-[648px] font-inter text-[14px] font-normal text-[#8E8E93] '>Research from the University of Cambridge shows that cycling quickly through three micro-steps Learn, Practice, Apply locks a new language skill faster and with less stress than long classes. BlaBlo builds that same loop into your day.</p>
+            <p className='max-w-[648px] font-inter text-[14px] font-normal text-[#8E8E93] leading-[150%]'>Research from the University of Cambridge shows that cycling quickly through three micro-steps Learn, Practice, Apply locks a new language skill faster and with less stress than long classes. BlaBlo builds that same loop into your day.</p>
           </div>
         </div>
       </div>

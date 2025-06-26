@@ -45,13 +45,13 @@ useEffect(() => {
     setIsDragging(false);
   };
   return (   
-     <section className="py-24  section-bg relative overflow-hidden">
+     <section className="py-32  section-bg relative overflow-hidden">
       {/* Decorative trees (laurels) */}
       <div className='relative px-4 sm:mb-[179px] '>
    <div 
   className="absolute 
           hidden sm:block 
-          left-4 sm:left-8 md:left-20 lg:left-40 xl:left-50 2xl:left-[250px] 
+          left-4 sm:left-8 md:left-40 lg:left-50 xl:left-60 2xl:left-[250px] 
           top-1/2 -translate-y-1/2 z-0">
         <Image 
           src="/images/tree_1.svg" 
@@ -64,7 +64,7 @@ useEffect(() => {
       </div>
       <div className="absolute 
           hidden sm:block 
-          right-4 sm:right-8 md:right-20 lg:right-40 xl:right-50 2xl:right-[250px] 
+          right-4 sm:right-8 md:right-40 lg:right-50 xl:right-60 2xl:right-[250px] 
           top-1/2 -translate-y-1/2 z-0">
         <Image 
           src="/images/tree_2.svg" 

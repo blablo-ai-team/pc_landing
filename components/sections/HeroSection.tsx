@@ -13,7 +13,7 @@ export default  function HeroSection () {
       {/* <div className="max-w-6xl bg-amber-700 2xl:max-w-8xl mx-auto px-4 sm:px-12 lg:px-8 2xl:px-12"> */}
         <div className="max-w-6xl  2xl:max-w-8xl "> 
         {/* Main Content */}
-        <div className="text-center  ">
+        <div className="text-center ">
             {/* Main Headline */}
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -22,7 +22,7 @@ export default  function HeroSection () {
             className=" px-4 sm:px-6 md:px-8 lg:px-12 xl:px-[330px] 2xl:px-20"
           >            
             <h1 className="font-bricolage  ">
-              <div className="text-gray-900 max-w-[1024px] max-h-[86px] text-nowrap mx-auto    mb-2 2xl:mb-3 text-[36px] sm:text-[48px] md:text-[64px] lg:text-[72px] xl:text-[70px]  2xl:text-[70px] font-medium p-0">
+              <div className="text-gray-900 max-w-[1024px] max-h-[86px] text-nowrap mx-auto    mb-2 2xl:mb-3 text-[36px] sm:text-[48px] md:text-[64px] lg:text-[72px] xl:text-[72px]  2xl:text-[70px] font-medium p-0">
                 {heroContent.headline.mainText}
               </div>
                <div className="relative inline-block mb-[46px]">              
@@ -58,7 +58,7 @@ export default  function HeroSection () {
                     @[600px]:left-28 @[600px]:w-7 @[600px]:h-7"
                 />
                   {/* Main text with gradient */}
-                <span className="text-[36px] sm:text-[48px] md:text-[64px] lg:text-[59px] xl:text-[86px] 2xl:text-[86px] font-medium" style={{
+                <span className="text-[36px] sm:text-[48px] md:text-[64px]  lg:text-[72px] xl:text-[72px] 2xl:text-[86px] font-medium" style={{
                   background: 'linear-gradient(90deg, #FF4BA0 0%, #CE6CFF 45%, #3260FF 100%)',
                   WebkitBackgroundClip: 'text',
                   WebkitTextFillColor: 'transparent',
@@ -90,7 +90,8 @@ export default  function HeroSection () {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.2 }}
-            className="font-bricolage text-black text-center font-normal mx-auto mb-11  max-w-[380px] text-[14px] sm:text-[15px] lg:text-[16px] leading-[150%]"
+            className="font-bricolage
+            mx-auto text-black text-center font-medium   mb-11 max-h-[72px]  max-w-[480px] text-[14px] sm:text-[20px] lg:text-[24px] leading-[150%]"
           >
             {heroContent.subtext}
           </motion.p>
@@ -114,7 +115,7 @@ export default  function HeroSection () {
      
         </div>
       </div>
-          <div className="relative z-10 lg-top-20 -top-10">
+          <div className="relative z-10  -top-10 lg:-top-16 xl:-top-10 ">
         <Image
           src="/images/card3d.png"
           alt="3D card preview"

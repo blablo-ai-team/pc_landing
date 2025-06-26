@@ -12,12 +12,12 @@ import {
 } from 'recharts';
 
 const data = [
-  { day: 'MON', minutes: 5, color: '#F9CDF6' },
-  { day: 'TUE', minutes: 10, color: '#FFB3FA' },
-  { day: 'WED', minutes: 18, color: '#FF9AF8' },
-  { day: 'THU', minutes: 30, color: '#FD79F4' },
-  { day: 'FRI', minutes: 45, color: '#FF51F3' },
-  { day: 'SAT', minutes: 70, color: '#EE33DF' },
+  { day: 'MON', minutes: 15, color: '#F9CDF6' },
+  { day: 'TUE', minutes: 25, color: '#FFB3FA' },
+  { day: 'WED', minutes: 38, color: '#FF9AF8' },
+  { day: 'THU', minutes: 50, color: '#FD79F4' },
+  { day: 'FRI', minutes: 65, color: '#FF51F3' },
+  { day: 'SAT', minutes: 80, color: '#EE33DF' },
   { day: 'SUN', minutes: 108, color: '#EE33DF' },
 ];
 import { motion } from 'framer-motion';
@@ -38,7 +38,8 @@ const CustomDot = (props: CustomDotProps) => {
       </g>
     );
   }
-  return cx && cy ? <circle cx={cx} cy={cy} r={4} fill="#e879f9" /> : null;
+
+  // return cx && cy ? <circle cx={cx} cy={cy} r={4} fill="#e879f9" /> : null;
 };
 
 // Custom label component for the SUN bar
@@ -119,12 +120,13 @@ export default function SpeakingChart() {
           />
             <Bar
             dataKey="minutes" 
-            radius={[6, 6, 0, 0]}
-            barSize={24}
+            radius={[20, 20, 0, 0]}
+            barSize={40}
+          
             label={<CustomLabel />}
           >
             {data.map((entry, index) => (
-              <Cell key={`cell-${index}`} fill={entry.color} />
+              <Cell key={`cell-${index}`} fill={entry.color}  />
             ))}
           </Bar>
           
@@ -132,7 +134,7 @@ export default function SpeakingChart() {
             type="monotone"
             dataKey="minutes"
             stroke="url(#lineGradient)"
-            strokeWidth={3}
+            strokeWidth={5}
             dot={<CustomDot />}
             strokeLinecap="round"
           />
