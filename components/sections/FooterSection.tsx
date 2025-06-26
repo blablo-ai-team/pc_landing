@@ -36,6 +36,7 @@ export default function FooterSection() {
   variant="large"
   className="mb-12"
   borderRadius='16px'
+  paddingContent="24px"
 />
        </div>
     

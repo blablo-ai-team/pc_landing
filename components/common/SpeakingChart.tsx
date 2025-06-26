@@ -12,12 +12,12 @@ import {
 } from 'recharts';
 
 const data = [
-  { day: 'MON', minutes: 15, color: '#F9CDF6' },
-  { day: 'TUE', minutes: 25, color: '#FFB3FA' },
-  { day: 'WED', minutes: 38, color: '#FF9AF8' },
-  { day: 'THU', minutes: 50, color: '#FD79F4' },
+  { day: 'MON', minutes: 14, color: '#F9CDF6' },
+  { day: 'TUE', minutes: 24, color: '#FFB3FA' },
+  { day: 'WED', minutes: 35, color: '#FF9AF8' },
+  { day: 'THU', minutes: 49, color: '#FD79F4' },
   { day: 'FRI', minutes: 65, color: '#FF51F3' },
-  { day: 'SAT', minutes: 80, color: '#EE33DF' },
+  { day: 'SAT', minutes: 85, color: '#EE33DF' },
   { day: 'SUN', minutes: 108, color: '#EE33DF' },
 ];
 import { motion } from 'framer-motion';
@@ -34,12 +34,12 @@ const CustomDot = (props: CustomDotProps) => {
   if (index === data.length - 1 && cx && cy) {
     return (
       <g>
-        <circle cx={cx} cy={cy} r={6} fill="#6366f1" stroke="#ffffff" strokeWidth={2} />
+        <circle cx={cx } cy={cy} r={6} fill="#6366f1" stroke="#ffffff" strokeWidth={2} />
       </g>
     );
   }
 
-  // return cx && cy ? <circle cx={cx} cy={cy} r={4} fill="#e879f9" /> : null;
+  
 };
 
 // Custom label component for the SUN bar
@@ -122,7 +122,7 @@ export default function SpeakingChart() {
             dataKey="minutes" 
             radius={[20, 20, 0, 0]}
             barSize={40}
-          
+         
             label={<CustomLabel />}
           >
             {data.map((entry, index) => (
