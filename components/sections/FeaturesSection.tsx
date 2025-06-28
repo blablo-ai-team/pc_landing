@@ -83,7 +83,7 @@ const EnhancedTiltCard: React.FC<{
           transform: 'translateZ(60px)',
           transformStyle: 'preserve-3d',
         }} 
-        className="relative bg-white  max-h-[526px] rounded-3xl shadow-lg overflow-hidden backdrop-blur-sm "
+        className="relative bg-white  max-h-[526px] rounded-3xl overflow-hidden backdrop-blur-sm "
       >
         {children}
       </motion.div>

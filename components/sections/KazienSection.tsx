@@ -102,11 +102,15 @@ export default function KazienSection() {    return (
                  <div className=" sm:relative w-full h-full overflow-visible " style={{ zIndex: 20 }}>
                   {/* Timeline with trees */}
                   <div className=" absolute -bottom-[500px]  sm:-bottom-25  left-0 right-0 h-[180px] overflow-visible">                    {/* Large tree overlay - Positioned absolutely to avoid clipping with exact 470x470 size */}
-                    <div 
-                      className="absolute right-[-200px] bottom-[-390px] z-50"
+                    <motion.div 
+                      className="absolute right-[-140px]  z-50"
+                                      
+                      initial={{ opacity: 0, y: 20 }}
+                      whileInView={{ opacity: 1, y: 0 }}
+                      transition={{ duration: 0.6, delay: 0.4 }}
                       style={{
-                        width: '470px',
-                        height: '470px',
+                        width: '380px',
+                        height: '380px',
                         transform: 'translateY(-100%)',
                         pointerEvents: 'none',
                         overflow: 'visible'
@@ -115,20 +119,23 @@ export default function KazienSection() {    return (
                       <Image
                         src="/images/kaizen/tree3.png"
                         alt="Large growth tree"
-                        width={470}
-                        height={470}
+                        width={380}
+                        height={380}
                         priority
-                        className="object-contain absolute bottom-0"
+                        className="object-contain absolute bottom-0 -translate-y-72"
                         style={{ 
                           objectPosition: 'bottom',
-                          width: '470px',
-                          height: '470px'
+                          width: '380px',
+                          height: '380px'
                         }}
                       />
                       
-                    </div>       
-                         <div 
-                      className="absolute  bottom-[90px] left-[200px] z-50"
+                    </motion.div>       
+                         <motion.div
+                                 initial={{ opacity: 0, y: 20 }}
+                      whileInView={{ opacity: 1, y: 0 }}
+                      transition={{ duration: 0.6, delay: 0.4 }}
+                      className="absolute  bottom-[90px] left-[170px] z-50 translate-3d"
                       style={{
                         width: '148px',
                         height: '148px',
@@ -137,7 +144,12 @@ export default function KazienSection() {    return (
                         overflow: 'visible'
                       }}
                     >
-                      <Image
+                        <motion.div
+                                
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: 0.2 }}
+                        >
+                            <Image
                         src="/images/kaizen/tree2.png"
                         alt="Large growth tree"
                         width={148}
@@ -150,14 +162,16 @@ export default function KazienSection() {    return (
                           height: '470px'
                         }}
                       />
+                        </motion.div>
+                    
                       
-                    </div>            
+                    </motion.div>            
                      <ResponsiveContainer width="100%" height="102%" style={{ overflow: 'visible' }}>
                       <LineChart
                         data={[
                           { x: 0, y: 0 },
-                          { x: 33, y: 0 },
-                          { x: 67, y: 0 },
+                          { x: 30, y: 0 },
+                          { x: 57, y: 0 },
                           { x: 100, y: 0 }
                         ]}
                         margin={{ top: 40, right: 60, left: 20, bottom: 40 }}
@@ -213,7 +227,11 @@ export default function KazienSection() {    return (
                                 width={36}
                                 height={40}
                               >
-                                <div className="w-full h-full relative">
+                                <motion.div
+                                    initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: 0.2 }}
+                                className="w-full h-full relative">
                                   <Image
                                     src="/images/kaizen/tree0.png"
                                     alt="Seedling"
@@ -222,7 +240,7 @@ export default function KazienSection() {    return (
                                     className="object-contain absolute bottom-2"
                                     style={{ objectPosition: 'bottom center' }}
                                   />
-                                </div>
+                                </motion.div>
                               </foreignObject>
                             );
                           }}
@@ -230,18 +248,21 @@ export default function KazienSection() {    return (
                         
                         {/* Tree 1 - Small Tree */}
                         <ReferenceDot
-                          x={33}
+                          x={30}
                           y={0}
                           r={0}
                           label={({ viewBox }: { viewBox: ViewBox }) => {
                             return (
                               <foreignObject
-                                x={viewBox.x - 60}
+                                x={viewBox.x - 90}
                                 y={viewBox.y - 75}
                                 width={75}
                                 height={85}
                               >
-                                <div className="w-full h-full relative">
+                                  <motion.div
+                                    initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: 0.2 }} className="w-full h-full relative">
                                   <Image
                                     src="/images/kaizen/tree1.png"
                                     alt="Small tree"
@@ -250,7 +271,7 @@ export default function KazienSection() {    return (
                                     className="object-contain absolute bottom-[17px]"
                                     style={{ objectPosition: 'bottom center' }}
                                   />
-                                </div>
+                                </motion.div>
                               </foreignObject>
                             );
                           }}
@@ -330,6 +351,7 @@ export default function KazienSection() {    return (
                 fontWeight: '500',
                 lineHeight: '150% /* 54px */',
               }}
+              className='mb-6'
             >
               Pick your first scenario for free!
             </motion.p>
