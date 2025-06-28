@@ -8,6 +8,11 @@ import AppDownload from '@/components/common/AppDownload'
 
 
 export default  function HeroSection () {
+  const animationOrder = [4, 3, 5, 2, 6, 1, 7];
+  const heroImageWithOrder = heroImage.map((img) => ({
+  ...img,
+  animationIndex: animationOrder.indexOf(img.id.valueOf()),
+}));
   return (   
      <section className="w-full leading-none block  pt-[160px]">
       {/* <div className="max-w-6xl bg-amber-700 2xl:max-w-8xl mx-auto px-4 sm:px-12 lg:px-8 2xl:px-12"> */}
@@ -115,20 +120,21 @@ export default  function HeroSection () {
      
         </div>
       </div>
+      
 <motion.div 
   initial={{ opacity: 0, y: 20 }}
   animate={{ opacity: 1, y: 0 }}
   transition={{ duration: 0.8, ease: "easeOut" }}
   className='flex items-center gap-4  -translate-y-20'
 >
-  {heroImage.map((image, index) => (
+  {heroImageWithOrder.map((image, index) => (
     <motion.div 
       key={`hero-image-${image.src}`}
       initial={{ opacity: 0, scale: 0.8 }}
       whileInView={{ opacity: 1, scale: 1 }}
       transition={{ 
         duration: 0.5,
-        delay: index * 0.2,
+        delay: image.animationIndex * 0.2,
         ease: "easeOut"
       }}
       viewport={{ once: true }}
