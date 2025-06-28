@@ -107,16 +107,22 @@ export default  function HeroSection () {
             transition={{ duration: 0.6, delay: 0.6 }}
             className="mb-[25px] "
           >            <p 
-              className="font-bricolage  text-black text-center font-semibold text-[20px] sm:text-[23px] lg:text-[24px] leading-[100%]"
+              className="font-bricolage  text-black text-center font-semibold text-[15px] sm:text-[16px] lg:text-[16px] leading-[100%]"
             >
               {heroContent.callToAction.boostText}
             </p>
             
           </motion.div>
+ <motion.div
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ duration: 0.6, delay: 0.6 }}>
 
-               <div className="relative z-20 ">
+                 <div className="relative z-20 ">
             <AppDownload />
           </div>
+            </motion.div>
+            
      
         </div>
       </div>

@@ -28,7 +28,7 @@ export default function SpeakingProgressSection() {
             transition={{ duration: 0.7 }}
             className="flex flex-col lg:flex-row lg:gap-4 gap-6 bg-[#F2F2F7] w-full max-w-[1176px] max-h-[599px] mx-auto py-4 px-4 sm:px-8 md:px-4 rounded-3xl">
             {/* Left Content */}
-            <div className="bg-white rounded-3xl p-6 lg:p-8 shadow-lg h-auto max-h-[551px] w-full max-w-[358px] flex flex-col lg:flex-shrink-0 mx-auto lg:mx-0">
+            <div className="bg-white rounded-3xl p-6 lg:p-8  h-auto max-h-[551px] w-full max-w-[358px] flex flex-col lg:flex-shrink-0 mx-auto lg:mx-0">
               <h3 className="font-inter lg:text-xl font-bold text-gray-900 mb-4 lg:mb-6 leading-tight">
                 Our only goal: Help you <span className="text-[#EE33DF] font-bold">say what you want</span>, in english.
               </h3>
@@ -50,7 +50,7 @@ export default function SpeakingProgressSection() {
             </div>
 
             {/* Right Content - Chart */}
-            <div className="bg-white rounded-3xl p-6 lg:p-8 shadow-lg w-full max-w-[774px] max-h-[551px] mx-auto lg:mx-0">
+            <div className="bg-white rounded-3xl p-6 lg:p-8  w-full max-w-[774px] max-h-[551px] mx-auto lg:mx-0">
               <div className="text-center mb-6 lg:mb-8 font-semibold max-w-[573px mx-auto text-black">
                 <h3 className="font-inter text-xl lg:text-2xl mb-2 leading-tight">
                   Our learners speak over{' '}

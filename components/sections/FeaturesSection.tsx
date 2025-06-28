@@ -76,7 +76,7 @@ const EnhancedTiltCard: React.FC<{
       onMouseMove={handleMouseMove}
       onMouseEnter={handleMouseEnter}
       onMouseLeave={handleMouseLeave}
-      className={`cursor-pointer will-change-transform ${className}`}
+      className={` will-change-transform ${className}`}
     >      
       <motion.div 
         style={{ 
