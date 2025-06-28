@@ -55,7 +55,7 @@ const Header: React.FC<HeaderProps> = ({ onGetBlabloClick }) => {
           zIndex: isSticky ? 999 : 1,
         }}
       >
-      <div className="max-w-5xl 2xl:max-w-8xl mx-auto px-4 sm:px-6 lg:px-8 2xl:px-12 py-4">
+      <div className="max-w-5xl 2xl:max-w-8xl mx-auto px-4 sm:px-6 lg:px-8 2xl:px-12 pb-4 pt-8">
         <div className="flex justify-between items-center">
           {/* Logo */}
           <button 

@@ -36,29 +36,25 @@ export default function FooterSection() {
   variant="large"
   className="mb-12"
   borderRadius='16px'
-  paddingContent="24px"
+ gapContent={4}
 />
        </div>
     
   
 
-        <div className='relative h-[700px] max-w-[1128px]   mx-auto rounded-4xl'>
+      
+      </div>
+        <div className='relative h-[700px] max-w-[1128px]  mx-auto   rounded-4xl'>
           <Image
             src="/images/test_banner.png"
             alt={'banner'}
             fill
-        
-            className="object-cover rounded-4xl z-10  max-w-[1128px]  "
-          />          
-                  {/* <Image
-            src="/images/footer-background-1.png"
-            alt={'banner'}
-            fill
+            // width={1128}
+            // height={700}
 
-            className="object-cover rounded-4xl z-10 block md:hidden "
-          />        */}
-          {/* <div className="absolute inset-0 bg-black/20 rounded-4xl z-10"></div> */}
-          
+            className="object-cover rounded-4xl z-10  "
+          />          
+     
           <div className="relative z-20 text-center mb-6 mt-20 pt-[100px]">
             <Image
               src="/images/blablo-logo.svg"
@@ -85,7 +81,6 @@ export default function FooterSection() {
 
         </div>
 
-      </div>
     </footer>
   );
 }

@@ -3,7 +3,7 @@
 import React from 'react'
 import Image from 'next/image'
 import { motion } from 'framer-motion'
-import { heroContent } from '@/data/hero'
+import { heroContent, heroImage } from '@/data/hero'
 import AppDownload from '@/components/common/AppDownload'
 
 
@@ -11,7 +11,7 @@ export default  function HeroSection () {
   return (   
      <section className="w-full leading-none block  pt-[160px]">
       {/* <div className="max-w-6xl bg-amber-700 2xl:max-w-8xl mx-auto px-4 sm:px-12 lg:px-8 2xl:px-12"> */}
-        <div className="max-w-6xl  2xl:max-w-8xl "> 
+        <div className=" "> 
         {/* Main Content */}
         <div className="text-center ">
             {/* Main Headline */}
@@ -19,10 +19,10 @@ export default  function HeroSection () {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
-            className=" px-4 sm:px-6 md:px-8 lg:px-12 xl:px-[330px] 2xl:px-20"
+            className=" "
           >            
             <h1 className="font-bricolage  ">
-              <div className="text-gray-900 max-w-[1024px] max-h-[86px] text-nowrap mx-auto    mb-2 2xl:mb-3 text-[36px] sm:text-[48px] md:text-[64px] lg:text-[72px] xl:text-[72px]  2xl:text-[70px] font-medium p-0">
+              <div className="text-gray-900 mx-auto max-w-[1024px] max-h-[86px] text-nowrap  text-center   mb-2 2xl:mb-3 text-[36px] sm:text-[48px] md:text-[64px] lg:text-[86px] xl:text-[86px]  2xl:text-[86px] font-medium p-0">
                 {heroContent.headline.mainText}
               </div>
                <div className="relative inline-block mb-[46px]">              
@@ -58,7 +58,7 @@ export default  function HeroSection () {
                     @[600px]:left-28 @[600px]:w-7 @[600px]:h-7"
                 />
                   {/* Main text with gradient */}
-                <span className="text-[36px] sm:text-[48px] md:text-[64px]  lg:text-[72px] xl:text-[72px] 2xl:text-[86px] font-medium" style={{
+                <span className="text-[36px] sm:text-[48px] md:text-[70px]  lg:text-[86px] xl:text-[86px] 2xl:text-[86px] font-medium" style={{
                   background: 'linear-gradient(90deg, #FF4BA0 0%, #CE6CFF 45%, #3260FF 100%)',
                   WebkitBackgroundClip: 'text',
                   WebkitTextFillColor: 'transparent',
@@ -102,29 +102,48 @@ export default  function HeroSection () {
             transition={{ duration: 0.6, delay: 0.6 }}
             className="mb-[25px] "
           >            <p 
-              className="font-bricolage  text-black text-center font-semibold text-[16px] sm:text-[17px] lg:text-[16px] leading-[100%]"
+              className="font-bricolage  text-black text-center font-semibold text-[20px] sm:text-[23px] lg:text-[24px] leading-[100%]"
             >
               {heroContent.callToAction.boostText}
             </p>
             
           </motion.div>
 
-               <div className="relative z-20 mb-8">
+               <div className="relative z-20 ">
             <AppDownload />
           </div>
      
         </div>
       </div>
-          <div className="relative z-10   lg:-top-20 xl:-top-10 ">
-        <Image
-          src="/images/card3d.png"
-          alt="3D card preview"
-          width={1986}
-          height={510}
-          className="w-full h-auto max-h-[551px] -translate-y-20"
-          priority={true}
-        />
-      </div>
+<motion.div 
+  initial={{ opacity: 0, y: 20 }}
+  animate={{ opacity: 1, y: 0 }}
+  transition={{ duration: 0.8, ease: "easeOut" }}
+  className='flex items-center gap-4  -translate-y-20'
+>
+  {heroImage.map((image, index) => (
+    <motion.div 
+      key={`hero-image-${image.src}`}
+      initial={{ opacity: 0, scale: 0.8 }}
+      whileInView={{ opacity: 1, scale: 1 }}
+      transition={{ 
+        duration: 0.5,
+        delay: index * 0.2,
+        ease: "easeOut"
+      }}
+      viewport={{ once: true }}
+    >
+      <Image
+        loading='lazy'
+        src={image.src}
+        alt={image.alt}
+        width={image.width}
+        height={image.height}
+        className='object-contain'
+      />
+    </motion.div>
+  ))}
+</motion.div>
     </section>
   )
 }

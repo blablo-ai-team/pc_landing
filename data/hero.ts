@@ -37,8 +37,69 @@ export interface HeroContent {
       alt: string
     }
   }
+
+}
+export interface heroImage  {
+  id : Number
+      src : string
+      alt : string,
+        width: number,
+      height : number
 }
 
+export const heroImage : heroImage [] = [
+  {
+    id : 1,
+      src : '/images/herosection/1.png',
+      alt : 'Hero Image 1',
+      width : 276.09,
+      height :  510,
+
+  },
+  {
+    id : 2,
+      src : '/images/herosection/2.png',
+      alt : 'Hero Image 2',
+   width : 276.09,
+      height :  420.53,
+  },
+  {
+    id : 3,
+      src : '/images/herosection/3.png',
+      alt : 'Hero Image 3',
+      width : 232.63,
+      height :  366.84,
+  },
+  {
+    id : 4,
+      src : '/images/herosection/4.png',
+      alt : 'Hero Image 4',
+      width : 232.63,
+      height :  352.78,
+  },
+  {
+    id : 5,
+      src : '/images/herosection/5.png',
+      alt : 'Hero Image 5',
+      width : 232.63,
+      height :  366.84,
+  },
+  {
+    id : 6,
+      src : '/images/herosection/6.png',
+      alt : 'Hero Image 6',
+     width : 276.09,
+      height :  420.53,
+  },
+  {
+    id : 7,
+      src : '/images/herosection/7.png',
+      alt : 'Hero Image 7',
+      width : 276.09,
+      height :  510,
+  },
+
+]
 export const heroContent: HeroContent = {
   branding: {
     logoSrc: '/images/blablo-logo.svg',

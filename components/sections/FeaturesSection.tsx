@@ -105,14 +105,12 @@ const FeaturesSection: React.FC<FeaturesSectionProps> = ({
           transition={{ duration: 0.6 }}
           className="text-center mb-16"
         >
-          <p className="text-[#8E8E93] text-[12px] font-normal leading-normal mb-4">
-            Meet BlaBlo, your on-the-go English buddy          
-          </p> 
-          <h2 className="font-bricolage text-[30px] lg:text-[35px] text-black mb-5">
+
+          <h2 className="font-bricolage text-[40px] lg:text-[48px] text-black mb-5">
             <span className="font-light">BlaBlo is for </span>
             <span className="font-bold">Your busy life</span>
           </h2>
-          <p className="font-bricolage text-[12px] text-black max-w-xl mx-auto">
+          <p className="font-bricolage text-base text-black max-w-xl mx-auto">
             {subtitle}
           </p>
         </motion.div>     
@@ -128,21 +126,22 @@ const FeaturesSection: React.FC<FeaturesSectionProps> = ({
                 <EnhancedTiltCard index={index}>           
                   <div className="w-full  rounded-3xl px-4 py-6 flex flex-col items-stretch" >
                     {/* Time Tag */}
-                    <div className="mb-6">
-                      <div className={`inline-flex items-center px-4 py-2 rounded-full text-[12px] font-semibold ${timeTagColors[card.timeTagColor]}`}>
+                    <div className="">
+                      <div className={`inline-flex mb-6 items-center px-4 py-2 rounded-full text-[12px] font-semibold ${timeTagColors[card.timeTagColor]}`}>
                         {card.timeTag}
                       </div>
                     </div>
 
                     {/* Feature Icon/Image - Centered and responsive */}
-                    <div className="flex justify-center items-center mb-8 flex-1">
+                    <div className="flex justify-center items-center mb-8  flex-1">
                       <div className="relative w-16 h-16 sm:w-20 sm:h-20  lg:w-40 lg:h-40">
                         {card.imageSrc ? (
                           <Image
                             src={card.imageSrc}
                             alt={card.imageAlt || card.title}
-                            fill
-                            className="object-cover"
+                            width={232}
+                            height={232}
+                            className="scale-125"
                             // sizes="(max-width: 640px) 64px, (max-width: 1024px) 80px, 96px"
                           />
                         ) : (
@@ -189,7 +188,7 @@ const FeaturesSection: React.FC<FeaturesSectionProps> = ({
               </div>
             ))}
           </div>
-          <div className=' mt-[60px] flex gap-x-[24px] border-t-[1px] pt-[20px] border-[#E5E5EA] '>
+          <div className=' mt-[60px] flex items-start gap-x-[24px] border-t-[1px] pt-[20px] border-[#E5E5EA] '>
             <Image
             src={"/images/features/cambi.png"}
             alt='hello'
@@ -197,7 +196,7 @@ const FeaturesSection: React.FC<FeaturesSectionProps> = ({
             height={35}
             className='object-contain'
             />
-            <p className='max-w-[648px] font-inter text-[14px] font-normal text-[#8E8E93] leading-[150%]'>Research from the University of Cambridge shows that cycling quickly through three micro-steps Learn, Practice, Apply locks a new language skill faster and with less stress than long classes. BlaBlo builds that same loop into your day.</p>
+            <p className='max-w-[648px] -translate-y-1 font-inter text-[14px] font-normal text-[#8E8E93] leading-[150%]'>Research from the University of Cambridge shows that cycling quickly through three micro-steps Learn, Practice, Apply locks a new language skill faster and with less stress than long classes. BlaBlo builds that same loop into your day.</p>
           </div>
         </div>
       </div>

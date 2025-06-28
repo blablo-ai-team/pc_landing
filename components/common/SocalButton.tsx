@@ -11,7 +11,7 @@ interface SocalButtonProps {
     customWidth?: number;
   customHeight?: number;
     borderRadius?:string;
-    paddingContent?: string
+    gapContent?: number
 }
 
 // Social media links configuration
@@ -66,14 +66,14 @@ export default function SocalButton({
   className = "", 
 
    iconSize = 'md',
-paddingContent = "10px",
+gapContent = 3,
       customWidth,
   customHeight,
     borderRadius = '12px'
 }: SocalButtonProps) {
-     
+  
   return (
-    <div className={`grid grid-cols-3 gap-[${paddingContent}] mb-16 md:flex md:justify-center md:items-center  ${className}`}>
+    <div className={`grid grid-cols-3 gap-${gapContent}  mb-16 md:flex md:justify-center md:items-center  ${className}`}>
               {socialLinks.map((social, index) => {
          const iconDimension = social.iconSize[iconSize];
         const containerClasses = containerConfig[iconSize];

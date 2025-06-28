@@ -13,10 +13,10 @@ export default function SpeakingProgressSection() {
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
           className="text-center mb-12">
-          <h2 className="font-bricolage text-4xl font-light text-gray-900 mb-4">
+          <h2 className="font-bricolage text-5xl font-light text-gray-900 mb-4">
             BlaBlo is for <span className="font-bold ">Speaking</span>
           </h2>
-          <p className="font-bricolage text-lg text-black max-w-2xl mx-auto">
+          <p className="font-bricolage text-base  text-black max-w-2xl mx-auto">
             Just “blablo” it!
           </p>
         </motion.div>
@@ -32,7 +32,7 @@ export default function SpeakingProgressSection() {
               <h3 className="font-inter lg:text-xl font-bold text-gray-900 mb-4 lg:mb-6 leading-tight">
                 Our only goal: Help you <span className="text-[#EE33DF] font-bold">say what you want</span>, in english.
               </h3>
-              <p className="font-inter text-black font-bold mb-6 lg:mb-8 text-base lg:text-lg leading-relaxed">
+              <p className="font-inter text-black font-bold mb-6 lg:mb-8 text-base lg:text-xl  leading-relaxed">
                 So we&apos;ll get you talking early, often, anywhere. Skip perfect accents, making your point is what matters!
               </p>
               <div className="flex justify-center items-end flex-1 lg:pb-0 -mb-6 lg:-mb-9 lg:-translate-y-1">

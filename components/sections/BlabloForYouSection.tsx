@@ -6,11 +6,11 @@ import { motion } from 'framer-motion';
 
 export default function BlabloForYouSection() {
   return (
-    <section className="py-20 px-4 section-bg">
+    <section className="py-2 px-4 section-bg">
       <div className="max-w-7xl mx-auto">
         {/* Section Header */}
         <div className="text-center mb-12">
-          <p className='text-[16px] max-w-[419px] mx-auto text-[#8E8E93] mb-[20px]'>Meet BlaBlo, your on-the-go English buddy</p>
+          <p className='text-[16px] max-w-[419px] mx-auto text-[#8E8E93] mb-[10px]'>Meet BlaBlo, your on-the-go English buddy</p>
           <h2 className="font-bricolage text-4xl md:text-5xl  text-gray-900 mb-6">
             {blabloForYouData.title}<span className='font-bold'>You</span>
           </h2>
@@ -22,7 +22,7 @@ export default function BlabloForYouSection() {
         <div className='bg-[#F2F2F7] max-w-[1176px] max-h-[1091px] mx-auto py-6 px-6 rounded-3xl flex flex-col '>
           <div className="grid lg:grid-cols-2 gap-2  items-center">
             {/* Left Side - Hiro Chat Conversation */}
-            <div className="relative min-h-[551px] w-full max-w-[552px]  rounded-[32px] bg-[#FEFAF4] shadow-lg overflow-hidden">
+            <div className="relative min-h-[551px] w-full max-w-[552px]  rounded-[32px] bg-[#FEFAF4]  overflow-hidden">
               {/* Character Image */}
               <div className="absolute  bottom-0">
                 <Image
@@ -52,7 +52,7 @@ export default function BlabloForYouSection() {
               </div>
             </div>
             {/* Right Side - AI Chat and Phone Screenshots */}
-            <div className="relative min-h-[551px] w-full max-w-[552px] rounded-[32px] bg-white px-6 pt-6 shadow-lg overflow-hidden">
+            <div className="relative min-h-[551px] w-full max-w-[552px] rounded-[32px] bg-white px-6 pt-6  overflow-hidden">
               {/* AI Icon and Response Bubbles */}
               <div className="flex flex-col space-y-2 pt-4">
                 {/* AI Icon and First Message */}
@@ -113,7 +113,7 @@ export default function BlabloForYouSection() {
                 viewport={{ once: true }}
                 className="flex justify-center space-x-6 "
               >              {/* First Phone */}
-                <div className=" max-w-[170px] translate-y-10 object-cover shadow-xl">
+                <div className=" max-w-[170px] translate-y-12 object-cover ">
                   <Image
                     src="/images/learning/phone1.png"
                     alt="App screenshot - Learning Quest"
@@ -124,7 +124,7 @@ export default function BlabloForYouSection() {
                 </div>
 
                 {/* Second Phone */}
-                <div className=" max-w-[170px] translate-y-10 object-cover">
+                <div className=" max-w-[170px] translate-y-12  object-cover">
                   <Image
                     src="/images/learning/phone2.png"
                     alt="App screenshot - Learning Activity"
@@ -153,7 +153,7 @@ export default function BlabloForYouSection() {
                         <div key={`rtl-1-${dupIndex}-${groupIndex}`} className="flex items-center">
                           {group.msg.map((job, index) => (
                             <span key={`rtl-1-${dupIndex}-${groupIndex}-${index}`} className="flex items-center">
-                              <span className="text-[#2249D1] font-medium text-2xl md:text-4xl whitespace-nowrap">{job}</span>
+                              <span className="text-[#2249D1] font-medium text-2xl md:text-5xl whitespace-nowrap">{job}</span>
                               <span className="mx-3 text-gray-300 text-2xl md:text-4xl">•</span>
                             </span>
                           ))}
@@ -172,7 +172,7 @@ export default function BlabloForYouSection() {
                         <div key={`ltr-2-${dupIndex}-${groupIndex}`} className="flex items-center">
                           {group.msg.map((job, index) => (
                             <span key={`ltr-2-${dupIndex}-${groupIndex}-${index}`} className="flex items-center">
-                              <span className="text-[#2249D1] font-medium text-2xl md:text-4xl whitespace-nowrap">{job}</span>
+                              <span className="text-[#2249D1] font-medium text-2xl md:text-5xl whitespace-nowrap">{job}</span>
                               <span className="mx-3 text-gray-300 text-2xl md:text-4xl">•</span>
                             </span>
                           ))}
@@ -191,7 +191,7 @@ export default function BlabloForYouSection() {
                         <div key={`rtl-3-${dupIndex}-${groupIndex}`} className="flex items-center">
                           {group.msg.map((job, index) => (
                             <span key={`rtl-3-${dupIndex}-${groupIndex}-${index}`} className="flex items-center">
-                              <span className="text-[#2249D1] font-medium text-2xl md:text-4xl whitespace-nowrap">{job}</span>
+                              <span className="text-[#2249D1] font-medium text-2xl md:text-5xl whitespace-nowrap">{job}</span>
                               <span className="mx-3 text-gray-300 text-2xl md:text-4xl">•</span>
                             </span>
                           ))}
@@ -210,7 +210,7 @@ export default function BlabloForYouSection() {
                         <div key={`ltr-4-${dupIndex}-${groupIndex}`} className="flex items-center">
                           {group.msg.map((job, index) => (
                             <span key={`ltr-4-${dupIndex}-${groupIndex}-${index}`} className="flex items-center">
-                              <span className="text-[#2249D1] font-medium text-2xl md:text-4xl whitespace-nowrap">{job}</span>
+                              <span className="text-[#2249D1] font-medium text-2xl md:text-5xl whitespace-nowrap">{job}</span>
                               <span className="mx-3 text-gray-300 text-2xl md:text-4xl">•</span>
                             </span>
                           ))}

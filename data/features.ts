@@ -50,7 +50,7 @@ export const featureCards: FeatureCard[] = [
     imageSrc: '/images/features/flash-cards.png',
     imageAlt: 'Flash cards feature illustration',
     width: 320,
-    height: 400
+    height: 500
   },
   {
     id: 3,

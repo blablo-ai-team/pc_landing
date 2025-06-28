@@ -47,52 +47,30 @@ useEffect(() => {
   return (   
      <section className="py-32  section-bg relative overflow-hidden">
       {/* Decorative trees (laurels) */}
-      <div className='relative px-4 sm:mb-[179px] '>
-   <div 
-  className="absolute 
-          hidden sm:block 
-          left-4 sm:left-8 md:left-40 lg:left-50 xl:left-60 2xl:left-[250px] 
-          top-1/2 -translate-y-1/2 z-0">
-        <Image 
+      {/* content (laurels) */}
+       <motion.div 
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6 }}
+          viewport={{ once: true }}
+          className="text-center pb-40"
+        >
+          <div className="   flex justify-center items-center">   
+              <Image 
           src="/images/tree_1.svg" 
           alt="Decorative left laurel" 
           width={140} 
           height={183}
           priority
-          className="w-[120px] h-auto md:w-[140px]"
+          className="w-[120px] h-auto md:w-[140px] translate-x-10"
         />
-      </div>
-      <div className="absolute 
-          hidden sm:block 
-          right-4 sm:right-8 md:right-40 lg:right-50 xl:right-60 2xl:right-[250px] 
-          top-1/2 -translate-y-1/2 z-0">
-        <Image 
-          src="/images/tree_2.svg" 
-          alt="Decorative right laurel" 
-          width={140} 
-          height={183}
-          priority
-          className="w-[120px] h-auto md:w-[140px]"
-        />
-      </div>
-
-      {/* content (laurels) */}
-      <div className="max-w-4xl mx-auto relative z-10 ">
-        <motion.div 
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6 }}
-          viewport={{ once: true }}
-          className="text-center"
-        >
-          <div className="mb-8">        
-                <p className=" text-3xl md:text-4xl font-bold text-green-500 mb-8">
+            <div className=' '>
+                 <p className=" text-4xl max-w-[792px] text-nowrap font-bold text-green-500 mb-8">
               BlaBlo knew exactly why I&apos;m learning!
               <br />
               Every lesson tailored made just for me.
             </p>
-            
-            <div className="flex flex-col sm:flex-row items-center justify-center">
+               <div className="flex flex-col sm:flex-row items-center justify-center">
               <div className="rounded-full overflow-hidden border-2 border-white shadow-sm">
                 <Image 
                   src="/images/avartar_job.svg"
@@ -106,10 +84,19 @@ useEffect(() => {
                 <p className="text-black font-bold">Keiko - <span className='font-light'>Customer Support Lead</span></p>
               </div>
             </div>
+              </div>     
+               <Image 
+          src="/images/tree_2.svg" 
+          alt="Decorative right laurel" 
+          width={140} 
+          height={183}
+          priority
+          className="w-[120px] h-auto md:w-[140px] -translate-x-10"
+        />
+            
+         
           </div>
-        </motion.div>
-      </div>
-      </div>       
+        </motion.div>   
        {/* Testimonial Cards Grid */}
           {/* Mobile Touch Carousel */}
         <div className="block md:hidden  ">
@@ -223,7 +210,7 @@ useEffect(() => {
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5, delay: 0.1 * index }}
                 viewport={{ once: true }}             
-                   className="bg-white border-[1px] border-[#C7C7CC] rounded-2xl max-w-[360px] max-h-[236px] p-4 md:p-6 shadow-md hover:shadow-lg transition-shadow w-[360px] h-[236px] flex flex-col"
+                   className="bg-white border-[1px] border-[#C7C7CC] rounded-2xl max-w-[360px] max-h-[236px] p-4 md:p-6  hover:shadow-md transition-shadow w-[360px] h-[236px] flex flex-col"
               >
                 <div className="flex items-center mb-5">
                   <div className="h-10 w-10 rounded-none overflow-hidden mr-3 flex-shrink-0">
@@ -254,7 +241,7 @@ useEffect(() => {
                 transition={{ duration: 0.5, delay: 0.1 * index + 0.2 }}
                 viewport={{ once: true }}             
                 
-                className="bg-white rounded-2xl border-[1px] border-[#C7C7CC] p-4 md:p-6 shadow-md hover:shadow-lg transition-shadow w-[360px] h-[236px] flex flex-col"
+                className="bg-white rounded-2xl border-[1px] border-[#C7C7CC] p-4 md:p-6  hover:shadow-md transition-shadow w-[360px] h-[236px] flex flex-col"
               >                <div className="flex items-center mb-5">
                   <div className="h-10 w-10 rounded-none overflow-hidden mr-3 flex-shrink-0">
                     <Image 

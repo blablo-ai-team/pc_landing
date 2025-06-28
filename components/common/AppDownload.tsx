@@ -9,6 +9,7 @@ interface AppDownloadProps {
   qrContainerWidth?: number; // Default: 170px
   qrContainerHeight?: number; // Default: 177px
   qrCodeSize?: number; // Default: 80px
+
 }
 
 /**
@@ -22,7 +23,7 @@ export default function AppDownload({
 }: AppDownloadProps) {
   return (
     <div className={`w-full ${className} `}>
-      <div className="flex flex-col md:flex-row justify-center gap-2 z-50">
+      <div className="flex flex-col  md:flex-row justify-center gap-2 z-50">
         {/* Google Play Store */}
         <div className="h-[185px] max-w-[175.5px] flex flex-col ">
           <div className=''>
@@ -36,7 +37,7 @@ export default function AppDownload({
             />
           </div>
 
-          <div className="max-w-[164px]  max-h-[185px] h-full hidden mx-2 md:flex  bg-[#FFF]  items-center justify-center  rounded-b-[8px] ">
+          <div className="max-w-[164px] shadow-lg max-h-[185px] h-full hidden mx-2 md:flex  bg-[#FFF]  items-center justify-center  rounded-b-[8px] ">
             <Image
               src="/images/qr-google-play.svg"
               alt="QR code to download Google Play app"
@@ -58,7 +59,7 @@ export default function AppDownload({
             />
           </div>
 
-          <div className="max-w-[164px]  max-h-[185px] h-full hidden mx-2 md:flex  bg-[#FFF]  items-center justify-center  rounded-b-[8px]  ">
+          <div className="max-w-[164px]  shadow-lg max-h-[185px] h-full hidden mx-2 md:flex  bg-[#FFF]  items-center justify-center  rounded-b-[8px]  ">
             <Image
               src="/images/qr-app-store.svg"
               alt="QR code to download Google Play app"

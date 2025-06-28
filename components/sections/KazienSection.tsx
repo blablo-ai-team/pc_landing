@@ -22,8 +22,8 @@ interface TickProps {
 }
 
 export default function KazienSection() {    return (      
-      <section className="bg-[#34C759] py-16 md:py-20 lg:py-24 px-4 overflow-visible" style={{ overflow: 'visible' }}>
-          <div className="max-w-[1176px] mx-auto overflow-visible" style={{ overflow: 'visible' }}>            
+      <section className="bg-[#34C759] py-16 md:py-20 lg:py-24  overflow-visible" style={{ overflow: 'visible' }}>
+          <div className="max-w-[1176px]  mx-auto overflow-visible" style={{ overflow: 'visible' }}>            
             <motion.h1
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
@@ -38,7 +38,7 @@ export default function KazienSection() {    return (
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: 0.2 }}
-                className="w-full  sm:relative max-w-5xl h-[890px] sm:h-[400px] mx-auto bg-white rounded-3xl shadow-xl p-6 md:p-10 lg:p-12  mb-[80px]"
+                className="w-full  sm:relative  h-[890px] sm:h-[400px] mx-auto bg-white rounded-3xl shadow-xl p-6 md:p-10 lg:p-12  mb-[80px]"
                 style={{
                     borderRadius: "32px",
                   
@@ -125,9 +125,34 @@ export default function KazienSection() {    return (
                           height: '470px'
                         }}
                       />
-                    </div>
-                    
-                    <ResponsiveContainer width="100%" height="102%" style={{ overflow: 'visible' }}>
+                      
+                    </div>       
+                         <div 
+                      className="absolute  bottom-[90px] left-[200px] z-50"
+                      style={{
+                        width: '148px',
+                        height: '148px',
+                        // transform: 'translateY(-100%)',
+                        pointerEvents: 'none',
+                        overflow: 'visible'
+                      }}
+                    >
+                      <Image
+                        src="/images/kaizen/tree2.png"
+                        alt="Large growth tree"
+                        width={148}
+                        height={148}
+                        priority
+                        className="object-contain absolute bottom-0"
+                        style={{ 
+                          objectPosition: 'bottom',
+                          width: '470px',
+                          height: '470px'
+                        }}
+                      />
+                      
+                    </div>            
+                     <ResponsiveContainer width="100%" height="102%" style={{ overflow: 'visible' }}>
                       <LineChart
                         data={[
                           { x: 0, y: 0 },
@@ -186,7 +211,7 @@ export default function KazienSection() {    return (
                                 x={viewBox.x - 18}
                                 y={viewBox.y - 36}
                                 width={36}
-                                height={36}
+                                height={40}
                               >
                                 <div className="w-full h-full relative">
                                   <Image
@@ -194,7 +219,7 @@ export default function KazienSection() {    return (
                                     alt="Seedling"
                                     width={36}
                                     height={36}
-                                    className="object-contain absolute bottom-0"
+                                    className="object-contain absolute bottom-2"
                                     style={{ objectPosition: 'bottom center' }}
                                   />
                                 </div>
@@ -214,7 +239,7 @@ export default function KazienSection() {    return (
                                 x={viewBox.x - 60}
                                 y={viewBox.y - 75}
                                 width={75}
-                                height={75}
+                                height={85}
                               >
                                 <div className="w-full h-full relative">
                                   <Image
@@ -222,7 +247,7 @@ export default function KazienSection() {    return (
                                     alt="Small tree"
                                     width={75}
                                     height={75}
-                                    className="object-contain absolute bottom-0"
+                                    className="object-contain absolute bottom-[17px]"
                                     style={{ objectPosition: 'bottom center' }}
                                   />
                                 </div>
@@ -231,7 +256,7 @@ export default function KazienSection() {    return (
                           }}
                         />
                         
-                        {/* Tree 2 - Medium Tree */}
+                        {/* Tree 2 - Medium Tree
                         <ReferenceDot
                           x={67}
                           y={0}
@@ -259,7 +284,7 @@ export default function KazienSection() {    return (
                             );
                           }}
                         />
-                        
+                         */}
                         {/* Dot at start of timeline */}
                         <ReferenceDot
                            className=' hidden sm:block'
@@ -284,7 +309,10 @@ export default function KazienSection() {    return (
                         />
                       </LineChart>
                     </ResponsiveContainer>
+
+                
                   </div>
+                  
                 </div>
               </div>
             </motion.div>
