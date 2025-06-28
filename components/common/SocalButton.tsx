@@ -73,7 +73,7 @@ gapContent = 3,
 }: SocalButtonProps) {
   
   return (
-    <div className={`grid grid-cols-3 gap-${gapContent}  mb-16 md:flex md:justify-center md:items-center  ${className}`}>
+    <div className={`grid grid-cols-3 gap-${gapContent}  mb-16 md:flex md:justify-center md:items-center   ${className}`}>
               {socialLinks.map((social, index) => {
          const iconDimension = social.iconSize[iconSize];
         const containerClasses = containerConfig[iconSize];
@@ -90,14 +90,15 @@ gapContent = 3,
             target="_blank"
             rel="noopener noreferrer"
             className={`
-              ${customWidth && customHeight ? '' : containerClasses}
-              mx-auto bg-white sm:bg-gray-50 rounded-xl
+         
+              // ${customWidth && customHeight ? '' : containerClasses}
+              mx-auto bg-red sm:bg-gray-50 rounded-xl
               flex items-center justify-center 
               shadow-sm hover:shadow-md
               transition-all duration-300 
-              hover:scale-105 hover:bg-white
+               hover:bg-white
               focus:outline-none focus:ring-2 focus:ring-[#EE33DF] focus:ring-offset-2
-              active:scale-95 ${className}
+              ${className}
             `}
             style={containerStyle}
             aria-label={`Follow us on ${social.name}`}

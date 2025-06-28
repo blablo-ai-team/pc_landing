@@ -12,7 +12,7 @@ export default function FooterSection() {
     <footer className="relative section-bg py-0 md:pt-20 overflow-hidden">
      
 
-      <div className="relative max-w-4xl mx-auto px-4">
+      <div className="relative max-w-[1128px]  mx-auto px-4">
 
         <div className="text-center mb-6">
           <p className="text-gray-600 text-sm">
@@ -30,8 +30,8 @@ export default function FooterSection() {
        /> */}
        <div className=' hidden sm:block'>
  <SocalButton 
-   customWidth={168}
- customHeight={100}  
+   customWidth={200}
+ customHeight={90}  
   iconSize="lg"
   variant="large"
   className="mb-12"
