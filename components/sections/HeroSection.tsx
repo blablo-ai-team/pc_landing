@@ -135,7 +135,7 @@ export default  function HeroSection () {
 >
   {heroImageWithOrder.map((image, index) => (
     <motion.div 
-      key={`hero-image-${image.src}`}
+      key={`hero-image-${image.src}-${index}`}
       initial={{ opacity: 0, scale: 0.8 }}
       whileInView={{ opacity: 1, scale: 1 }}
       transition={{ 
