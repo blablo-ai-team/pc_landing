@@ -51,10 +51,45 @@ const AppDownloadModal: React.FC<AppDownloadModalProps> = ({ isOpen, onClose }) 
               <h2 className="text-2xl text-nowrap  sm:text-5xl font-bold text-black mb-2">
                 Turn Dead Time into
               </h2>
-              <div className="text-2xl font-bold">
-                <span className="text-[#EE33DF]">Fluent </span>
-                <span className="text-[#8B5CF6]">English</span>
-                <span className="text-[#EE33DF]">*</span>
+              <div className="relative inline-block mb-8">
+                {/* Star icon - top left */}
+                <Image
+                  src="/icons/soft_star_pink.svg"
+                  alt=""
+                  width={19}
+                  height={21}
+                  className="absolute -top-2 -left-3"
+                />
+                {/* Star icon - bottom left */}
+                <Image
+                  src="/icons/soft_star_pink.svg"
+                  alt=""
+                  width={11}
+                  height={12}
+                  className="absolute -bottom-1 left-12"
+                />
+                {/* Main text with gradient */}
+                <span
+                  className="text-[36px] max-w-[249px] text-nowrap   sm:text-[50px] font-bold text-transparent bg-clip-text a"
+                  style={{
+                    background: 'linear-gradient(90deg, #FF4BA0 0%, #CE6CFF 45%, #3260FF 100%)',
+                    WebkitBackgroundClip: 'text',
+                    WebkitTextFillColor: 'transparent',
+                    backgroundClip: 'text',
+                    color: '#FF4BA0',
+                    lineHeight: 1,
+                  }}
+                >
+                  Fluent English
+                </span>
+                {/* Star icon - right */}
+                <Image
+                  src="/icons/Soft_star_blue.svg"
+                  alt=""
+                  width={13}
+                  height={14}
+                  className="absolute top-0 -right-2"
+                />
               </div>
                    {/* Social Media Links */}
             <AppDownload 
@@ -64,7 +99,7 @@ const AppDownloadModal: React.FC<AppDownloadModalProps> = ({ isOpen, onClose }) 
                 <SocalButton 
   iconSize="sm"
   variant="compact"
-  customWidth={54}
+  customWidth={125}
   customHeight={32}
   borderRadius="4px"
   className="mt-5 mx-[90px]"
