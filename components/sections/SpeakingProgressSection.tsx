@@ -6,14 +6,14 @@ import { motion } from 'framer-motion';
 
 export default function SpeakingProgressSection() {
   return (
-    <section className="py-16 px-4 section-bg overflow-visible " style={{ overflow: 'visible' }}>
+    <section className="pt-36 pb-10 px-4 section-bg overflow-visible " style={{ overflow: 'visible' }}>
       <div className=" overflow-visible" style={{ overflow: 'visible' }}>
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
-          className="text-center mb-12">
-          <h2 className="font-bricolage text-5xl font-light text-gray-900 mb-4">
+          className="text-center mb-6">
+          <h2 className="font-bricolage text-5xl font-light text-gray-900 mb-10">
             BlaBlo is for <span className="font-bold ">Speaking</span>
           </h2>
           <p className="font-bricolage text-base  text-black max-w-2xl mx-auto">
@@ -52,11 +52,11 @@ export default function SpeakingProgressSection() {
             {/* Right Content - Chart */}
             <div className="bg-white rounded-3xl p-6 lg:p-8  w-full max-w-[774px] max-h-[551px] mx-auto lg:mx-0">
               <div className="text-center mb-6 lg:mb-8 font-semibold max-w-[573px mx-auto text-black">
-                <h3 className="font-inter text-xl lg:text-2xl mb-2 leading-tight">
+                <h3 className="font-inter text-xl lg:text-[28px] mb-2 leading-tight">
                   Our learners speak over{' '}
                   <span className="text-[#EE33DF] font-bold">1 hour 48 minutes</span>
                 </h3>
-                <p className="font-inter text-xl lg:text-2xl leading-tight">
+                <p className="font-inter text-xl lg:text-[28px] leading-tight">
                   just in the first week
                 </p>
               </div>

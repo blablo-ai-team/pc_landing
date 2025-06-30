@@ -103,14 +103,14 @@ const FeaturesSection: React.FC<FeaturesSectionProps> = ({
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
-          className="text-center mb-16"
+          className="text-center pb-[24px]"
         >
 
-          <h2 className="font-bricolage text-[40px] lg:text-[48px] text-black mb-5">
+          <h2 className="font-bricolage text-[40px] lg:text-[48px] text-black pb-10">
             <span className="font-light">BlaBlo is for </span>
             <span className="font-bold">Your busy life</span>
           </h2>
-          <p className="font-bricolage text-base text-black max-w-xl mx-auto">
+          <p className="font-inter text-base text-black max-w-xl mx-auto">
             {subtitle}
           </p>
         </motion.div>     

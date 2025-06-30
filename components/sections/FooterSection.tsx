@@ -44,7 +44,7 @@ export default function FooterSection() {
 
       
       </div>
-        <div className='relative h-[700px] max-w-[1128px]  mx-auto   rounded-4xl'>
+        <div className='relative h-[598px] max-w-[1128px]  mx-auto   rounded-4xl'>
           <Image
             src="/images/test_banner.png"
             alt={'banner'}
@@ -59,15 +59,15 @@ export default function FooterSection() {
             <Image
               src="/images/blablo-logo.svg"
               alt="Blablo Logo"
-              width={180}
-              height={47}
-              className="mx-auto "
+              width={305.641}
+              height={80}
+              className="mx-auto  "
             />
           </div>
        
           {/* Tagline */}
           <div className="relative z-20 text-center ">
-            <p className="text-black text-lg font-medium max-w-lg mx-auto leading-relaxed drop-shadow-lg">
+            <p className="text-black text-[14px] font-inter font-medium max-w-lg mx-auto leading-relaxed drop-shadow-lg">
               Designed and built for busy learners, by busy learners.
             </p>
             <p className="text-gray-500 mt-2 mb-16">© 2025 BlaBlo, Inc. All rights reserved</p>

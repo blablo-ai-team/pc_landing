@@ -48,7 +48,7 @@ const AppDownloadModal: React.FC<AppDownloadModalProps> = ({ isOpen, onClose }) 
 
             {/* Title */}
             <div className="text-center mt-10 ">
-              <h2 className="text-2xl text-nowrap  sm:text-5xl font-bold text-black mb-2">
+              <h2 className="text-2xl text-nowrap  sm:text-5xl font-medium text-black mb-2">
                 Turn Dead Time into
               </h2>
               <div className="relative inline-block mb-8">

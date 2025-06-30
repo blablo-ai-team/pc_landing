@@ -55,7 +55,7 @@ export default  function HeroSection () {
                   height={25}
                 //   className="absolute -bottom-4 left-16 sm:-bottom-5 sm:left-20 md:-bottom-6 md:left-28 lg:-bottom-7 lg:left-32 xl:-bottom-8 xl:left-36 2xl:-bottom-9 2xl:left-40 w-2 h-2 sm:w-5 sm:h-5 md:w-6 md:h-6 lg:w-7 lg:h-7"
                 // />
-                    className="absolute -bottom-2 left-20 w-5 h-5
+                    className="absolute -bottom-2 left-30  w-5 h-5
                     @[200px]:left-10 @[200px]:w-3 @[200px]:h-3
                     @[300px]:left-14 @[300px]:w-4 @[300px]:h-4
                     @[400px]:left-18 @[400px]:w-5 @[400px]:h-5
@@ -63,7 +63,7 @@ export default  function HeroSection () {
                     @[600px]:left-28 @[600px]:w-7 @[600px]:h-7"
                 />
                   {/* Main text with gradient */}
-                <span className="text-[36px] sm:text-[48px] md:text-[70px]  lg:text-[86px] xl:text-[86px] 2xl:text-[86px] font-medium" style={{
+                <span className="text-[36px] sm:text-[48px] md:text-[70px]  lg:text-[86px] xl:text-[86px] 2xl:text-[86px] font-bold" style={{
                   background: 'linear-gradient(90deg, #FF4BA0 0%, #CE6CFF 45%, #3260FF 100%)',
                   WebkitBackgroundClip: 'text',
                   WebkitTextFillColor: 'transparent',
@@ -95,7 +95,7 @@ export default  function HeroSection () {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.2 }}
-            className="font-bricolage
+            className="font-inter
             mx-auto text-black text-center font-medium   mb-11 max-h-[72px]  max-w-[480px] text-[14px] sm:text-[20px] lg:text-[24px] leading-[150%]"
           >
             {heroContent.subtext}

@@ -3,20 +3,30 @@
 import { blabloForYouData } from '@/data/blabloForYou';
 import Image from 'next/image';
 import { motion } from 'framer-motion';
+import SplitText from '@/components/common/SplitText';
 
 export default function BlabloForYouSection() {
   return (
     <section className="py-2 px-4 section-bg">
       <div className="max-w-7xl mx-auto">
         {/* Section Header */}
-        <div className="text-center mb-12">
-          <p className='text-[16px] max-w-[419px] mx-auto text-[#8E8E93] mb-[10px]'>Meet BlaBlo, your on-the-go English buddy</p>
-          <h2 className="font-bricolage text-4xl md:text-5xl  text-gray-900 mb-6">
-            {blabloForYouData.title}<span className='font-bold'>You</span>
+        <div className="text-center mb-6">
+          <p className='text-[16px] font-inter max-w-[419px] mx-auto text-[#8E8E93]  mb-[10px]'>Meet BlaBlo, your on-the-go English buddy</p>
+          <h2 className="font-bricolage text-4xl md:text-5xl  text-gray-900 mb-10">
+            <SplitText className="lazy">
+              {blabloForYouData.title}<span className='font-bold'>You</span>
+            </SplitText>
+
+
           </h2>
+
           <p className="font-inter text-[16px] max-w-[419px] text-[#000]  mx-auto leading-relaxed">
-            {blabloForYouData.subtitle} <br /><span className='font-bold '>designed just for you.</span>
+            {blabloForYouData.subtitle}
+            <br />
+            <span className="font-bold font-inter">designed just for you.</span>
           </p>
+
+
         </div>
         {/* Main Content Grid */}
         <div className='bg-[#F2F2F7] max-w-[1176px] max-h-[1091px] mx-auto py-6 px-6 rounded-3xl flex flex-col '>
@@ -56,17 +66,17 @@ export default function BlabloForYouSection() {
               {/* AI Icon and Response Bubbles */}
               <div className="flex flex-col space-y-2 pt-4">
                 {/* AI Icon and First Message */}
-                <div className="flex items-start space-x-4">              
-                    {/* Rainbow AI Icon */}
+                <div className="flex items-start space-x-4">
+                  {/* Rainbow AI Icon */}
                   <div className="relative w-[40px]  ">
 
-                    <div className="absolute inset-[3px]  rounded-full flex items-center justify-center bg-white">
+                    <div className="absolute inset-[3px] top-6  rounded-full flex items-center justify-center bg-white">
                       <Image
                         src="/icons/chat_ai.svg"
                         alt="AI Assistant"
                         width={94}
                         height={94}
-                        className="max-h-[94px]  scale-200"
+                        className="h-[94px] w-full scale-200"
                       />
                     </div>
                   </div>
@@ -81,8 +91,8 @@ export default function BlabloForYouSection() {
                       Hi Hiro! By the end of this week, you&apos;ll <span className="font-bold text-[#2249D1]">handle guest complaints smoothly</span>
                     </p>
                   </motion.div>
-                </div>            
-                  {/* Second Message */}
+                </div>
+                {/* Second Message */}
                 <motion.div
                   initial={{ opacity: 0, y: 10 }}
                   whileInView={{ opacity: 1, y: 0 }}
@@ -128,7 +138,7 @@ export default function BlabloForYouSection() {
                   <Image
                     src="/images/learning/phone2.png"
                     alt="App screenshot - Learning Activity"
-                  width={210}
+                    width={210}
                     height={220}
                     className=" inset-0 w-full h-full"
                   />
@@ -137,13 +147,13 @@ export default function BlabloForYouSection() {
             </div>
           </div>        {/* Job Titles Marquee - Below the two cards */}
           <div className="mt-4  overflow-hidden bg-white rounded-3xl">
-            <div className="text-start mb-6 ">
-              <h3 className="font-bricolage text-[14px] md:text-[16px] pt-10 pl-20 font-bold text-gray-900">
+            <div className="text-start mb-10 ">
+              <h3 className="font-bricolage text-[14px] md:text-[16px] pt-20 pl-20 font-bold text-gray-900">
                 Whatever your job, BlaBlo has you covered.
               </h3>
             </div>
             {/* Alternate direction marquees - 4 rows */}
-            <div className="flex flex-col gap-6 py-5">            {/* Row 1 - Right to Left */}
+            <div className="flex flex-col gap-6 pb-5">            {/* Row 1 - Right to Left */}
               <div className="marquee-container overflow-hidden">
                 <div className="marquee-row marquee-row-rtl ">
                   {/* Triple content for seamless infinite loop */}

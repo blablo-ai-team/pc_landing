@@ -73,7 +73,7 @@ gapContent = 3,
 }: SocalButtonProps) {
   
   return (
-    <div className={`grid grid-cols-3 gap-${gapContent}  mb-16 md:flex md:justify-center md:items-center   ${className}`}>
+    <div className={`grid grid-cols-3 gap-${gapContent}   md:flex md:justify-center md:items-center   ${className}`}>
               {socialLinks.map((social, index) => {
          const iconDimension = social.iconSize[iconSize];
         const containerClasses = containerConfig[iconSize];
@@ -92,9 +92,9 @@ gapContent = 3,
             className={`
          
               // ${customWidth && customHeight ? '' : containerClasses}
-              mx-auto bg-red sm:bg-gray-50 rounded-xl
+              mx-auto bg-red sm:bg-[#F2F2F7] rounded-xl
               flex items-center justify-center 
-              shadow-sm hover:shadow-md
+             hover:shadow-md
               transition-all duration-300 
                hover:bg-white
               focus:outline-none focus:ring-2 focus:ring-[#EE33DF] focus:ring-offset-2

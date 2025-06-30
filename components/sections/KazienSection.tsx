@@ -47,11 +47,11 @@ export default function KazienSection() {    return (
                     zIndex: 1
                 }}
             >            
-              <div className="   sm:grid md:grid-cols-2 gap-8 lg:gap-12 -h-full relative overflow-visible">
+              <div className=" font-inter  sm:grid md:grid-cols-2 gap-8 lg:gap-[120px] -h-full relative overflow-visible">
                 {/* Left side - Kaizen steps */}
-                <div className="  h-full relative z-10">
+                <div className="h-full relative z-10">
                   <h2 
-                className="font-inter font-semibold text-[22px] leading-[140%] self-stretch
+                className=" font-semibold text-[22px] leading-[140%] self-stretch
                md:w-[390px] md:font-normal md:text-[16px] md:leading-[150%] 
                text-black mb-2 pb-2">
                     Our approach is inspired by Kaizen – a Japanese philosophy of steady, small steps that lead to big success.

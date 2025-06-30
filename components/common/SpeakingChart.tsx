@@ -59,9 +59,12 @@ const CustomLabel = (props: CustomLabelProps) => {
         x={x + 15 } 
         y={y - 15} // Position below the bar
         fill="#6366f1" 
-        fontSize={12}
-        fontWeight="600"
+        fontSize={14}
+     
         textAnchor="middle"
+        fontWeight="500"
+     
+
       >108 mins speaking!
       </text>
     );
@@ -105,6 +108,7 @@ export default function SpeakingChart() {
             tickLine={false}
             tick={{ fontSize: 12, fill: '#9ca3af', fontWeight: '500' }}
             dy={10}
+            padding={{ left: 20, right: 20 }}
           />          <YAxis 
             domain={[0, 120]}
             axisLine={{ stroke: '#e5e7eb', strokeWidth: 1, markerStart: 'url(#arrowY)' }}

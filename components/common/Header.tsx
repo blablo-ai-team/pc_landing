@@ -45,8 +45,9 @@ const Header: React.FC<HeaderProps> = ({ onGetBlabloClick }) => {
       
       <header
    
-        className={`w-full px-[250px]  transition-all duration-300 ${
-          isSticky ? 'fixed top-0 left-0 right-0' : 'relative'
+        className={`w-full px-[250px]   transition-all duration-300 ${
+          isSticky ? 'fixed top-0 left-0 right-0  ' : 'relative '
+   
         }`}
         style={{
           backgroundColor: isSticky ? 'rgba(255, 255, 255, 0.95)' : 'rgba(255, 255, 255, 1)',
@@ -55,7 +56,7 @@ const Header: React.FC<HeaderProps> = ({ onGetBlabloClick }) => {
           zIndex: isSticky ? 999 : 1,
         }}
       >
-      <div className="max-w-5xl 2xl:max-w-8xl mx-auto px-4 sm:px-6 lg:px-8 2xl:px-12 pb-4 pt-8">
+      <div className={`max-w-5xl 2xl:max-w-8xl mx-auto px-4 sm:px-6 lg:px-8 2xl:px-12 pb-4 pt-4 `}>
         <div className="flex justify-between items-center">
           {/* Logo */}
           <button 
@@ -66,7 +67,7 @@ const Header: React.FC<HeaderProps> = ({ onGetBlabloClick }) => {
             <Image
               src={heroContent.branding.logoSrc}
               alt={heroContent.branding.logoAlt}
-              width={149}
+              width={120}
               height={49}
               className=" "
               priority
@@ -82,7 +83,7 @@ const Header: React.FC<HeaderProps> = ({ onGetBlabloClick }) => {
                 : 'bg-white border border-[#C7C7CC] shadow-[0px_4px_0px_0px_#DFDFDF] hover:translate-y-0.5 hover:shadow-[0px_2px_0px_0px_#DFDFDF] active:translate-y-1 active:shadow-none'
             }`}
           >
-            <span className={`text-center font-bricolage text-base font-bold leading-[100%] transition-colors duration-300 ${
+            <span className={`text-center font-bricolage text-[14px] font-bold leading-[100%] transition-colors duration-300 ${
               isSticky ? 'text-white' : 'text-[#EE33DF]'
             }`}>
               {heroContent.branding.ctaButton.text}

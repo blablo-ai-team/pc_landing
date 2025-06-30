@@ -81,7 +81,7 @@ useEffect(() => {
                 />
               </div>
               <div className="ml-3 text-left">
-                <p className="text-black font-bold">Keiko - <span className='font-light'>Customer Support Lead</span></p>
+                <p className="text-black font-inter font-bold">Keiko - <span className='font-light'>Customer Support Lead</span></p>
               </div>
             </div>
               </div>     
@@ -199,7 +199,7 @@ useEffect(() => {
         </div>
 
  {/* Destops Touch Carousel */}
-      <div className="max-w-[1660px] max-h-[406px] hidden md:block mx-auto px-4 md:px-6">       
+      <div className="max-w-[1660px] font-inter max-h-[406px] hidden md:block mx-auto px-4 md:px-6">       
          {/* First row - exactly 4 cards */}
         <div className="mb-6">
           <div className="flex justify-center gap-6 max-w-[1512px] max-h-[236px] ">
