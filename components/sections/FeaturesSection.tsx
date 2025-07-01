@@ -22,7 +22,7 @@ const EnhancedTiltCard: React.FC<{
   const x = useSpring(0, { stiffness: 150, damping: 25 })
   const y = useSpring(0, { stiffness: 150, damping: 25 })
   const scaleSpring = useSpring(1, { stiffness: 200, damping: 20 })
-  
+
   // Transform values cho tilt effect với góc nghiêng vừa phải
   const rotateX = useTransform(y, [-0.5, 0.5], [12, -12])
   const rotateY = useTransform(x, [-0.5, 0.5], [-12, 12])
@@ -59,8 +59,8 @@ const EnhancedTiltCard: React.FC<{
       ref={ref}
       initial={{ opacity: 0, y: 50, scale: 0.9 }}
       animate={{ opacity: 1, y: 0, scale: 1 }}
-      transition={{ 
-        duration: 0.8, 
+      transition={{
+        duration: 0.8,
         delay: index * 0.15,
         type: "spring",
         stiffness: 100,
@@ -77,13 +77,13 @@ const EnhancedTiltCard: React.FC<{
       onMouseEnter={handleMouseEnter}
       onMouseLeave={handleMouseLeave}
       className={` will-change-transform ${className}`}
-    >      
-      <motion.div 
-        style={{ 
+    >
+      <motion.div
+        style={{
           transform: 'translateZ(60px)',
           transformStyle: 'preserve-3d',
-        }} 
-        className="relative bg-white  max-h-[526px] rounded-3xl overflow-hidden backdrop-blur-sm "
+        }}
+        className="relative bg-white  max-h-[526px] rounded-3xl   "
       >
         {children}
       </motion.div>
@@ -97,7 +97,7 @@ const FeaturesSection: React.FC<FeaturesSectionProps> = ({
   return (
     <section className="w-full section-bg py-16 lg:py-[120px]">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        
+
         {/* Section Header */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -113,18 +113,18 @@ const FeaturesSection: React.FC<FeaturesSectionProps> = ({
           <p className="font-inter text-base text-black max-w-xl mx-auto">
             {subtitle}
           </p>
-        </motion.div>     
+        </motion.div>
 
         {/* Features Grid - Responsive container */}
-        <div className='bg-[#F2F2F7]  max-w-[1176px] max-h-[717px]  mx-auto py-4 sm:px-8 md:px-4 rounded-3xl'> 
-          <div 
-            className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-2 lg:gap-4 " 
+        <div className='bg-[#F2F2F7]  max-w-[1176px] max-h-[717px]  mx-auto py-4 sm:px-8 md:px-4 rounded-3xl'>
+          <div
+            className="grid  grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-2 lg:gap-4 "
             style={{ perspective: '1200px' }}
           >
             {featureCards.map((card, index) => (
               <div key={card.id} className="w-full">
-                <EnhancedTiltCard index={index}>           
-                  <div className="w-full  rounded-3xl px-4 py-6 flex flex-col items-stretch" >
+                <EnhancedTiltCard index={index}>
+                  <div className="w-full aws-hover-card  rounded-3xl px-4 py-6 flex flex-col items-stretch" >
                     {/* Time Tag */}
                     <div className="">
                       <div className={`inline-flex mb-6 items-center px-4 py-2 rounded-full text-[12px] font-semibold ${timeTagColors[card.timeTagColor]}`}>
@@ -142,7 +142,7 @@ const FeaturesSection: React.FC<FeaturesSectionProps> = ({
                             width={232}
                             height={232}
                             className="scale-125"
-                            // sizes="(max-width: 640px) 64px, (max-width: 1024px) 80px, 96px"
+                          // sizes="(max-width: 640px) 64px, (max-width: 1024px) 80px, 96px"
                           />
                         ) : (
                           <Image
@@ -150,7 +150,7 @@ const FeaturesSection: React.FC<FeaturesSectionProps> = ({
                             alt={card.iconAlt}
                             fill
                             className="object-contain"
-                            // sizes="(max-width: 640px) 64px, (max-width: 1024px) 80px, 96px"
+                          // sizes="(max-width: 640px) 64px, (max-width: 1024px) 80px, 96px"
                           />
                         )}
                       </div>
@@ -173,7 +173,7 @@ const FeaturesSection: React.FC<FeaturesSectionProps> = ({
                         <span className="font-medium text-black">
                           {card.duration}
                         </span>
-                        <span className={`font-medium ${card.status === 'available' ? 'text-black': 'text-[#8E8E93]'}  `}>
+                        <span className={`font-medium ${card.status === 'available' ? 'text-black' : 'text-[#8E8E93]'}  `}>
                           • {card.status === 'available' ? 'Now available' : 'Launching soon'}
                         </span>
                       </div>
@@ -190,11 +190,11 @@ const FeaturesSection: React.FC<FeaturesSectionProps> = ({
           </div>
           <div className=' mt-[60px] flex items-start gap-x-[24px] border-t-[1px] pt-[20px] border-[#E5E5EA] '>
             <Image
-            src={"/images/features/cambi.png"}
-            alt='hello'
-            width={168}
-            height={35}
-            className='object-contain'
+              src={"/images/features/cambi.png"}
+              alt='hello'
+              width={168}
+              height={35}
+              className='object-contain'
             />
             <p className='max-w-[648px] -translate-y-1 font-inter text-[14px] font-normal text-[#8E8E93] leading-[150%]'>Research from the University of Cambridge shows that cycling quickly through three micro-steps Learn, Practice, Apply locks a new language skill faster and with less stress than long classes. BlaBlo builds that same loop into your day.</p>
           </div>
