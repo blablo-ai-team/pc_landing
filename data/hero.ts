@@ -115,8 +115,8 @@ export const heroContent: HeroContent = {
     mainText: 'Turn Dead Time into',
     highlightText: 'Fluent English',
     decorativeIcons: {
-      pinkStarTopLeft: '/icons/soft_star_pink.svg',
-      pinkStarBottomLeft: '/icons/soft_star_pink.svg',
+      pinkStarTopLeft: '/icons/Soft_star_pink.svg',
+      pinkStarBottomLeft: '/icons/Soft_star_pink.svg',
       blueStarRight: '/icons/Soft_star_blue.svg'
     }
   },
