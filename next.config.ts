@@ -1,8 +1,8 @@
 import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
-  output: 'export', Add commentMore actions
-   images: {
+  output: 'export',
+  images: {
     unoptimized: true, // <- bắt buộc nếu dùng export
   },
 };
