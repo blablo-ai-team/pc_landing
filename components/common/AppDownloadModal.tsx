@@ -26,7 +26,7 @@ const AppDownloadModal: React.FC<AppDownloadModalProps> = ({ isOpen, onClose }) 
             className="absolute inset-0 bg-black/50 backdrop-blur-sm"
             onClick={onClose}
           />
-          
+
           {/* Modal */}
           <motion.div
             initial={{ opacity: 0, scale: 0.8, y: 20 }}
@@ -54,7 +54,7 @@ const AppDownloadModal: React.FC<AppDownloadModalProps> = ({ isOpen, onClose }) 
               <div className="relative inline-block mb-8">
                 {/* Star icon - top left */}
                 <Image
-                  src="/icons/soft_star_pink.svg"
+                  src="/icons/Soft_star_pink.svg"
                   alt=""
                   width={19}
                   height={21}
@@ -62,7 +62,7 @@ const AppDownloadModal: React.FC<AppDownloadModalProps> = ({ isOpen, onClose }) 
                 />
                 {/* Star icon - bottom left */}
                 <Image
-                  src="/icons/soft_star_pink.svg"
+                  src="/icons/Soft_star_pink.svg"
                   alt=""
                   width={11}
                   height={12}
@@ -91,38 +91,38 @@ const AppDownloadModal: React.FC<AppDownloadModalProps> = ({ isOpen, onClose }) 
                   className="absolute top-0 -right-2"
                 />
               </div>
-                   {/* Social Media Links */}
-            <AppDownload 
-            
-            />
-            <div className=' hidden sm:block'>
-                <SocalButton 
-  iconSize="sm"
-  variant="compact"
-  customWidth={125}
-  customHeight={32}
-  borderRadius="4px"
-  className="mt-5 mx-[90px]"
-/>  
-            </div>
-              
-                 <Image
-                           src="/images/blablo-logo.svg"
-                           alt="Blablo Logo"
-                           width={180}
-                           height={47}
-                           className="block sm:hidden pt-40 mx-auto"
-                         />
-       
+              {/* Social Media Links */}
+              <AppDownload
+
+              />
+              <div className=' hidden sm:block'>
+                <SocalButton
+                  iconSize="sm"
+                  variant="compact"
+                  customWidth={125}
+                  customHeight={32}
+                  borderRadius="4px"
+                  className="mt-5 mx-[90px]"
+                />
+              </div>
+
+              <Image
+                src="/images/blablo-logo.svg"
+                alt="Blablo Logo"
+                width={180}
+                height={47}
+                className="block sm:hidden pt-40 mx-auto"
+              />
+
             </div>
 
-        
 
-      
+
+
           </motion.div>
-          
+
         </div>
-        
+
       )}
     </AnimatePresence>
   );
