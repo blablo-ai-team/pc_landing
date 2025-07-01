@@ -21,7 +21,7 @@ jobs:
           cache: yarn
 
       - name: 📦 Install dependencies
-        run: yarn install --frozen-lockfile
+        run: yarn install
 
       - name: 🧪 Run Lint (nếu có)
         run: yarn lint
