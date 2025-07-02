@@ -23,12 +23,7 @@ jobs:
         run: yarn install --frozen-lockfile
 
       - name: 🏗️ Build project
-        run: yarn build
-
-      - name: 📁 Prepare deployment folder (strip `out/`)
-        run: |
-          mkdir -p deploy
-          cp -a out/. deploy/
+        run: yarn build && mkdir -p deploy && cp -a out/. deploy/
           
       - name: 📤 Deploy to EC2 via SCP
         uses: burnett01/rsync-deployments@5.2
