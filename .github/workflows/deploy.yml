@@ -25,6 +25,11 @@ jobs:
       - name: 🏗️ Build project
         run: yarn build
 
+      - name: 📁 Prepare deployment folder (strip `out/`)
+        run: |
+          mkdir -p deploy
+          cp -a out/. deploy/
+          
       - name: 📤 Deploy to EC2 via SCP
         uses: burnett01/rsync-deployments@5.2
         with:
@@ -32,5 +37,5 @@ jobs:
           username: deploy
           password: 1l8F0zfPq64mB1yCBVSckQMbW
           port: 22
-          source: "out/**"   # tùy theo thư mục build của bạn
+          source: "deploy/**"   # tùy theo thư mục build của bạn
           target: /var/www/blablo/pc   # thư mục đích trên EC2
