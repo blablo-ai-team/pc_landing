@@ -33,4 +33,4 @@ jobs:
           password: 1l8F0zfPq64mB1yCBVSckQMbW
           port: 22
           source: "out/*"   # tùy theo thư mục build của bạn
-          target: /home/deploy/blablo-landingpage-pc   # thư mục đích trên EC2
+          target: /var/www/blablo/pc   # thư mục đích trên EC2
