@@ -3,7 +3,7 @@ name: CI/CD - Build and Deploy to EC2
 on:
   push:
     branches:
-      - main  # hoặc branch bạn muốn deploy
+      - master  # hoặc branch bạn muốn deploy
 
 jobs:
   build-deploy:
