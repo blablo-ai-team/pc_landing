@@ -26,7 +26,7 @@ jobs:
         run: yarn build
 
       - name: 📤 Deploy to EC2 via SCP
-        uses: appleboy/scp-action@v0.1.4
+        uses: burnett01/rsync-deployments@5.2
         with:
           host: 54.151.191.185
           username: deploy
