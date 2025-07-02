@@ -33,4 +33,5 @@ jobs:
           password: 1l8F0zfPq64mB1yCBVSckQMbW
           port: 22
           source: "deploy/**"   # tùy theo thư mục build của bạn
+          strip_components: 1
           target: /var/www/blablo/pc   # thư mục đích trên EC2
