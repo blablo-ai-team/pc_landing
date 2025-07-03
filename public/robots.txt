@@ -1,0 +1,9 @@
+# *
+User-agent: *
+Allow: /
+
+# Host
+Host: https://blablo.co
+
+# Sitemaps
+Sitemap: https://blablo.co/sitemap.xml
