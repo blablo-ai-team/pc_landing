@@ -3,7 +3,7 @@ name: CI/CD - Build and Deploy to EC2
 on:
   push:
     branches:
-      - main  # hoặc branch bạn muốn deploy
+      - master  # hoặc branch bạn muốn deploy
 
 jobs:
   build-deploy:
@@ -23,26 +23,15 @@ jobs:
         run: yarn install --frozen-lockfile
 
       - name: 🏗️ Build project
-        run: yarn build
-
+        run: yarn build && mkdir -p deploy && cp -a out/. deploy/
+          
       - name: 📤 Deploy to EC2 via SCP
         uses: appleboy/scp-action@v0.1.4
         with:
-          host: ${{ secrets.EC2_HOST }}
-          username: ${{ secrets.EC2_USER }}
-          key: ${{ secrets.EC2_SSH_KEY }}
+          host: 54.151.191.185
+          username: deploy
+          password: 1l8F0zfPq64mB1yCBVSckQMbW
           port: 22
-          source: "dist/*"   # tùy theo thư mục build của bạn
-          target: /home/ubuntu/www/blablo   # thư mục đích trên EC2
-
-      # (Optional) Restart service on EC2 (nếu cần)
-      - name: 🚀 SSH and restart service
-        uses: appleboy/ssh-action@v1.0.0
-        with:
-          host: ${{ secrets.EC2_HOST }}
-          username: ${{ secrets.EC2_USER }}
-          key: ${{ secrets.EC2_SSH_KEY }}
-          port: 22
-          script: |
-            cd /home/ubuntu/www/blablo
-            pm2 reload blablo || true
+          source: "deploy/**"   # tùy theo thư mục build của bạn
+          strip_components: 1
+          target: /var/www/blablo/pc   # thư mục đích trên EC2
