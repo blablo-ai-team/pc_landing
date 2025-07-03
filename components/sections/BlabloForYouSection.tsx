@@ -3,19 +3,20 @@
 import { blabloForYouData } from '@/data/blabloForYou';
 import Image from 'next/image';
 import { motion } from 'framer-motion';
-import SplitText from '@/components/common/SplitText';
 
 export default function BlabloForYouSection() {
   return (
     <section className="py-2 px-4 section-bg">
       <div className="max-w-7xl mx-auto">
         {/* Section Header */}
-        <div className="text-center mb-6">
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6 }}
+          className="text-center mb-6">
           <p className='text-[16px] font-inter max-w-[419px] mx-auto text-[#8E8E93]  mb-[10px]'>Meet BlaBlo, your on-the-go English buddy</p>
           <h2 className="font-bricolage text-4xl md:text-5xl  text-gray-900 mb-10">
-            <SplitText className="lazy">
-              {blabloForYouData.title}<span className='font-bold'>You</span>
-            </SplitText>
+            {blabloForYouData.title}<span className='font-bold'>You</span>
 
 
           </h2>
@@ -27,7 +28,7 @@ export default function BlabloForYouSection() {
           </p>
 
 
-        </div>
+        </motion.div>
         {/* Main Content Grid */}
         <div className='bg-[#F2F2F7] max-w-[1176px] max-h-[1091px] mx-auto py-6 px-6 rounded-3xl flex flex-col '>
           <div className="grid lg:grid-cols-2 gap-2  items-center">
@@ -148,12 +149,12 @@ export default function BlabloForYouSection() {
           </div>        {/* Job Titles Marquee - Below the two cards */}
           <div className="mt-4  overflow-hidden bg-white rounded-3xl">
             <div className="text-start mb-10 ">
-              <h3 className="font-bricolage text-[14px] md:text-[16px] pt-20 pl-20 font-bold text-gray-900">
+              <h3 className="font-inter text-[14px] md:text-[16px] pt-20 pl-20 font-medium text-gray-900">
                 Whatever your job, BlaBlo has you covered.
               </h3>
             </div>
             {/* Alternate direction marquees - 4 rows */}
-            <div className="flex flex-col gap-6 pb-5">            {/* Row 1 - Right to Left */}
+            <div className="flex flex-col gap-6 pb-[60px]">            {/* Row 1 - Right to Left */}
               <div className="marquee-container overflow-hidden">
                 <div className="marquee-row marquee-row-rtl ">
                   {/* Triple content for seamless infinite loop */}
@@ -163,7 +164,7 @@ export default function BlabloForYouSection() {
                         <div key={`rtl-1-${dupIndex}-${groupIndex}`} className="flex items-center">
                           {group.msg.map((job, index) => (
                             <span key={`rtl-1-${dupIndex}-${groupIndex}-${index}`} className="flex items-center">
-                              <span className="text-[#2249D1] font-medium text-2xl md:text-5xl whitespace-nowrap">{job}</span>
+                              <span className="text-[#2249D1] font-normal text-2xl md:text-5xl whitespace-nowrap">{job}</span>
                               <span className="mx-3 text-gray-300 text-2xl md:text-4xl">•</span>
                             </span>
                           ))}
@@ -182,7 +183,7 @@ export default function BlabloForYouSection() {
                         <div key={`ltr-2-${dupIndex}-${groupIndex}`} className="flex items-center">
                           {group.msg.map((job, index) => (
                             <span key={`ltr-2-${dupIndex}-${groupIndex}-${index}`} className="flex items-center">
-                              <span className="text-[#2249D1] font-medium text-2xl md:text-5xl whitespace-nowrap">{job}</span>
+                              <span className="text-[#2249D1] font-normal text-2xl md:text-5xl whitespace-nowrap">{job}</span>
                               <span className="mx-3 text-gray-300 text-2xl md:text-4xl">•</span>
                             </span>
                           ))}
@@ -201,7 +202,7 @@ export default function BlabloForYouSection() {
                         <div key={`rtl-3-${dupIndex}-${groupIndex}`} className="flex items-center">
                           {group.msg.map((job, index) => (
                             <span key={`rtl-3-${dupIndex}-${groupIndex}-${index}`} className="flex items-center">
-                              <span className="text-[#2249D1] font-medium text-2xl md:text-5xl whitespace-nowrap">{job}</span>
+                              <span className="text-[#2249D1] font-normal text-2xl md:text-5xl whitespace-nowrap">{job}</span>
                               <span className="mx-3 text-gray-300 text-2xl md:text-4xl">•</span>
                             </span>
                           ))}
@@ -220,7 +221,7 @@ export default function BlabloForYouSection() {
                         <div key={`ltr-4-${dupIndex}-${groupIndex}`} className="flex items-center">
                           {group.msg.map((job, index) => (
                             <span key={`ltr-4-${dupIndex}-${groupIndex}-${index}`} className="flex items-center">
-                              <span className="text-[#2249D1] font-medium text-2xl md:text-5xl whitespace-nowrap">{job}</span>
+                              <span className="text-[#2249D1] font-normal text-2xl md:text-5xl whitespace-nowrap">{job}</span>
                               <span className="mx-3 text-gray-300 text-2xl md:text-4xl">•</span>
                             </span>
                           ))}

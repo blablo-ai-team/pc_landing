@@ -124,7 +124,7 @@ const FeaturesSection: React.FC<FeaturesSectionProps> = ({
             {featureCards.map((card, index) => (
               <div key={card.id} className="w-full">
                 <EnhancedTiltCard index={index}>
-                  <div className="w-full aws-hover-card  rounded-3xl px-4 py-6 flex flex-col items-stretch" >
+                  <div className="w-full   rounded-3xl px-4 py-6 flex flex-col items-stretch" >
                     {/* Time Tag */}
                     <div className="">
                       <div className={`inline-flex mb-6 items-center px-4 py-2 rounded-full text-[12px] font-semibold ${timeTagColors[card.timeTagColor]}`}>

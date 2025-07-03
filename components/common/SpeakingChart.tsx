@@ -13,15 +13,26 @@ import {
 
 const data = [
   { day: 'MON', minutes: 14, color: '#F9CDF6' },
-  { day: 'TUE', minutes: 24, color: '#FFB3FA' },
-  { day: 'WED', minutes: 35, color: '#FF9AF8' },
-  { day: 'THU', minutes: 49, color: '#FD79F4' },
-  { day: 'FRI', minutes: 65, color: '#FF51F3' },
-  { day: 'SAT', minutes: 85, color: '#EE33DF' },
+  { day: 'TUE', minutes: 19.68, color: '#FFB3FA' },
+  { day: 'WED', minutes: 27.66, color: '#FF9AF8' },
+  { day: 'THU', minutes: 38.88, color: '#FD79F4' },
+  { day: 'FRI', minutes: 54.66, color: '#FF51F3' },
+  { day: 'SAT', minutes: 76.83, color: '#EE33DF' },
   { day: 'SUN', minutes: 108, color: '#EE33DF' },
 ];
 import { motion } from 'framer-motion';
+// const min = 14;
+// const max = 108;
+// const steps = 6; // vì có 7 điểm => 6 khoảng
+// const growthRate = 1.25; // tăng dần nhẹ
 
+// let value = min;
+// const data = ['MON', 'TUE', 'WED', 'THU', 'FRI', 'SAT', 'SUN'].map((day, index) => {
+//   if (index === 0) return { day, minutes: min };
+//   if (index === 6) return { day, minutes: max };
+//   value += (max - min) / Math.pow(steps, growthRate); // tăng chậm dần
+//   return { day, minutes: Math.round(value * 100) / 100 };
+// });
 interface CustomDotProps {
   cx?: number;
   cy?: number;
@@ -30,16 +41,16 @@ interface CustomDotProps {
 
 const CustomDot = (props: CustomDotProps) => {
   const { cx, cy, index } = props;
-  
+
   if (index === data.length - 1 && cx && cy) {
     return (
       <g>
-        <circle cx={cx } cy={cy} r={6} fill="#6366f1" stroke="#ffffff" strokeWidth={2} />
+        <circle cx={cx} cy={cy} r={6} fill="#6366f1" stroke="#ffffff" strokeWidth={2} />
       </g>
     );
   }
 
-  
+
 };
 
 // Custom label component for the SUN bar
@@ -52,18 +63,18 @@ interface CustomLabelProps {
 
 const CustomLabel = (props: CustomLabelProps) => {
   const { x, y, width, index } = props;
-  
+
   if (index === data.length - 1 && x && y && width) { // Only for the last bar (SUN)
     return (
-      <text 
-        x={x + 15 } 
+      <text
+        x={x + 15}
         y={y - 15} // Position below the bar
-        fill="#6366f1" 
+        fill="#6366f1"
         fontSize={14}
-     
+
         textAnchor="middle"
         fontWeight="500"
-     
+
 
       >108 mins speaking!
       </text>
@@ -77,10 +88,10 @@ const CustomLabel = (props: CustomLabelProps) => {
 export default function SpeakingChart() {
   return (
     <motion.div
-       initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: 0.2 }}
-    className=" h-96 p-2 bg-gradient-to-br rounded-2xl">
+      initial={{ opacity: 0, y: 20 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.6, delay: 0.2 }}
+      className=" h-96 p-2 bg-gradient-to-br rounded-2xl">
       <ResponsiveContainer width="100%" height="100%">
         <ComposedChart data={data} margin={{ top: 20, right: 90, bottom: 0, left: 0 }}>
           <defs>
@@ -91,25 +102,25 @@ export default function SpeakingChart() {
             </linearGradient>
             <marker id="arrowX" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto">
               <polygon points="0,0 0,6 9,3" fill="#9ca3af" />
-              </marker>            <marker id="arrowY" markerWidth="10" markerHeight="10" refX="3" refY="6">
+            </marker>            <marker id="arrowY" markerWidth="10" markerHeight="10" refX="3" refY="6">
               <polygon points="0,6 6,6 3,0" fill="#9ca3af" />
             </marker>
           </defs>
-          
-          <CartesianGrid 
-            strokeDasharray="2 2" 
-            vertical={false} 
-            stroke="#e5e7eb" 
+
+          <CartesianGrid
+            strokeDasharray="2 2"
+            vertical={false}
+            stroke="#e5e7eb"
             opacity={0.5}
           />
-            <XAxis 
-            dataKey="day" 
+          <XAxis
+            dataKey="day"
             axisLine={{ stroke: '#e5e7eb', strokeWidth: 1, markerEnd: 'url(#arrowX)' }}
             tickLine={false}
             tick={{ fontSize: 12, fill: '#9ca3af', fontWeight: '500' }}
             dy={10}
             padding={{ left: 20, right: 20 }}
-          />          <YAxis 
+          />          <YAxis
             domain={[0, 120]}
             axisLine={{ stroke: '#e5e7eb', strokeWidth: 1, markerStart: 'url(#arrowY)' }}
             tickLine={false}
@@ -122,18 +133,18 @@ export default function SpeakingChart() {
             }}
             width={100}
           />
-            <Bar
-            dataKey="minutes" 
+          <Bar
+            dataKey="minutes"
             radius={[20, 20, 0, 0]}
             barSize={40}
-         
+
             label={<CustomLabel />}
           >
             {data.map((entry, index) => (
-              <Cell key={`cell-${index}`} fill={entry.color}  />
+              <Cell key={`cell-${index}`} fill={entry.color} />
             ))}
           </Bar>
-          
+
           <Line
             type="monotone"
             dataKey="minutes"

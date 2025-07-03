@@ -10,7 +10,7 @@ export default function FreeAppSection() {
     <section className="pt-[160px] pb-[100px] section-bg">
       <div className="max-w-4xl mx-auto px-4 text-center ">
         {/* Header */}
-        <motion.div 
+        <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
@@ -20,7 +20,7 @@ export default function FreeAppSection() {
             And it&apos;s
           </h2>
           <h1 className="text-[158px] max-w-[384px] mx-auto relative leading-none sm:text-[150] md:text-[158px] font-bold text-black ">
-             <Image
+            <Image
               src="/icons/Soft_star_pink.svg"
               alt=""
               width={24}
@@ -50,31 +50,31 @@ export default function FreeAppSection() {
               className="absolute top-5 right-2"
             />
           </h1>
-          <p className="text-[#8E8E93] font-semibold  max-w-lg  mx-auto text-2xl">
+          <p className="text-[#8E8E93] font-semibold pt-[20px]  max-w-lg  mx-auto text-2xl">
             Boost your speaking for free.
-            <br className='hidden sm:block'/>
+            <br className='hidden sm:block' />
             Enjoy free daily scenarios to level up your
-            <br className='hidden sm:block'/>
+            <br className='hidden sm:block' />
             confident. No credit card required.
           </p>
         </motion.div>
 
         {/* App Download Component */}
-        <motion.div 
+        <motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.2 }}
           viewport={{ once: true }}
           className="flex justify-center"
         >
-           <AppDownload 
-                   className="mt-10"
-                   qrCodeSize={80}
-                   qrContainerWidth={200}
-                   qrContainerHeight={177}
-                   variant="light" 
+          <AppDownload
+            className="mt-10"
+            qrCodeSize={80}
+            qrContainerWidth={200}
+            qrContainerHeight={177}
+            variant="light"
 
-                 />
+          />
         </motion.div>
       </div>
     </section>
