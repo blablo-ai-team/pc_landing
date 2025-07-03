@@ -50,7 +50,7 @@ export default function FreeAppSection() {
               className="absolute top-5 right-2"
             />
           </h1>
-          <p className="text-[#8E8E93] font-semibold pt-[20px]  max-w-lg  mx-auto text-2xl">
+          <p className="text-[#8E8E93] font-normal pt-[20px] leading-[140%]   max-w-lg  mx-auto text-2xl">
             Boost your speaking for free.
             <br className='hidden sm:block' />
             Enjoy free daily scenarios to level up your

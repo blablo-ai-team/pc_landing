@@ -23,7 +23,7 @@ const bricolageGrotesque = Bricolage_Grotesque({
 export const metadata: Metadata = {
   title: "BlaBlo - Turn Dead Time into English Fluency",
   description: "Turn your commute or dishwashing time into confident English practice with engaging, AI-personalized stories. Start free today!",
-  keywords: ["business platform", "innovation", "technology", "growth", "English speaking", "language learning app", "practice English", "AI tutor", "English fluency"],
+  // keywords: ["business platform", "innovation", "technology", "growth", "English speaking", "language learning app", "practice English", "AI tutor", "English fluency"],
   authors: [{ name: "Blablo Team" }],
 
   creator: "Blablo",
@@ -35,7 +35,7 @@ export const metadata: Metadata = {
     type: "website",
     locale: "en_US",
     url: "https://www.blablo.co",
-    title: "Blablo - Next Generation Platform",
+    title: "BlaBlo - Turn Dead Time into English Fluency",
     description: "Transform your business with our innovative solutions. Built for scale, designed for growth.",
     siteName: "Blablo",
     images: [
