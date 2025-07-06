@@ -36,7 +36,7 @@ export const metadata: Metadata = {
     locale: "en_US",
     url: "https://www.blablo.co",
     title: "BlaBlo - Turn Dead Time into English Fluency",
-    description: "Transform your business with our innovative solutions. Built for scale, designed for growth.",
+    description: "Turn your commute or dishwashing time into confident English practice with engaging, AI-personalized stories. Start free today!",
     siteName: "Blablo",
     images: [
       {
@@ -53,7 +53,7 @@ export const metadata: Metadata = {
     site: "@blablo",
     creator: "@blablo",
     title: "BlaBlo - Turn Dead Time into English Fluency",
-    description: "Turn your commute or dishwashing time into confident English practice with engaging, AI-personalized stories.",
+    description: "Turn your commute or dishwashing time into confident English practice with engaging, AI-personalized stories. Start free today!",
     images: ["https://www.blablo.co/og.jpg"],
   },
 
