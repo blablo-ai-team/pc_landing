@@ -40,7 +40,7 @@ export const metadata: Metadata = {
     siteName: "Blablo",
     images: [
       {
-        url: "https://www.blablo.co/og.jpg",
+        url: "https://www.blablo.co/og.png",
         width: 1200,
         height: 630,
         alt: "BlaBlo - English-Speaking App for Busy Professionals",
@@ -54,7 +54,7 @@ export const metadata: Metadata = {
     creator: "@blablo",
     title: "BlaBlo - Turn Dead Time into English Fluency",
     description: "Turn your commute or dishwashing time into confident English practice with engaging, AI-personalized stories. Start free today!",
-    images: ["https://www.blablo.co/og.jpg"],
+    images: ["https://www.blablo.co/og.png"],
   },
 
 };
