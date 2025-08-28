@@ -1,0 +1,53 @@
+name: CI/CD - Build and Deploy to GitHub Pages
+
+on:
+  push:
+    branches:
+      - master   # hoặc "main" tuỳ repo
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: "pages"
+  cancel-in-progress: true
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: ✅ Checkout source
+        uses: actions/checkout@v4
+
+      - name: 🟢 Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 'lts/*'
+          cache: yarn
+
+      - name: 📦 Install deps
+        run: yarn install --frozen-lockfile
+
+      - name: 🏗️ Build
+        run: |
+          yarn build
+          # nếu bạn dùng Next export: npx next export -o out
+          # hoặc Vite/React build ra "dist"
+          mkdir -p deploy && cp -a out/. deploy/
+
+      - name: 📤 Upload artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: deploy   # thư mục chứa file tĩnh
+
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - id: deployment
+        uses: actions/deploy-pages@v4
