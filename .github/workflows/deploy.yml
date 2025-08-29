@@ -28,7 +28,7 @@ jobs:
       - name: 📤 Deploy to EC2 via SCP
         uses: appleboy/scp-action@v0.1.4
         with:
-          host: 35.223.17.19
+          host: 35.187.231.35
           username: deploy
           password: 1l8F0zfPq64mB1yCBVSckQMbW
           port: 22
